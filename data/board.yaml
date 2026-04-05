@@ -1,0 +1,20 @@
+members:
+  - name: "Jane Smith"
+    role: "President"
+    photo: board/jane-smith.jpg
+    bio: "Placeholder bio. Update with actual board member information."
+
+  - name: "John Doe"
+    role: "Vice President"
+    photo: board/john-doe.jpg
+    bio: "Placeholder bio. Update with actual board member information."
+
+  - name: "Alex Johnson"
+    role: "Treasurer"
+    photo: board/alex-johnson.jpg
+    bio: "Placeholder bio. Update with actual board member information."
+
+  - name: "Sam Lee"
+    role: "Secretary"
+    photo: board/sam-lee.jpg
+    bio: "Placeholder bio. Update with actual board member information."
