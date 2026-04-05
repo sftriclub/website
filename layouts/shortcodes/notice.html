@@ -1,0 +1,4 @@
+<div class="notice-box">
+  {{ with .Get "title" }}<div class="notice-box__title">{{ . }}</div>{{ end }}
+  {{ .Inner | markdownify }}
+</div>

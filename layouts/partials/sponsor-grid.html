@@ -1,5 +1,5 @@
 <ul class="sponsor-grid">
-  {{ range .Site.Data.sponsors.sponsors }}
+  {{ range hugo.Data.sponsors.sponsors }}
   <li class="sponsor-grid__item">
     <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" title="{{ .name }}">
       <img

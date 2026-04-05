@@ -3,16 +3,28 @@
    Update these values to match your actual brand assets.
    ========================================================================== */
 :root {
-  /* Colors */
-  --color-bg:          #FFFEF5;   /* brand cream */
-  --color-bg-section:  #ffffff;
-  --color-bg-dark:     #05422C;   /* brand forest green */
-  --color-text:        #111111;
-  --color-text-muted:  #555555;
-  --color-text-light:  #FFFEF5;   /* cream — for text on dark backgrounds */
-  --color-border:      #c8ddbf;   /* sage-tinted border */
-  --color-accent:      #97BF88;   /* brand light sage green */
-  --color-cta:         #4A6FA5;   /* brand blue — signup/CTA buttons */
+  /* Color defs */
+  --color-blue:        #4A6FA5;   /* brand blue */
+  --color-cream:       #FFFEF5;   /* brand cream */
+  --color-forest:      #05422C;   /* brand forest green */
+  --color-old-green:   #b5d1a6;   /* old club brand green */
+  --color-sage-light:  #ddeedd;   /* light sage — notice boxes */
+  --color-sage-tint:   #c8ddbf;   /* sage-tinted border */
+  --color-sage:        #97BF88;   /* brand sage green */
+
+  /* Section colors — reference color defs above */
+  --color-accent:      var(--color-sage);
+  --color-bg-dark:     var(--color-forest);
+  --color-bg:          var(--color-cream);
+  --color-border:      var(--color-sage-tint);
+  --color-border-dark: var(--color-forest);
+  --color-cta:         var(--color-blue);
+  --color-notice:      var(--color-old-green);
+  --color-text-blue:   var(--color-blue);
+  --color-text-light:  var(--color-cream);
+  --color-text-muted:  var(--color-forest);
+  --color-text-sage:   var(--color-sage);
+  --color-text:        var(--color-forest);
 
   /* Typography */
   --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -35,7 +47,7 @@
 
   /* Layout */
   --max-width:    1200px;
-  --header-height: 72px;
+  --header-height: 96px;
 
   /* Transitions */
   --transition-fast: 150ms ease;
@@ -110,22 +122,23 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--color-accent);
-  border-bottom: 1px solid var(--color-border);
+  background: linear-gradient(to bottom, var(--color-accent), var(--color-bg));
+  border-bottom: none;
   height: var(--header-height);
 }
 
 .site-header__inner {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   height: 100%;
   width: 100%;
   padding-inline: var(--space-md);
+  padding-top: var(--space-sm);
 }
 
 .nav-wrapper { flex: 1; display: flex; justify-content: center; }
 
-.header-signup { font-size: var(--font-size-sm); padding: 0.5rem 1.25rem; align-self: center; margin-left: auto; }
+.header-signup { font-size: var(--font-size-sm); padding: 0.5rem 1.25rem; margin-left: auto; }
 
 @media (max-width: 768px) {
   .header-signup { display: none; }
@@ -140,7 +153,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .nav-list {
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
+  gap: clamp(0.25rem, calc(-4.9rem + 10.7vw), var(--space-sm));
 }
 
 .nav-item { position: relative; }
@@ -247,6 +260,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   align-items: flex-end;
 }
 
+
 .page-hero__overlay {
   position: absolute;
   inset: 0;
@@ -272,33 +286,54 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 .page-header {
-  padding-block: var(--space-lg);
+  padding-block: var(--space-md);
+  text-align: center;
 }
 
 .page-title {
   font-size: var(--font-size-3xl);
   line-height: var(--line-height-tight);
+  color: var(--color-text)
 }
 
 .page-subtitle {
   font-size: var(--font-size-lg);
   color: var(--color-text-muted);
   margin-top: var(--space-xs);
+  color: var(--color-text)
 }
 
 .page-body {
-  padding-block: var(--space-lg);
-  max-width: 800px;
+  padding-block: var(--space-sm);
+  color: var(--color-text)
 }
 
 /* Prose styles for .Content */
-.page-body h2 { font-size: var(--font-size-2xl); margin-top: var(--space-lg); margin-bottom: var(--space-sm); }
-.page-body h3 { font-size: var(--font-size-xl);  margin-top: var(--space-md); margin-bottom: var(--space-xs); }
+.page-body h2 { font-size: var(--font-size-2xl); margin-top: var(--space-md); margin-bottom: var(--space-sm); }
+.page-body h3 { font-size: var(--font-size-xl);  margin-top: var(--space-sm); margin-bottom: var(--space-xs); }
 .page-body p  { margin-bottom: var(--space-sm); }
-.page-body ul, .page-body ol { margin-bottom: var(--space-sm); padding-left: var(--space-md); list-style: disc; }
+.page-body ul { margin-bottom: var(--space-sm); padding-left: var(--space-md); list-style: disc; }
+.page-body ol { margin-bottom: var(--space-sm); padding-left: var(--space-md); list-style: decimal; }
 .page-body li { margin-bottom: var(--space-xs); }
-.page-body a  { text-decoration: underline; text-underline-offset: 3px; }
+.page-body a  { text-decoration: underline; text-underline-offset: 3px; color: var(--color-text-blue) }
 .page-body strong { font-weight: 700; }
+
+.notice-box {
+  background-color: var(--color-notice);
+  border: 2.5px solid var(--color-border-dark);
+  border-radius: 10px;
+  padding: var(--space-md) var(--space-md);
+  margin: var(--space-md) auto;
+  max-width: 600px;
+  text-align: left;
+}
+
+.notice-box__title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+  color: var(--color-text);
+}
 
 /* ==========================================================================
    HOMEPAGE
@@ -501,7 +536,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 /* ==========================================================================
    FAQ
    ========================================================================== */
-.faq { padding-block: var(--space-lg); max-width: 800px; }
+.faq { padding-block: var(--space-sm); max-width: 800px; }
 .faq-item {
   border-bottom: 1px solid var(--color-border);
   padding-block: var(--space-sm);
@@ -518,6 +553,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .faq-question::after { content: '+'; font-size: var(--font-size-xl); font-weight: 300; }
 details[open] .faq-question::after { content: '−'; }
 .faq-answer { padding-top: var(--space-sm); color: var(--color-text-muted); }
+.faq-answer ul { list-style: disc; padding-left: var(--space-md); margin-top: var(--space-xs); }
+.faq-answer li { margin-bottom: var(--space-xs); }
+.faq-answer a { color: var(--color-text-blue); text-decoration: underline; text-underline-offset: 3px; }
 
 /* ==========================================================================
    SPONSORS DETAIL PAGE
@@ -536,12 +574,52 @@ details[open] .faq-question::after { content: '−'; }
 }
 
 /* ==========================================================================
+   COLUMNS SHORTCODE
+   ========================================================================== */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+.column h2, .column h3 { font-size: var(--font-size-lg); margin-bottom: var(--space-xs); }
+.column ul { list-style: disc; padding-left: var(--space-sm); }
+.column li { margin-bottom: var(--space-xs); }
+
+@media (max-width: 768px) {
+  .columns { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .columns { grid-template-columns: 1fr; }
+}
+
+/* ==========================================================================
+   IMAGE SECTION SHORTCODE
+   ========================================================================== */
+.image-section {
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-start;
+  margin-bottom: var(--space-md);
+}
+.image-section--left { flex-direction: row-reverse; }
+.image-section__content { flex: 1; }
+.image-section__image { flex: 1 1 280px; max-width: 50%; }
+.image-section__image img { width: 100%; border-radius: 8px; }
+
+@media (max-width: 768px) {
+  .image-section,
+  .image-section--left { flex-direction: column; }
+  .image-section__image { flex: none; width: 100%; max-width: 100%; order: -1; }
+}
+
+/* ==========================================================================
    FOOTER
    ========================================================================== */
 .site-footer {
   background-color: var(--color-accent);
   color: var(--color-text-light);
-  padding-block: var(--space-lg);
+  padding-block: var(--space-sm);
 }
 .site-footer__inner {
   display: flex;
@@ -585,7 +663,7 @@ details[open] .faq-question::after { content: '−'; }
   padding: 0.625rem 0.875rem;
   font: inherit;
   font-size: var(--font-size-base);
-  background: var(--color-bg-section);
+  background: var(--color-bg);
   transition: border-color var(--transition-fast);
 }
 .form-input:focus { outline: none; border-color: var(--color-text); }

@@ -6,7 +6,7 @@
 
 <div class="sponsors-page container">
   <ul class="sponsors-detail-grid">
-    {{ range .Site.Data.sponsors.sponsors }}
+    {{ range hugo.Data.sponsors.sponsors }}
     <li class="sponsor-detail-card">
       <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
         <img src="/images/{{ .logo }}" alt="{{ .name }}" class="sponsor-detail-logo"
