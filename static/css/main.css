@@ -191,7 +191,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .dropdown-link:hover { background-color: var(--color-border); }
 
 /* Hamburger toggle — hidden on desktop */
-.nav-toggle { display: none; flex-direction: column; gap: 5px; padding: 0.5rem; }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; padding: 0.5rem; margin-left: auto; }
 .nav-toggle__bar {
   display: block;
   width: 24px;
@@ -540,7 +540,7 @@ details[open] .faq-question::after { content: '−'; }
    ========================================================================== */
 .site-footer {
   background-color: var(--color-accent);
-  color: var(--color-text);
+  color: var(--color-text-light);
   padding-block: var(--space-lg);
 }
 .site-footer__inner {
@@ -556,6 +556,7 @@ details[open] .faq-question::after { content: '−'; }
 .site-footer__social { display: flex; gap: var(--space-sm); }
 .site-footer__social a { opacity: 0.8; transition: opacity var(--transition-fast); }
 .site-footer__social a:hover { opacity: 1; }
+.site-footer__social img { filter: brightness(0) invert(1); }
 
 @media (max-width: 600px) {
   .site-footer__inner { flex-direction: column; text-align: center; }
