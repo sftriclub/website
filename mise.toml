@@ -1,0 +1,14 @@
+[tools]
+hugo = "0.160.0"
+
+[tasks.dev]
+description = "Start Hugo development server"
+run = "hugo server --source . --buildDrafts --navigateToChanged"
+
+[tasks.build]
+description = "Build site for production"
+run = "hugo --source . --minify"
+
+[tasks.new]
+description = "Create new content (usage: mise run new -- posts/my-post.md)"
+run = "hugo new --source ."
