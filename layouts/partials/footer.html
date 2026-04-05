@@ -1,0 +1,22 @@
+<footer class="site-footer">
+  <div class="site-footer__inner container">
+    <div class="site-footer__brand">
+      <p class="site-footer__name">{{ .Site.Title }}</p>
+      <a class="site-footer__email" href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+    </div>
+    <nav class="site-footer__social" aria-label="Social media links">
+      <a href="{{ .Site.Params.instagram }}" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <img src="/images/icons/instagram.svg" alt="Instagram" width="24" height="24">
+      </a>
+      <a href="{{ .Site.Params.facebook }}" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <img src="/images/icons/facebook.svg" alt="Facebook" width="24" height="24">
+      </a>
+      <a href="{{ .Site.Params.tiktok }}" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+        <img src="/images/icons/tiktok.svg" alt="TikTok" width="24" height="24">
+      </a>
+      <a href="{{ .Site.Params.strava }}" target="_blank" rel="noopener noreferrer" aria-label="Strava">
+        <img src="/images/icons/strava.svg" alt="Strava" width="24" height="24">
+      </a>
+    </nav>
+  </div>
+</footer>

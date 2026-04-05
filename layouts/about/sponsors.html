@@ -1,0 +1,25 @@
+{{ define "main" }}
+<div class="page-header container">
+  <h1 class="page-title">{{ .Title }}</h1>
+  <p class="page-subtitle">{{ .Params.description }}</p>
+</div>
+
+<div class="sponsors-page container">
+  <ul class="sponsors-detail-grid">
+    {{ range .Site.Data.sponsors.sponsors }}
+    <li class="sponsor-detail-card">
+      <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+        <img src="/images/{{ .logo }}" alt="{{ .name }}" class="sponsor-detail-logo"
+             onerror="this.src='/images/placeholder.jpg'">
+      </a>
+      <div class="sponsor-detail-body">
+        <h2 class="sponsor-detail-name">{{ .name }}</h2>
+        <p class="sponsor-detail-description">{{ .description }}</p>
+        <a class="sponsor-detail-link" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .url }}</a>
+      </div>
+    </li>
+    {{ end }}
+  </ul>
+  <p class="sponsors-note">Members can access exclusive discount codes through the club's Heylo platform.</p>
+</div>
+{{ end }}

@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div class="page-header container">
+  <h1 class="page-title">{{ .Title }}</h1>
+</div>
+<div class="faq container">
+  {{ range .Params.questions }}
+  <details class="faq-item">
+    <summary class="faq-question">{{ .q }}</summary>
+    <div class="faq-answer">{{ .a }}</div>
+  </details>
+  {{ end }}
+</div>
+{{ end }}

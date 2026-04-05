@@ -1,0 +1,15 @@
+<ul class="sponsor-grid">
+  {{ range .Site.Data.sponsors.sponsors }}
+  <li class="sponsor-grid__item">
+    <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" title="{{ .name }}">
+      <img
+        src="/images/{{ .logo }}"
+        alt="{{ .name }}"
+        class="sponsor-grid__logo"
+        loading="lazy"
+        onerror="this.src='/images/placeholder.jpg'"
+      >
+    </a>
+  </li>
+  {{ end }}
+</ul>
