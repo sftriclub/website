@@ -17,8 +17,10 @@ We also host a couple BBQs each year to relax, eat and drink with our clubmates!
 No better way to end a workout than heading over to a local bakery and enjoying some well-deserved baked goods — Arsicault, Equator, Devil's Teeth. You'll become a pastry connoisseur in no time.
 {{< /image-section >}}
 
+{{< image-section src="/images/social/party.webp" alt="Club Party" side="right" >}}
 ## Parties
 
 The club occasionally hosts more formal celebrations — a chance to dress up and celebrate the season together.
 
 For upcoming events and RSVPs, check the club calendar on [Heylo](https://heylo.group/sftriclub).
+{{< /image-section >}}
