@@ -6,7 +6,7 @@
   {{ range .Params.questions }}
   <details class="faq-item">
     <summary class="faq-question">{{ .q }}</summary>
-    <div class="faq-answer">{{ .a }}</div>
+    <div class="faq-answer">{{ .a | markdownify }}</div>
   </details>
   {{ end }}
 </div>
