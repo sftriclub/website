@@ -18,6 +18,12 @@
   dropdownToggles.forEach(function (toggle) {
     toggle.addEventListener('click', function () {
       const parent = toggle.closest('.has-dropdown');
+      document.querySelectorAll('.has-dropdown.is-open').forEach(function (el) {
+        if (el !== parent) {
+          el.classList.remove('is-open');
+          el.querySelector('.dropdown-toggle').setAttribute('aria-expanded', 'false');
+        }
+      });
       const isOpen = parent.classList.toggle('is-open');
       toggle.setAttribute('aria-expanded', String(isOpen));
     });
