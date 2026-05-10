@@ -1,0 +1,20 @@
+<ul class="board-grid">
+  {{ range hugo.Data.board.members }}
+  <li class="board-card">
+    <div class="board-card__photo-wrap">
+      <img
+        src="/images/{{ .photo }}"
+        alt="{{ .name }}"
+        class="board-card__photo"
+        loading="lazy"
+        onerror="this.src='/images/placeholder.jpg'"
+      >
+    </div>
+    <div class="board-card__body">
+      <h3 class="board-card__name">{{ .name }}</h3>
+      <p class="board-card__role">{{ .role }}</p>
+      {{ with .bio }}<p class="board-card__bio">{{ . }}</p>{{ end }}
+    </div>
+  </li>
+  {{ end }}
+</ul>

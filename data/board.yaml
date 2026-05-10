@@ -1,0 +1,75 @@
+members:
+  - name: "Ellen Ebert"
+    role: "President"
+    photo: board/ellen_ebert.webp
+    #bio: "Placeholder bio. Update with actual board member information."
+
+  - name: "Sidd Chandra"
+    role: "Vice President"
+    photo: board/sidd_chandra.webp
+    # bio: "Placeholder bio. Update with actual board member information."
+
+  - name: "Ben Garcia"
+    role: "Treasurer"
+    photo: board/ben_garcia.webp
+    # bio: "Placeholder bio. Update with actual board member information."
+
+  - name: "Ashley Martin"
+    role: "Secretary"
+    photo: board/ashley_martin.webp
+    #bio: "Placeholder bio. Update with actual board member information."
+
+  - name: "Andrea Lira"
+    role: "Secretary"
+    photo: board/andrea_lira.webp
+    #bio: "Placeholder bio. Update with actual board member information."
+
+  - name: "Phil Davies"
+    role: "Secretary"
+    photo: board/phil_davies.webp
+    #bio: "Placeholder bio. Update with actual board member information."
+
+  - name: "Anna Cosentino"
+    role: "Secretary"
+    photo: board/anna_cosentino.webp
+    #bio: "Placeholder bio. Update with actual board member information."
+
+  - name: "Katie Cornett"
+    role: "Secretary"
+    photo: board/katie_cornett.webp
+    #bio: "Placeholder bio. Update with actual board member information."
+
+  - name: "Patrick McBride"
+    role: "Secretary"
+    photo: board/patrick_mcbride.webp
+    #bio: "Placeholder bio. Update with actual board member information."
+
+  - name: "Langsi Wu"
+    role: "Secretary"
+    photo: board/langsi_wu.webp
+    #bio: "Placeholder bio. Update with actual board member information."
+
+  - name: "Anh Tran"
+    role: "Secretary"
+    photo: board/anh_tran.webp
+    #bio: "Placeholder bio. Update with actual board member information."
+
+  - name: "Hana Tomozawa"
+    role: "0 - 60 Training Program Leader"
+    photo: board/hana_tomozawa.webp
+    #bio: "Placeholder bio. Update with actual board member information."
+
+  - name: "Karina Goot"
+    role: "0 - 60 Training Program Leader"
+    photo: board/karina_goot.webp
+    #bio: "Placeholder bio. Update with actual board member information."
+
+  - name: "Kate Fosburgh"
+    role: "60 - 70.3 Training Program Leader"
+    photo: board/
+    #bio: "Placeholder bio. Update with actual board member information."
+
+  - name: "Maddy Adams"
+    role: "60 - 70.3 Training Program Leader"
+    photo: board/
+    #bio: "Placeholder bio. Update with actual board member information."

@@ -1,0 +1,23 @@
+{{ define "main" }}
+<article class="news-post">
+  {{ with .Params.hero_image }}
+  <div class="news-post__hero" style="background-image: url('/images/{{ . }}')">
+    <div class="news-post__hero-overlay"></div>
+  </div>
+  {{ end }}
+
+  <div class="news-post__content container">
+    <header class="news-post__header">
+      <time class="news-post__date" datetime="{{ .Date.Format "2006-01-02" }}">
+        {{ .Date.Format "January 2, 2006" }}
+      </time>
+      <h1 class="news-post__title">{{ .Title }}</h1>
+      <p class="news-post__author">By {{ .Params.author }}</p>
+    </header>
+    <div class="news-post__body page-body">
+      {{ .Content }}
+    </div>
+    <a class="news-post__back" href="/news/">← All posts</a>
+  </div>
+</article>
+{{ end }}

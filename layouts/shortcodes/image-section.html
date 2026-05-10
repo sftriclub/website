@@ -1,0 +1,9 @@
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" | default "" }}
+{{ $side := .Get "side" | default "right" }}
+<div class="image-section image-section--{{ $side }}">
+  <div class="image-section__content">{{ .Inner | markdownify }}</div>
+  <div class="image-section__image">
+    <img src="{{ $src }}" alt="{{ $alt }}" loading="lazy">
+  </div>
+</div>

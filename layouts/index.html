@@ -1,0 +1,87 @@
+{{ define "main" }}
+
+{{/* ── Hero ─────────────────────────────────────────────────────────────── */}}
+<section class="hero" style="background-image: url('/images/{{ .Params.hero_image }}')">
+  <div class="hero__overlay"></div>
+  <div class="hero__content container">
+    <h1 class="hero__headline">{{ .Params.hero_headline }}</h1>
+    <p class="hero__subheadline">{{ .Params.hero_subheadline }}</p>
+    <a class="btn btn--primary" href="{{ .Params.hero_cta_url }}">{{ .Params.hero_cta_text }}</a>
+  </div>
+</section>
+
+{{/* ── Sports Cards ────────────────────────────────────────────────────── */}}
+<section class="sports-section">
+  <div class="container">
+    <div class="sports-grid">
+      {{ range (where .Site.RegularPages "Section" "sports").ByWeight }}
+      <article class="sport-card">
+        <div class="sport-card__image-wrap">
+          <img src="/images/{{ with .Params.hero_image }}{{ . }}{{ else }}placeholder.jpg{{ end }}"
+               alt="{{ .Title }}" class="sport-card__image" loading="lazy">
+        </div>
+        <div class="sport-card__body">
+          <h2 class="sport-card__title">{{ .Title }}</h2>
+          <p class="sport-card__description">{{ .Params.description }}</p>
+          <a class="btn btn--outline" href="{{ .RelPermalink }}">Learn more</a>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{/* ── Training Programs ───────────────────────────────────────────────── */}}
+<section class="programs-section">
+  <div class="container">
+    <h2 class="section-title">Training Programs</h2>
+    <div class="programs-grid">
+      {{ range where .Site.RegularPages "Section" "training" }}
+      <article class="program-card">
+        <h3 class="program-card__title">{{ .Title }}</h3>
+        <p class="program-card__subtitle">{{ .Params.subtitle }}</p>
+        <p class="program-card__description">{{ .Params.description }}</p>
+        <a class="program-card__link" href="{{ .RelPermalink }}">Learn more →</a>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{/* ── Latest News ─────────────────────────────────────────────────────── */}}
+{{ $news := where .Site.RegularPages "Section" "news" }}
+{{ if $news }}
+<section class="news-teaser-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Latest News</h2>
+      <a class="section-link" href="/news/">All posts →</a>
+    </div>
+    <div class="news-teaser-grid">
+      {{ range first 3 $news }}
+        {{ partial "news-card.html" . }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* ── Sponsors ────────────────────────────────────────────────────────── */}}
+<section class="sponsors-section">
+  <div class="container">
+    <h2 class="section-title">Our Sponsors</h2>
+    {{ partial "sponsor-grid.html" . }}
+    <p class="sponsors-note">Members can access exclusive discount codes in Heylo.</p>
+  </div>
+</section>
+
+{{/* ── Strava CTA ──────────────────────────────────────────────────────── */}}
+<section class="strava-section">
+  <div class="container">
+    <a class="btn btn--primary" href="{{ .Site.Params.strava }}" target="_blank" rel="noopener noreferrer">
+      Join us on Strava
+    </a>
+  </div>
+</section>
+
+{{ end }}

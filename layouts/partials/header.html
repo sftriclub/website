@@ -1,0 +1,17 @@
+<header class="site-header">
+  <div class="site-header__inner">
+    {{ $logo := resources.Get "sf-tri-logo-cream.png" }}
+    <a class="site-logo" href="/" aria-label="{{ .Site.Title }} home">
+      <img src="{{ $logo.RelPermalink }}" alt="{{ .Site.Title }}" height="48" width="auto">
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation menu">
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+    </button>
+    <div id="main-nav" class="nav-wrapper">
+      {{ partial "nav.html" . }}
+    </div>
+    <a class="btn btn--signup header-signup" href="{{ .Site.Params.heyloSignup }}" target="_blank" rel="noopener noreferrer">Sign Up</a>
+  </div>
+</header>

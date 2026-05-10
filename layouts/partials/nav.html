@@ -1,0 +1,23 @@
+<nav class="site-nav" aria-label="Main navigation">
+  <ul class="nav-list">
+    {{ range .Site.Menus.main }}
+      {{ if .HasChildren }}
+        <li class="nav-item has-dropdown">
+          <button class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            {{ .Name }}
+            <span class="dropdown-arrow" aria-hidden="true">▾</span>
+          </button>
+          <ul class="dropdown-menu">
+            {{ range .Children }}
+              <li><a class="dropdown-link" href="{{ .URL }}">{{ .Name }}</a></li>
+            {{ end }}
+          </ul>
+        </li>
+      {{ else }}
+        <li class="nav-item">
+          <a class="nav-link{{ if .Params.external }} nav-link--external{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+        </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+</nav>

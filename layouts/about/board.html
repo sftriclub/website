@@ -1,0 +1,9 @@
+{{ define "main" }}
+<div class="page-header container">
+  <h1 class="page-title">{{ .Title }}</h1>
+  {{ with .Params.description }}<p class="page-subtitle">{{ . }}</p>{{ end }}
+</div>
+<div class="container" style="padding-bottom: var(--space-xl)">
+  {{ partial "board-grid.html" . }}
+</div>
+{{ end }}

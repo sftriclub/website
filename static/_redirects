@@ -1,0 +1,7 @@
+# External redirects
+/shop-redirect/    https://sftriclub.myshopify.com    302
+/login-redirect/   https://heylo.group/sftriclub      302
+
+# Legacy Squarespace URL redirects
+# Add entries here if any Squarespace URLs differ from the new Hugo slugs.
+# Format: /old-path/    /new-path/    301
