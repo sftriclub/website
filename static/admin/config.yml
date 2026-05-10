@@ -1,0 +1,238 @@
+backend:
+  name: github
+  repo: sftriclub/website
+  branch: main
+  base_url: https://sveltia-cms-auth.sf-tri-club.workers.dev
+
+# Enables editing against the local filesystem via the Decap proxy server (Sveltia
+# speaks the same protocol). Run `mise run cms` and `mise run dev` in two terminals,
+# then visit http://localhost:1313/admin/. The proxy is ignored in production builds.
+local_backend: true
+
+media_folder: static/images
+public_folder: /images
+
+collections:
+
+  # ── Top-level pages ──────────────────────────────────────────────────────
+  - name: pages
+    label: Pages
+    files:
+      - name: homepage
+        label: Homepage
+        file: content/_index.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: hero_headline, label: Hero Headline, widget: string }
+          - { name: hero_subheadline, label: Hero Subheadline, widget: string }
+          - { name: hero_cta_text, label: CTA Button Text, widget: string }
+          - { name: hero_cta_url, label: CTA Button URL, widget: string }
+          - { name: hero_image, label: Hero Image, widget: image }
+
+      - name: trial_workout
+        label: Trial Workout
+        file: content/trial-workout.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: description, label: SEO Description, widget: string, required: false }
+          - { name: body, label: Body, widget: markdown }
+
+      - name: membership
+        label: Membership
+        file: content/membership.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: description, label: SEO Description, widget: string, required: false }
+          - { name: body, label: Body, widget: markdown }
+
+      - name: contact
+        label: Contact
+        file: content/contact.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: description, label: SEO Description, widget: string, required: false }
+
+  # ── Training Programs ─────────────────────────────────────────────────────
+  - name: training
+    label: Training Programs
+    files:
+      - name: zero_to_sixty
+        label: Zero to Sixty
+        file: content/training/zero-to-sixty.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: subtitle, label: Subtitle, widget: string, required: false }
+          - { name: hero_image, label: Hero Image, widget: image, required: false }
+          - { name: description, label: Card Description, widget: string, required: false }
+          - { name: body, label: Body, widget: markdown }
+
+      - name: half_ironman
+        label: Half Ironman
+        file: content/training/half-ironman.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: subtitle, label: Subtitle, widget: string, required: false }
+          - { name: hero_image, label: Hero Image, widget: image, required: false }
+          - { name: description, label: Card Description, widget: string, required: false }
+          - { name: body, label: Body, widget: markdown }
+
+      - name: ironman
+        label: Ironman
+        file: content/training/ironman.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: subtitle, label: Subtitle, widget: string, required: false }
+          - { name: hero_image, label: Hero Image, widget: image, required: false }
+          - { name: description, label: Card Description, widget: string, required: false }
+          - { name: body, label: Body, widget: markdown }
+
+      - name: training_weekend
+        label: Training Weekend
+        file: content/training/training-weekend.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: subtitle, label: Subtitle, widget: string, required: false }
+          - { name: hero_image, label: Hero Image, widget: image, required: false }
+          - { name: description, label: Card Description, widget: string, required: false }
+          - { name: body, label: Body, widget: markdown }
+
+      - name: coaching
+        label: Coaching
+        file: content/training/coaching.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: subtitle, label: Subtitle, widget: string, required: false }
+          - { name: hero_image, label: Hero Image, widget: image, required: false }
+          - { name: description, label: Card Description, widget: string, required: false }
+          - { name: body, label: Body, widget: markdown }
+
+  # ── Sports ────────────────────────────────────────────────────────────────
+  - name: sports
+    label: Sports
+    files:
+      - name: swim
+        label: Swim
+        file: content/sports/swim.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: hero_image, label: Hero Image, widget: image, required: false }
+          - { name: description, label: SEO Description, widget: string, required: false }
+          - { name: body, label: Body, widget: markdown }
+
+      - name: bike
+        label: Bike
+        file: content/sports/bike.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: hero_image, label: Hero Image, widget: image, required: false }
+          - { name: description, label: SEO Description, widget: string, required: false }
+          - { name: body, label: Body, widget: markdown }
+
+      - name: run
+        label: Run
+        file: content/sports/run.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: hero_image, label: Hero Image, widget: image, required: false }
+          - { name: description, label: SEO Description, widget: string, required: false }
+          - { name: body, label: Body, widget: markdown }
+
+  # ── About ─────────────────────────────────────────────────────────────────
+  - name: about
+    label: About
+    files:
+      - name: mission
+        label: Our Mission
+        file: content/about/mission.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: description, label: SEO Description, widget: string, required: false }
+          - { name: body, label: Body, widget: markdown }
+
+      - name: code_of_conduct
+        label: Code of Conduct
+        file: content/about/code-of-conduct.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: body, label: Body, widget: markdown }
+
+      - name: social_events
+        label: Social Events
+        file: content/about/social-events.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: body, label: Body, widget: markdown }
+
+      - name: giving_back
+        label: Giving Back
+        file: content/about/giving-back.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: body, label: Body, widget: markdown }
+
+      - name: club_season
+        label: Club Season
+        file: content/about/club-season.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: body, label: Body, widget: markdown }
+
+      - name: faq
+        label: FAQ
+        file: content/about/faq.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - name: questions
+            label: Questions
+            widget: list
+            fields:
+              - { name: q, label: Question, widget: string }
+              - { name: a, label: Answer, widget: text }
+
+  # ── News ─────────────────────────────────────────────────────────────────
+  - name: news
+    label: News
+    folder: content/news
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: date, label: Date, widget: datetime }
+      - { name: author, label: Author, widget: string }
+      - { name: summary, label: Summary, widget: string, hint: "1-2 sentences shown on the news listing and homepage teaser." }
+      - { name: hero_image, label: Hero Image, widget: image, required: false }
+      - { name: body, label: Body, widget: markdown }
+
+  # ── Sponsors ──────────────────────────────────────────────────────────────
+  - name: sponsors
+    label: Sponsors
+    files:
+      - name: sponsors
+        label: Sponsor List
+        file: data/sponsors.yaml
+        fields:
+          - name: sponsors
+            label: Sponsors
+            widget: list
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: logo, label: Logo, widget: image }
+              - { name: url, label: Website URL, widget: string }
+              - { name: description, label: Description, widget: string, required: false }
+
+  # ── Board Members ─────────────────────────────────────────────────────────
+  - name: board
+    label: Board Members
+    files:
+      - name: board
+        label: Board Member List
+        file: data/board.yaml
+        fields:
+          - name: members
+            label: Members
+            widget: list
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: role, label: Role/Title, widget: string }
+              - { name: photo, label: Photo, widget: image, required: false }
+              - { name: bio, label: Bio, widget: text, required: false }
