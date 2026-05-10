@@ -9,23 +9,38 @@ title = "San Francisco Triathlon Club"
   facebook = "https://www.facebook.com/sftriclub"
   tiktok = "https://www.tiktok.com/@sftriclub"
   strava = "https://www.strava.com/clubs/sftriclub"
-  shopURL = "https://sftriclub.myshopify.com"
-  heyloURL = "https://heylo.group/sftriclub"
+  heyloSignup = "https://www.heylo.com/invite/30b897c1-3bba-4511-9a25-c2bde97b9491"
 
 # Top-level nav items. Items with identifier are dropdown parents (no URL).
 # External links use [params] to mark them as external.
 [[menus.main]]
-  name = "Trial Workout"
-  url = "/trial-workout/"
+  name = "Membership"
+  identifier = "membership"
+  url = "#"
   weight = 1
 
 [[menus.main]]
   name = "Membership"
+  parent = "membership"
   url = "/membership/"
+  weight = 1
+
+[[menus.main]]
+  name = "Trial Workout"
+  parent = "membership"
+  url = "/trial-workout/"
   weight = 2
 
 [[menus.main]]
-  name = "Training Programs"
+  name = "Login"
+  parent = "membership"
+  url = "https://www.heylo.com/login"
+  weight = 3
+  [menus.main.params]
+    external = true
+
+[[menus.main]]
+  name = "Training"
   identifier = "training"
   url = "#"
   weight = 3
@@ -140,7 +155,7 @@ title = "San Francisco Triathlon Club"
 
 [[menus.main]]
   name = "Shop"
-  url = "/shop-redirect/"
+  url = "https://shop.sftriclub.org"
   weight = 6
   [menus.main.params]
     external = true
@@ -150,9 +165,3 @@ title = "San Francisco Triathlon Club"
   url = "/contact/"
   weight = 7
 
-[[menus.main]]
-  name = "Login"
-  url = "/login-redirect/"
-  weight = 8
-  [menus.main.params]
-    external = true
