@@ -1,11 +1,11 @@
 ---
 title: Coaching
-subtitle: Professional coaching for every level.
+subtitle: ''
 hero_image: sports/placeholder.jpg
-description: The SF Tri Club partners with professional coaches to support member development.
+description: SF Tri Club partners with professional coaches to support member development.
 ---
 
-## Coach Megan
+## Coach Meg
 
 Coach Megan Tobin from [TMT Coaching](https://www.tmtcoaching.com/) has been working with the SF Tri Club for several years, leading our popular training programs (0 to 60, Escape From Alcatraz, and 60-70.3) and coaching many of our members privately.
 
