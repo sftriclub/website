@@ -2,6 +2,7 @@
 title: "Run"
 weight: 3
 hero_image: "sports/run.jpg"
+hero_position: "center 25%"
 description: "Track workouts, member-led group runs, and running clinics with Coach JD."
 ---
 
