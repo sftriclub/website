@@ -59,6 +59,7 @@
       formStatus.textContent = 'Sending…';
 
       const data = {
+        source:  contactForm.dataset.source || 'Contact Form',
         name:    contactForm.elements['name'].value,
         email:   contactForm.elements['email'].value,
         message: contactForm.elements['message'].value,

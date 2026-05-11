@@ -38,12 +38,14 @@ export default {
       return json({ error: 'Invalid JSON body' }, 400);
     }
 
-    const { name, email, message } = body;
+    const { name, email, message, source } = body;
 
     if (!name || !String(name).trim())           return json({ error: 'name is required' }, 400);
     if (!email || !String(email).trim())          return json({ error: 'email is required' }, 400);
     if (!isValidEmail(String(email).trim()))      return json({ error: 'email is invalid' }, 400);
     if (!message || !String(message).trim())      return json({ error: 'message is required' }, 400);
+
+    const label = source ? String(source).trim() : 'Contact Form';
 
     const resendResponse = await fetch('https://api.resend.com/emails', {
       method: 'POST',
@@ -54,8 +56,8 @@ export default {
       body: JSON.stringify({
         from:     FROM_ADDRESS,
         to:       [TO_ADDRESS],
-        subject:  `SF Tri Club Contact: message from ${String(name).trim()}`,
-        text:     `Name: ${String(name).trim()}\nEmail: ${String(email).trim()}\n\n${String(message).trim()}`,
+        subject:  `[${label}] Message from ${String(name).trim()}`,
+        text:     `Source: ${label}\nName: ${String(name).trim()}\nEmail: ${String(email).trim()}\n\n${String(message).trim()}`,
         reply_to: String(email).trim(),
       }),
     });
