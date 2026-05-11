@@ -1,0 +1,13 @@
+{
+  "name": "sftriclub-contact-form-worker",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "vitest run",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "vitest": "^1.6.0"
+  }
+}

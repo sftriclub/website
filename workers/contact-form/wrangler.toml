@@ -1,0 +1,10 @@
+name = "sftriclub-contact-form"
+main = "index.js"
+compatibility_date = "2024-01-01"
+
+# Secrets are set via: wrangler secret put RESEND_API_KEY
+# Never commit secrets to this file.
+
+[[routes]]
+pattern = "sftriclub.org/api/contact"
+zone_name = "sftriclub.org"
