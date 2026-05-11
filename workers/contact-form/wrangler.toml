@@ -8,3 +8,7 @@ compatibility_date = "2024-01-01"
 [[routes]]
 pattern = "sftriclub.org/api/contact"
 zone_name = "sftriclub.org"
+
+[[routes]]
+pattern = "new-www.sftriclub.org/api/contact"
+zone_name = "sftriclub.org"
