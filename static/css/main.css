@@ -72,6 +72,7 @@ body {
 #main-content { flex: 1; }
 img, video { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
+a:not([class]) { color: var(--color-text-blue); text-decoration: underline; text-underline-offset: 3px; }
 ul, ol { list-style: none; }
 button { cursor: pointer; border: none; background: none; font: inherit; }
 
@@ -559,7 +560,6 @@ details[open] .faq-question::after { content: '−'; }
 .faq-answer { padding-top: var(--space-sm); color: var(--color-text-muted); }
 .faq-answer ul { list-style: disc; padding-left: var(--space-md); margin-top: var(--space-xs); }
 .faq-answer li { margin-bottom: var(--space-xs); }
-.faq-answer a { color: var(--color-text-blue); text-decoration: underline; text-underline-offset: 3px; }
 
 /* ==========================================================================
    SPONSORS DETAIL PAGE
