@@ -1,7 +1,7 @@
 {{ define "main" }}
 <article class="news-post">
   {{ with .Params.hero_image }}
-  <div class="news-post__hero" style="background-image: url('/images/{{ . }}')">
+  <div class="news-post__hero" style="background-image: url('{{ . }}')">
     <div class="news-post__hero-overlay"></div>
   </div>
   {{ end }}

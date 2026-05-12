@@ -1,7 +1,7 @@
 ---
 title: "Bike"
 weight: 2
-hero_image: "sports/bike.jpg"
+hero_image: "/images/sports/bike.jpg"
 description: "Saturday group rides, bike clinics, and the Triple Mountain Challenge."
 ---
 

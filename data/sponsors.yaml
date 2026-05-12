@@ -1,50 +1,50 @@
 sponsors:
   - name: TMT Coaching
-    logo: sponsors/tmt-coaching.png
+    logo: /images/sponsors/tmt-coaching.png
     url: https://www.tmtcoaching.com
     description: Multisport training built to power you, support from a diverse and inclusive team.
 
   - name: Arena
-    logo: sponsors/arena.png
+    logo: /images/sponsors/arena.png
     url: https://www.arenasport.com
     description: Italian sportswear brand offering athletic apparel and gear.
 
   - name: Clubhouse Velo
-    logo: sponsors/clubhouse-velo.png
+    logo: /images/sponsors/clubhouse-velo.png
     url: https://www.clubhousevelo.com
     description: Bike fitting services emphasizing comfort and power optimization.
 
   - name: Fog Swimming
-    logo: sponsors/fog-swimming.png
+    logo: /images/sponsors/fog-swimming.png
     url: https://gomotionapp.com/team/pcfch
     description: Premier San Francisco swim club and ASCA top 100 age group team.
 
   - name: Pacific Open Water Swim Co.
-    logo: sponsors/pacific-open-water.png
+    logo: /images/sponsors/pacific-open-water.png
     url: https://www.pacificswim.co
     description: Alcatraz swimming instruction with 20+ years of Bay Area experience.
 
   - name: Bay Cycles Co
-    logo: sponsors/bay-cycles.png
+    logo: /images/sponsors/bay-cycles.png
     url: https://www.baycycles.co
     description: Cycling retailer focused on freedom and connection to riding.
 
   - name: Best Day Brewing
-    logo: sponsors/best-day-brewing.png
+    logo: /images/sponsors/best-day-brewing.png
     url: https://bestdaybrewing.com
     description: Non-alcoholic craft beer company supporting active lifestyles.
 
   - name: Hummingbird Fuels
-    logo: sponsors/hummingbird-fuels.png
+    logo: /images/sponsors/hummingbird-fuels.png
     url: https://www.hummingbirdfuels.com
     description: Sports drink provider using a 60 grams for 60 minutes carbohydrate formula.
 
   - name: Fitted By Pedro
-    logo: sponsors/fitted-by-pedro.png
+    logo: /images/sponsors/fitted-by-pedro.png
     url: https://fittedbypedro.com
     description: Specialized bike fitting services with 20,000+ client experience.
 
   - name: A Runner's Mind
-    logo: sponsors/a-runners-mind.png
+    logo: /images/sponsors/a-runners-mind.png
     url: https://arunnersmind.com
     description: Athletic apparel and running gear retailer.

@@ -1,7 +1,7 @@
 ---
 title: "Half Ironman"
 subtitle: "70.3 miles. Build the endurance to get there."
-hero_image: "sports/swim.jpg"
+hero_image: "/images/sports/swim.jpg"
 description: "A structured training program for athletes targeting a 70.3-mile Half Ironman race."
 ---
 
