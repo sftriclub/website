@@ -1,75 +1,61 @@
 members:
-  - name: "Ellen Ebert"
-    role: "President"
+  - name: Ellen Ebert
+    role: President
     photo: board/ellen_ebert.webp
-    #bio: "Placeholder bio. Update with actual board member information."
-
-  - name: "Sidd Chandra"
-    role: "Vice President"
+    bio: ''
+  - name: Sidd Chandra
+    role: Vice President
     photo: board/sidd_chandra.webp
-    # bio: "Placeholder bio. Update with actual board member information."
-
-  - name: "Ben Garcia"
-    role: "Treasurer"
+    bio: ''
+  - name: Ben Garcia
+    role: Treasurer
     photo: board/ben_garcia.webp
-    # bio: "Placeholder bio. Update with actual board member information."
-
-  - name: "Ashley Martin"
-    role: "Secretary"
+    bio: ''
+  - name: Ashley Martin
+    role: Secretary
     photo: board/ashley_martin.webp
-    #bio: "Placeholder bio. Update with actual board member information."
-
-  - name: "Andrea Lira"
-    role: "Membership Officer"
+    bio: ''
+  - name: Andrea Lira
+    role: Membership Officer
     photo: board/andrea_lira.webp
-    #bio: "Placeholder bio. Update with actual board member information."
-
-  - name: "Phil Davies"
-    role: "Webmaster"
+    bio: ''
+  - name: Phil Davies
+    role: Tech Officer
     photo: board/phil_davies.webp
-    #bio: "Placeholder bio. Update with actual board member information."
-
-  - name: "Anna Cosentino"
-    role: "Secretary"
+    bio: ''
+  - name: Anna Cosentino
+    role: Branding & Social Media Officer
     photo: board/anna_cosentino.webp
-    #bio: "Placeholder bio. Update with actual board member information."
-
-  - name: "Katie Cornett"
-    role: "Community Outreach"
+    bio: ''
+  - name: Katie Cornett
+    role: Community Outreach Officer
     photo: board/katie_cornett.webp
-    #bio: "Placeholder bio. Update with actual board member information."
-
-  - name: "Patrick McBride"
-    role: "Bike Officer"
+    bio: ''
+  - name: Patrick McBride
+    role: Bike Officer
     photo: board/patrick_mcbride.webp
-    #bio: "Placeholder bio. Update with actual board member information."
-
-  - name: "Langsi Wu"
-    role: "Swim Officer"
+    bio: ''
+  - name: Langsi Wu
+    role: Swim Officer
     photo: board/langsi_wu.webp
-    #bio: "Placeholder bio. Update with actual board member information."
-
-  - name: "Anh Tran"
-    role: "Run Officer"
+    bio: ''
+  - name: Anh Tran
+    role: Run Officer
     photo: board/anh_tran.webp
-    #bio: "Placeholder bio. Update with actual board member information."
-
-  - name: "Hana Tomozawa"
-    role: "0 - 60 Training Program Leader"
+    bio: ''
+  - name: Hana Tomozawa
+    role: 0 - 60 Training Program Leader
     photo: board/hana_tomozawa.webp
-    #bio: "Placeholder bio. Update with actual board member information."
-
-  - name: "Karina Goot"
-    role: "0 - 60 Training Program Leader"
+    bio: ''
+  - name: Karina Goot
+    role: 0 - 60 Training Program Leader
     photo: board/karina_goot.webp
-    #bio: "Placeholder bio. Update with actual board member information."
-
-  - name: "Kate Fosburgh"
-    role: "60 - 70.3 Training Program Leader"
+    bio: ''
+  - name: Kate Fosburgh
+    role: 60 - 70.3 Training Program Leader
     photo: board/
-    #bio: "Placeholder bio. Update with actual board member information."
-
-  - name: "Maddy Adams"
-    role: "60 - 70.3 Training Program Leader"
+    bio: ''
+  - name: Maddy Adams
+    role: 60 - 70.3 Training Program Leader
     photo: board/
-    #bio: "Placeholder bio. Update with actual board member information."
+    bio: ''
