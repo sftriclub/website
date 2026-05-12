@@ -20,12 +20,12 @@ members:
     #bio: "Placeholder bio. Update with actual board member information."
 
   - name: "Andrea Lira"
-    role: "Secretary"
+    role: "Membership Officer"
     photo: board/andrea_lira.webp
     #bio: "Placeholder bio. Update with actual board member information."
 
   - name: "Phil Davies"
-    role: "Secretary"
+    role: "Webmaster"
     photo: board/phil_davies.webp
     #bio: "Placeholder bio. Update with actual board member information."
 
@@ -35,22 +35,22 @@ members:
     #bio: "Placeholder bio. Update with actual board member information."
 
   - name: "Katie Cornett"
-    role: "Secretary"
+    role: "Community Outreach"
     photo: board/katie_cornett.webp
     #bio: "Placeholder bio. Update with actual board member information."
 
   - name: "Patrick McBride"
-    role: "Secretary"
+    role: "Bike Officer"
     photo: board/patrick_mcbride.webp
     #bio: "Placeholder bio. Update with actual board member information."
 
   - name: "Langsi Wu"
-    role: "Secretary"
+    role: "Swim Officer"
     photo: board/langsi_wu.webp
     #bio: "Placeholder bio. Update with actual board member information."
 
   - name: "Anh Tran"
-    role: "Secretary"
+    role: "Run Officer"
     photo: board/anh_tran.webp
     #bio: "Placeholder bio. Update with actual board member information."
 
