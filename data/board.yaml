@@ -1,61 +1,61 @@
 members:
   - name: Ellen Ebert
     role: President
-    photo: board/ellen_ebert.webp
+    photo: /images/board/ellen_ebert.webp
     bio: ''
   - name: Sidd Chandra
     role: Vice President
-    photo: board/sidd_chandra.webp
+    photo: /images/board/sidd_chandra.webp
     bio: ''
   - name: Ben Garcia
     role: Treasurer
-    photo: board/ben_garcia.webp
+    photo: /images/board/ben_garcia.webp
     bio: ''
   - name: Ashley Martin
     role: Secretary
-    photo: board/ashley_martin.webp
+    photo: /images/board/ashley_martin.webp
     bio: ''
   - name: Andrea Lira
     role: Membership Officer
-    photo: board/andrea_lira.webp
+    photo: /images/board/andrea_lira.webp
     bio: ''
   - name: Phil Davies
     role: Tech Officer
-    photo: board/phil_davies.webp
+    photo: /images/board/phil_davies.webp
     bio: ''
   - name: Anna Cosentino
     role: Branding & Social Media Officer
-    photo: board/anna_cosentino.webp
+    photo: /images/board/anna_cosentino.webp
     bio: ''
   - name: Katie Cornett
     role: Community Outreach Officer
-    photo: board/katie_cornett.webp
+    photo: /images/board/katie_cornett.webp
     bio: ''
   - name: Patrick McBride
     role: Bike Officer
-    photo: board/patrick_mcbride.webp
+    photo: /images/board/patrick_mcbride.webp
     bio: ''
   - name: Langsi Wu
     role: Swim Officer
-    photo: board/langsi_wu.webp
+    photo: /images/board/langsi_wu.webp
     bio: ''
   - name: Anh Tran
     role: Run Officer
-    photo: board/anh_tran.webp
+    photo: /images/board/anh_tran.webp
     bio: ''
   - name: Hana Tomozawa
     role: 0 - 60 Training Program Leader
-    photo: board/hana_tomozawa.webp
+    photo: /images/board/hana_tomozawa.webp
     bio: ''
   - name: Karina Goot
     role: 0 - 60 Training Program Leader
-    photo: board/karina_goot.webp
+    photo: /images/board/karina_goot.webp
     bio: ''
   - name: Kate Fosburgh
     role: 60 - 70.3 Training Program Leader
-    photo: board/
+    photo: ''
     bio: ''
   - name: Maddy Adams
     role: 60 - 70.3 Training Program Leader
-    photo: /images/maddy_adams.JPG
+    photo: /images/board/maddy_adams.JPG
     bio: ''
