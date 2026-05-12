@@ -1,7 +1,7 @@
 ---
 title: "Swim"
 weight: 1
-hero_image: "sports/swim.jpg"
+hero_image: "/images/sports/swim.jpg"
 description: "Pool workouts, open water clinics, and the annual Alcatraz Escape Swim."
 ---
 

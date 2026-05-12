@@ -1,7 +1,7 @@
 ---
 title: "Zero to Sixty"
 subtitle: "First triathlon? No sweat. Our beginner program has your back!"
-hero_image: "sports/swim.jpg"
+hero_image: "/images/sports/swim.jpg"
 description: "A 12-week beginner training program to get you ready for your first Olympic-distance triathlon."
 ---
 
