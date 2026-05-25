@@ -1,7 +1,7 @@
 {{ define "main" }}
 <article class="spotlight">
   <header class="spotlight-hero">
-    <img class="spotlight-hero__image" src="{{ .Params.hero_image }}" alt="{{ .Title }}">
+    <img class="spotlight-hero__image" src="{{ .Params.hero_image }}" alt="{{ .Params.hero_image_alt | default .Title }}">
     <div class="spotlight-hero__banner">
       <h1 class="spotlight-hero__name">{{ .Title }}</h1>
     </div>
@@ -23,7 +23,7 @@
 
     {{ with .Params.secondary_image }}
     <figure class="spotlight-secondary-image">
-      <img src="{{ . }}" alt="{{ $.Title }} racing">
+      <img src="{{ . }}" alt="{{ $.Params.secondary_image_alt | default $.Title }}">
     </figure>
     {{ end }}
 

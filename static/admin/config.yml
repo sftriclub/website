@@ -214,7 +214,9 @@ collections:
       - { name: date, label: Date, widget: datetime }
       - { name: summary, label: Summary, widget: text, hint: "1-2 sentences shown on the spotlight listing." }
       - { name: hero_image, label: Hero Photo, widget: image }
+      - { name: hero_image_alt, label: "Hero Photo Alt Text (optional)", widget: string, required: false, hint: "For screen readers. Defaults to the member's name." }
       - { name: secondary_image, label: "Secondary Photo (optional)", widget: image, required: false }
+      - { name: secondary_image_alt, label: "Secondary Photo Alt Text (optional)", widget: string, required: false, hint: "Defaults to the member's name. Override when the photo shows something other than the member alone." }
       - name: questions
         label: Q&A
         widget: list
