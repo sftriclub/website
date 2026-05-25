@@ -1,0 +1,13 @@
+{{ define "main" }}
+<section class="spotlight-list">
+  <div class="spotlight-list__header container">
+    <h1 class="page-title">{{ .Title }}</h1>
+    {{ with .Content }}<div class="page-body">{{ . }}</div>{{ end }}
+  </div>
+  <div class="spotlight-list__grid container">
+    {{ range .Pages.ByDate.Reverse }}
+      {{ partial "spotlight-card.html" . }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}
