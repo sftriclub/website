@@ -2,8 +2,8 @@
 title: "Mike Locke"
 date: 2026-02-15
 summary: "Three-time Ironman finisher and longtime SF Tri board member who served as President and Membership Officer."
-hero_image: "/images/spotlights/mike-locke/portrait.jpg"
-secondary_image: "/images/spotlights/mike-locke/im-canada-finish.jpg"
+hero_image: "/images/spotlights/mike-locke/portrait.webp"
+secondary_image: "/images/spotlights/mike-locke/im-canada-finish.webp"
 questions:
   - q: "What inspired you to sign up for your very first triathlon?"
     a: "My friend Lynn sent out an email to a handful of friends with the subject line \"Try a tri?\" and I thought… Oh, that sounds interesting. Didn't consider anything about the preparation."
