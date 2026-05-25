@@ -1,0 +1,47 @@
+---
+title: "Mirella Niskala"
+date: 2026-04-15
+summary: "Ironman age-group winner racing the 70.3 World Championship in Marbella and the Ironman World Championship in Kona."
+hero_image: "/images/spotlights/mirella-niskala/portrait.webp"
+questions:
+  - q: "What inspired you to sign up for your very first triathlon?"
+    a: "I blame my older brother. He completed his first triathlon in 2014 (and being the lunatic he is, went all in, completing IM Cour d'Alene 2 months later). While I had cheered him on from afar for years, I finally went to see him race at 70.3 Worlds in St. George in October 2022. The athletes, the atmosphere and the strong sense of community there all inspired me to sign up for a triathlon. Also, my mother in law passed away from ALS just a month before and seeing the disease rob her of the ability to move pushed me toward making the most of what I had."
+  - q: "What were your initial triathlon aspirations?"
+    a: "It's hard to imagine now but I didn't have aspirations beyond just completing the Napa Oly distance initially. But I really loved all the learning and adventure that was part of the 0-60 program so as the weeks went by, and there started to be talk about the 60 to 70.3 program, I knew I wanted to do it, even though it seemed completely out of reach at the moment."
+  - q: "What was your athletic baseline when you first started training for triathlons?"
+    a: "I definitely did not consider myself an athlete at the start but had run a few half marathons right before the pandemic and running was generally my go-to stress buster. I \"went to the gym\" for spin class and weights here and there (Bodypump anyone?). That was really it. Growing up in Finland, we rode our bikes around all summer but I hadn't ridden outside really since then, and I did most of the 0-60 program on a pretty ill-fitted rental bike from Sports Basement. Swimming was new to me aside from being able to swim the requisite yardage for the program."
+  - q: "At what point did you decide to join SF Tri as part of your training?"
+    a: "I joined the club in January of 2023 for 0-60, right at the start of my tri training. Hands down, one of the best decisions I've made — I don't know that I'd be doing this had I just signed up for a race on my own. This group is so inspiring, knowledgeable and generous with their insights. I often think about how much my world has expanded over the last 3 years as a result of being part of this adventurous group."
+  - q: "What are some of the unexpected discoveries you've had about triathlon training, the tri world and/or yourself as you've become the accomplished triathlete you are today?"
+    a: "How it can and will transform you. And learning to actually trust the process. Also, it's a great way to fall in love with the Bay Area again."
+  - q: "What's been your favorite race to date?"
+    a: "IM South Hokkaido Japan — I got to race with my brother and it was my first full IM distance race on an absolutely stunning course. I would say Marbella is a close second for the vibes and that hilly bike course with glorious descents on pristine roads."
+  - q: "What's been one of your hardest race moments and how did you prevail?"
+    a: "hmmm…each race has *many* hard moments. The now infamous Morro Bay swim and resulting near hypothermia was tough. But the really memorable one for me is back stroking in Napa during my first triathlon swim. I was a hyperventilating mess for that swim and I wasn't convinced I'd make it out of there alive and if I did, I didn't think I would even get on the bike. I swore off triathlon while splashing my limbs around to keep going. But thankfully I'm quite stubborn (and also Finnish and we have something called sisu) and when I DID make it out of the water and heard all the encouraging cheers of the SF Tri Crew, I was able to mentally move on to the bike and run and ended up having a great rest of the race. I think you have to be able to move on from setbacks and things that don't go as you imagined or planned and try to focus on the next step and what is still ahead."
+  - q: "If you could give any advice to someone in their first season of triathlon training, what would it be?"
+    a: "Consistency in training is key and you absolutely need recovery days. I learned this the hard way and developed some overuse injuries so now I pay a lot more attention to sleep and fueling to make sure my body recovers well. Oh and progress over perfection always. And SMILE because you're out there doing some amazing stuff!"
+  - q: "What are 1-2 training habits that have made the biggest difference for you as you've trained up to become an accomplished Iron(wo)man athlete?"
+    a: "I think it has to be consistency and learning about the goals of different types of sessions (and then doing my best to follow the session coach has given me :)."
+  - q: "What's a mistake you made early in your triathlon journey that you'd encourage newer triathletes to avoid?"
+    a: "Thinking I had to go hard all the time. I didn't understand/appreciate that different workouts had different goals and all played different roles."
+  - q: "What keeps you motivated to keep racing and training?"
+    a: "I think partly it's setting a big goal that scares you a little. If motivation is low, and that happens more than I'd like to admit, I remind myself of the goal and how much I actually always love the workout once I get started. Also, while injured, I had to stop run and bike for over 2 months, and that was incredibly hard. This season I'm thankful to be able to train without injury and bad pain and when I struggle to get going, I remind myself — or someone else does — not to take that ability for granted. And Coach Meg!"
+  - q: "What races are you targeting this year?"
+    a: "I'm planning on Oly at Wildflower, then 70.3 Northern California in August and then I hope to survive the heat and humidity and be fit enough to really enjoy WCs in Kona in October."
+race_groups:
+  - title: "2025"
+    races:
+      - "Wildflower / Olympic Distance — 3rd place Age Group"
+      - "Ironman South Hokkaido (Japan) — 1st place Age Group"
+      - "Ironman 70.3 World Championship — Marbella, Spain"
+  - title: "2024"
+    races:
+      - "Ironman 70.3 Morro Bay"
+      - "Escape from Alcatraz — 5th place"
+      - "Ironman 70.3 Santa Cruz — 4th place Age Group, World Championship slot via rolldown"
+  - title: "2023"
+    races:
+      - "Napa / Olympic Distance — 2nd place Age Group"
+      - "San Diego International Triathlon"
+      - "Ironman 70.3 Santa Cruz"
+---
