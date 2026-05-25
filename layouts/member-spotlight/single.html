@@ -1,0 +1,51 @@
+{{ define "main" }}
+<article class="spotlight">
+  <header class="spotlight-hero">
+    <img class="spotlight-hero__image" src="{{ .Params.hero_image }}" alt="{{ .Title }}">
+    <div class="spotlight-hero__banner">
+      <h1 class="spotlight-hero__name">{{ .Title }}</h1>
+    </div>
+  </header>
+
+  <div class="spotlight-body container">
+    {{ with .Content }}<div class="page-body">{{ . }}</div>{{ end }}
+
+    {{ with .Params.questions }}
+    <section class="spotlight-qa">
+      {{ range . }}
+      <details class="spotlight-qa__item">
+        <summary class="spotlight-qa__question">{{ .q }}</summary>
+        <div class="spotlight-qa__answer">{{ .a | markdownify }}</div>
+      </details>
+      {{ end }}
+    </section>
+    {{ end }}
+
+    {{ with .Params.secondary_image }}
+    <figure class="spotlight-secondary-image">
+      <img src="{{ . }}" alt="{{ $.Title }} racing">
+    </figure>
+    {{ end }}
+
+    {{ with .Params.race_groups }}
+    <section class="spotlight-race-resume">
+      <h2 class="spotlight-race-resume__heading">Race Resume</h2>
+      <div class="spotlight-race-resume__grid">
+        {{ range . }}
+        <div class="spotlight-race-group">
+          <h3 class="spotlight-race-group__title">{{ .title }}</h3>
+          <ul class="spotlight-race-group__list">
+            {{ range .races }}
+            <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }}
+      </div>
+    </section>
+    {{ end }}
+
+    <a class="spotlight-back" href="/member-spotlight/">← All spotlights</a>
+  </div>
+</article>
+{{ end }}
