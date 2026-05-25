@@ -677,3 +677,74 @@ details[open] .faq-question::after { content: '−'; }
 @media (max-width: 768px) {
   .contact-page__body { grid-template-columns: 1fr; }
 }
+
+/* ============================================
+   Member Spotlight
+   ============================================ */
+
+/* Index list */
+.spotlight-list { padding-block: var(--space-lg); }
+.spotlight-list__header { text-align: center; margin-bottom: var(--space-lg); }
+.spotlight-list__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-md);
+}
+
+/* Card on the index */
+.spotlight-card { display: flex; flex-direction: column; }
+.spotlight-card__image-link { display: block; aspect-ratio: 4/5; overflow: hidden; }
+.spotlight-card__image { width: 100%; height: 100%; object-fit: cover; transition: transform var(--transition-base); }
+.spotlight-card__image-link:hover .spotlight-card__image { transform: scale(1.03); }
+.spotlight-card__body { padding: var(--space-sm) 0; display: flex; flex-direction: column; gap: var(--space-xs); flex: 1; }
+.spotlight-card__title { font-size: var(--font-size-lg); font-weight: 700; }
+.spotlight-card__title a:hover { text-decoration: underline; }
+.spotlight-card__summary { color: var(--color-text-muted); flex: 1; }
+.spotlight-card__link { font-size: var(--font-size-sm); font-weight: 600; margin-top: auto; }
+.spotlight-card__link:hover { text-decoration: underline; }
+
+/* Hero on the single page */
+.spotlight-hero { position: relative; }
+.spotlight-hero__image { width: 100%; max-height: 70vh; object-fit: cover; display: block; }
+.spotlight-hero__banner {
+  background: var(--color-accent);
+  color: var(--color-text);
+  padding: var(--space-md) var(--space-lg);
+  text-align: center;
+}
+.spotlight-hero__name { margin: 0; font-size: var(--font-size-3xl); }
+
+/* Body wrapper */
+.spotlight-body { padding-block: var(--space-lg); max-width: 800px; }
+
+/* Q&A accordion */
+.spotlight-qa { margin-block: var(--space-lg); }
+.spotlight-qa__item { border-bottom: 1px solid var(--color-border); padding-block: var(--space-sm); }
+.spotlight-qa__question { font-weight: 600; cursor: pointer; padding-block: var(--space-xs); list-style: none; }
+.spotlight-qa__question::-webkit-details-marker { display: none; }
+.spotlight-qa__question::after { content: "+"; float: right; font-weight: 400; }
+.spotlight-qa__item[open] .spotlight-qa__question::after { content: "−"; }
+.spotlight-qa__answer { padding-block: var(--space-sm) 0; color: var(--color-text-muted); }
+.spotlight-qa__answer p { margin-block: var(--space-xs); }
+
+/* Secondary image */
+.spotlight-secondary-image { margin-block: var(--space-lg); }
+.spotlight-secondary-image img { width: 100%; height: auto; display: block; }
+
+/* Race resume */
+.spotlight-race-resume { margin-block: var(--space-lg); }
+.spotlight-race-resume__heading { text-align: center; margin-bottom: var(--space-md); }
+.spotlight-race-resume__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-md);
+}
+.spotlight-race-group { padding: var(--space-md); background: var(--color-accent); color: var(--color-text); }
+.spotlight-race-group:nth-child(even) { background: var(--color-sage-light); }
+.spotlight-race-group__title { margin-block: 0 var(--space-sm); font-size: var(--font-size-lg); }
+.spotlight-race-group__list { list-style: none; padding: 0; margin: 0; }
+.spotlight-race-group__list li { padding-block: 4px; font-size: var(--font-size-sm); }
+
+/* Back link */
+.spotlight-back { display: inline-block; margin-top: var(--space-lg); font-weight: 600; }
+.spotlight-back:hover { text-decoration: underline; }
