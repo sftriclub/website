@@ -111,7 +111,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   background-color: var(--color-accent);
   color: var(--color-text);
 }
-.btn--signup {
+.btn--login {
   background-color: var(--color-cta);
   color: var(--color-text-light);
 }
@@ -143,10 +143,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 .nav-wrapper { flex: 1; display: flex; justify-content: center; }
 
-.header-signup { font-size: var(--font-size-sm); padding: 0.5rem 1.25rem; margin-left: auto; }
+.header-login { font-size: var(--font-size-sm); padding: 0.5rem 1.25rem; margin-left: auto; }
 
 @media (max-width: 768px) {
-  .header-signup { display: none; }
+  .header-login { display: none; }
 }
 
 .site-logo img {
