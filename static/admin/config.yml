@@ -203,6 +203,37 @@ collections:
       - { name: hero_image, label: Hero Image, widget: image, required: false }
       - { name: body, label: Body, widget: markdown }
 
+  # ── Member Spotlight ─────────────────────────────────────────────────────
+  - name: member_spotlight
+    label: Member Spotlight
+    folder: content/member-spotlight
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: title, label: Name, widget: string }
+      - { name: date, label: Date, widget: datetime }
+      - { name: summary, label: Summary, widget: text, hint: "1-2 sentences shown on the spotlight listing." }
+      - { name: hero_image, label: Hero Photo, widget: image }
+      - { name: hero_image_alt, label: "Hero Photo Alt Text (optional)", widget: string, required: false, hint: "For screen readers. Defaults to the member's name." }
+      - { name: secondary_image, label: "Secondary Photo (optional)", widget: image, required: false }
+      - { name: secondary_image_alt, label: "Secondary Photo Alt Text (optional)", widget: string, required: false, hint: "Defaults to the member's name. Override when the photo shows something other than the member alone." }
+      - name: questions
+        label: Q&A
+        widget: list
+        fields:
+          - { name: q, label: Question, widget: string }
+          - { name: a, label: Answer, widget: text }
+      - name: race_groups
+        label: Race Resume
+        widget: list
+        fields:
+          - { name: title, label: Category, widget: string, hint: "e.g. Ironman, Long Course 70.3, Olympic, Sprint" }
+          - name: races
+            label: Races
+            widget: list
+            field: { name: race, label: Race, widget: string }
+      - { name: body, label: "Body (optional intro/notes)", widget: markdown, required: false }
+
   # ── Sponsors ──────────────────────────────────────────────────────────────
   - name: sponsors
     label: Sponsors

@@ -1,0 +1,10 @@
+<article class="spotlight-card">
+  <a class="spotlight-card__image-link" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">
+    <img class="spotlight-card__image" src="{{ .Params.hero_image }}" alt="{{ .Title }}" loading="lazy">
+  </a>
+  <div class="spotlight-card__body">
+    <h3 class="spotlight-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <p class="spotlight-card__summary">{{ .Params.summary }}</p>
+    <a class="spotlight-card__link" href="{{ .RelPermalink }}">Read story →</a>
+  </div>
+</article>
