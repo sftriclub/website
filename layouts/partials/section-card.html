@@ -1,0 +1,12 @@
+<article class="section-card">
+  {{ with .Params.hero_image }}
+  <a class="section-card__image-link" href="{{ $.RelPermalink }}" tabindex="-1" aria-hidden="true">
+    <img class="section-card__image" src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+  </a>
+  {{ end }}
+  <div class="section-card__body">
+    <h3 class="section-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    {{ with .Params.description }}<p class="section-card__summary">{{ . }}</p>{{ end }}
+    <a class="section-card__link" href="{{ .RelPermalink }}">Learn more →</a>
+  </div>
+</article>
