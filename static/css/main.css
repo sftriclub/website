@@ -85,6 +85,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   padding-inline: var(--space-md);
 }
 
+/* Narrow reading column for long-form prose */
+.container--narrow { max-width: 760px; }
+
 .visually-hidden {
   position: absolute;
   width: 1px; height: 1px;
@@ -322,6 +325,23 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .page-body li { margin-bottom: var(--space-xs); }
 .page-body a  { text-decoration: underline; text-underline-offset: 3px; color: var(--color-text-blue) }
 .page-body strong { font-weight: 700; }
+
+/* CTA block (foot of sport / training single pages) */
+.cta-block {
+  background-color: var(--color-sage-light);
+  margin-top: var(--space-lg);
+  padding-block: var(--space-lg);
+}
+.cta-block__inner { text-align: center; }
+.cta-block__title { font-size: var(--font-size-2xl); color: var(--color-text); }
+.cta-block__text { color: var(--color-text-muted); margin-top: var(--space-xs); }
+.cta-block__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
 
 .notice-box {
   background-color: var(--color-notice);
