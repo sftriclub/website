@@ -1,0 +1,11 @@
+<section class="list-page">
+  <div class="list-page__header container">
+    <h1 class="page-title">{{ .Title }}</h1>
+    {{ with .Content }}<div class="page-body">{{ . }}</div>{{ end }}
+  </div>
+  <div class="list-page__grid container">
+    {{ range .Pages.ByWeight }}
+      {{ partial "section-card.html" . }}
+    {{ end }}
+  </div>
+</section>

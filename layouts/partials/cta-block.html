@@ -1,0 +1,18 @@
+{{ if not .Params.no_cta }}
+{{ $pText := "Join the Club" }}
+{{ if isset .Params "cta_primary_text" }}{{ $pText = .Params.cta_primary_text }}{{ end }}
+{{ $pURL := .Params.cta_primary_url | default "/membership" }}
+{{ $sText := "Try a Free Workout" }}
+{{ if isset .Params "cta_secondary_text" }}{{ $sText = .Params.cta_secondary_text }}{{ end }}
+{{ $sURL := .Params.cta_secondary_url | default "/trial-workout" }}
+<aside class="cta-block">
+  <div class="container container--narrow cta-block__inner">
+    <h2 class="cta-block__title">{{ .Params.cta_title | default "Ready to get started?" }}</h2>
+    {{ with .Params.cta_text }}<p class="cta-block__text">{{ . }}</p>{{ end }}
+    <div class="cta-block__actions">
+      {{ with $pText }}<a class="btn btn--primary" href="{{ $pURL }}">{{ . }}</a>{{ end }}
+      {{ with $sText }}<a class="btn btn--outline" href="{{ $sURL }}">{{ . }}</a>{{ end }}
+    </div>
+  </div>
+</aside>
+{{ end }}

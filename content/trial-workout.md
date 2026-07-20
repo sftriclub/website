@@ -1,6 +1,7 @@
 ---
 title: "Free Track Workout"
 description: "Drop in for a free track session with the SF Tri Club. All levels welcome."
+cta_secondary_text: ""
 ---
 
 **Thinking of joining the SF Tri Club?** Just moved to the city and want to make new friends? Looking for more fun and fitness in your life? Drop in for a free track session with us! We meet on Tuesday evenings at Kezar Stadium. ([Google Maps](https://maps.app.goo.gl/p2DWg2o9cRj33ieo8))

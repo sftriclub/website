@@ -69,7 +69,10 @@ body {
   display: flex;
   flex-direction: column;
 }
-#main-content { flex: 1; }
+#main-content { flex: 1; display: flex; flex-direction: column; }
+/* Single-page article fills main so a short page's CTA is pushed to the bottom */
+.page { flex: 1; display: flex; flex-direction: column; }
+.page > .page-body { flex: 1 0 auto; }
 img, video { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
 a:not([class]) { color: var(--color-text-blue); text-decoration: underline; text-underline-offset: 3px; }
@@ -84,6 +87,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   margin-inline: auto;
   padding-inline: var(--space-md);
 }
+
+/* Narrow reading column for long-form prose */
+.container--narrow { max-width: 760px; }
 
 .visually-hidden {
   position: absolute;
@@ -323,6 +329,23 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .page-body a  { text-decoration: underline; text-underline-offset: 3px; color: var(--color-text-blue) }
 .page-body strong { font-weight: 700; }
 
+/* CTA block (foot of sport / training single pages) */
+.cta-block {
+  background-color: var(--color-sage-light);
+  margin-top: var(--space-lg);
+  padding-block: var(--space-lg);
+}
+.cta-block__inner { text-align: center; }
+.cta-block__title { font-size: var(--font-size-2xl); color: var(--color-text); }
+.cta-block__text { color: var(--color-text-muted); margin-top: var(--space-xs); }
+.cta-block__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
 .notice-box {
   background-color: var(--color-notice);
   border: 2.5px solid var(--color-border-dark);
@@ -494,6 +517,18 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .news-card__summary { color: var(--color-text-muted); flex: 1; }
 .news-card__link { font-size: var(--font-size-sm); font-weight: 600; margin-top: auto; }
 .news-card__link:hover { text-decoration: underline; }
+
+/* Section card (sports / training landing grids) */
+.section-card { display: flex; flex-direction: column; }
+.section-card__image-link { display: block; aspect-ratio: 16/9; overflow: hidden; }
+.section-card__image { width: 100%; height: 100%; object-fit: cover; transition: transform var(--transition-base); }
+.section-card__image-link:hover .section-card__image { transform: scale(1.03); }
+.section-card__body { padding: var(--space-sm) 0; display: flex; flex-direction: column; gap: var(--space-xs); flex: 1; }
+.section-card__title { font-size: var(--font-size-lg); font-weight: 700; }
+.section-card__title a:hover { text-decoration: underline; }
+.section-card__summary { color: var(--color-text-muted); flex: 1; }
+.section-card__link { font-size: var(--font-size-sm); font-weight: 600; margin-top: auto; }
+.section-card__link:hover { text-decoration: underline; }
 
 /* Single post */
 .news-post__hero {
