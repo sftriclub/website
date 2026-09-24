@@ -1,7 +1,7 @@
 ---
 title: Coaching
 subtitle: ''
-hero_image: /images/sports/placeholder.jpg
+hero_image: "/images/shared/placeholder.jpg"
 description: SF Tri Club partners with professional coaches to support member development.
 ---
 

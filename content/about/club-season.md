@@ -53,4 +53,4 @@ The mild climate in Northern California allows the triathlon season to stretch o
 {{< /column >}}
 {{< /columns >}}
 
-![Club members on the Holiday Costume Ride](/images/winter_season.webp)
+![Club members on the Holiday Costume Ride](/images/about/winter_season.webp)

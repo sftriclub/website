@@ -17,7 +17,7 @@
       {{ range (where .Site.RegularPages "Section" "sports").ByWeight }}
       <article class="sport-card">
         <div class="sport-card__image-wrap">
-          <img src="{{ with .Params.hero_image }}{{ . }}{{ else }}/images/placeholder.jpg{{ end }}"
+          <img src="{{ with .Params.hero_image }}{{ . }}{{ else }}/images/shared/placeholder.jpg{{ end }}"
                alt="{{ .Title }}" class="sport-card__image" loading="lazy">
         </div>
         <div class="sport-card__body">

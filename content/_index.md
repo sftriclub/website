@@ -4,5 +4,5 @@ hero_headline: "Swim, Bike, Run with the SF Tri Club"
 hero_subheadline: "A welcoming community for triathletes of all levels in San Francisco."
 hero_cta_text: "Try a Free Workout"
 hero_cta_url: "/trial-workout/"
-hero_image: "/images/sports/hero.jpg"
+hero_image: "/images/shared/placeholder.jpg"
 ---
