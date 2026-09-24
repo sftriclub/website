@@ -1,7 +1,7 @@
 ---
 title: "Half Ironman"
 subtitle: "70.3 miles. Build the endurance to get there."
-hero_image: "/images/sports/swim.jpg"
+hero_image: "/images/sports/swim.webp"
 description: "A structured training program for athletes targeting a 70.3-mile Half Ironman race."
 ---
 
@@ -13,7 +13,7 @@ As a member you'll get access to weekly coached track and swim workouts, member-
 Either way, you're welcome to [drop in for a free track workout](/trial-workout).
 {{< /notice >}}
 
-{{< image-section src="/images/training/im_70-3_santa_cruz_swim.webp" alt="IM Santa Rosa Medals" side="right" >}}
+{{< image-section src="/images/training/im_70-3_santa_cruz_swim.webp" alt="A group of SF Tri Club athletes in wetsuits on the beach after an open water swim at Santa Cruz, with the wharf behind them." side="right" >}}
 ### Want to do a Half Ironman?
 #### Our 70.3 training program has your back!
 

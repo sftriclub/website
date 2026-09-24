@@ -6,11 +6,11 @@
 
   <div class="spotlight-layout container">
     <div class="spotlight-media">
-      <img class="spotlight-hero__image" src="{{ .Params.hero_image }}" alt="{{ .Params.hero_image_alt | default .Title }}">
+      {{ partial "image.html" (dict "src" .Params.hero_image "alt" (.Params.hero_image_alt | default .Title) "class" "spotlight-hero__image" "sizes" "(max-width: 900px) 100vw, 40vw" "loading" "eager" "fetchpriority" "high") }}
 
       {{ with .Params.secondary_image }}
       <figure class="spotlight-secondary-image">
-        <img src="{{ . }}" alt="{{ $.Params.secondary_image_alt | default $.Title }}">
+        {{ partial "image.html" (dict "src" . "alt" ($.Params.secondary_image_alt | default $.Title) "sizes" "(max-width: 900px) 100vw, 40vw") }}
       </figure>
       {{ end }}
     </div>

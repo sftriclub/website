@@ -1,6 +1,6 @@
 <article class="spotlight-card">
   <a class="spotlight-card__image-link" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">
-    <img class="spotlight-card__image" src="{{ .Params.hero_image }}" alt="{{ .Title }}" loading="lazy">
+    {{ partial "image.html" (dict "src" .Params.hero_image "alt" (.Params.hero_image_alt | default .Title) "class" "spotlight-card__image" "sizes" "(max-width: 700px) 100vw, 33vw") }}
   </a>
   <div class="spotlight-card__body">
     <h3 class="spotlight-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
