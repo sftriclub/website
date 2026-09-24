@@ -1,7 +1,7 @@
 {{ define "main" }}
 <article class="spotlight">
   <div class="spotlight-banner container">
-    <span class="spotlight-banner__name">{{ .Title }}</span>
+    <h1 class="spotlight-banner__name">{{ .Title }}</h1>
   </div>
 
   <div class="spotlight-layout container">
@@ -33,7 +33,7 @@
 
   {{ with .Params.race_groups }}
   <section class="spotlight-race-resume container">
-    <div class="spotlight-race-resume__heading"><span>Race Resume</span></div>
+    <div class="spotlight-race-resume__heading"><h2 class="spotlight-race-resume__title">Race Resume</h2></div>
     <div class="spotlight-race-resume__body">
       {{ range . }}
       <div class="spotlight-race-group">

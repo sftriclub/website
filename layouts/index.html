@@ -1,7 +1,10 @@
 {{ define "main" }}
 
 {{/* ── Hero ─────────────────────────────────────────────────────────────── */}}
-<section class="hero" style="background-image: url('{{ .Params.hero_image }}')">
+<section class="hero">
+  {{ with .Params.hero_image }}
+  <img class="hero-bg-image" src="{{ . }}" alt="{{ $.Params.hero_image_alt | default "" }}" fetchpriority="high">
+  {{ end }}
   <div class="hero__overlay"></div>
   <div class="hero__content container">
     <h1 class="hero__headline">{{ .Params.hero_headline }}</h1>

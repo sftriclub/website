@@ -29,18 +29,21 @@ collections:
         file: content/_index.md
         fields:
           - { name: title, label: Title, widget: string }
+          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
           - { name: hero_headline, label: Hero Headline, widget: string }
           - { name: hero_subheadline, label: Hero Subheadline, widget: string }
           - { name: hero_cta_text, label: CTA Button Text, widget: string }
           - { name: hero_cta_url, label: CTA Button URL, widget: string }
           - { name: hero_image, label: Hero Image, widget: image }
+          - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
 
       - name: trial_workout
         label: Trial Workout
         file: content/trial-workout.md
         fields:
           - { name: title, label: Title, widget: string }
-          - { name: description, label: SEO Description, widget: string, required: false }
+          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
+          - { name: cta_secondary_text, label: Secondary CTA Text, widget: string, required: false }
           - { name: body, label: Body, widget: markdown }
 
       - name: membership
@@ -48,7 +51,8 @@ collections:
         file: content/membership.md
         fields:
           - { name: title, label: Title, widget: string }
-          - { name: description, label: SEO Description, widget: string, required: false }
+          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
+          - { name: no_cta, label: Hide the footer call-to-action, widget: boolean, required: false, default: true }
           - { name: body, label: Body, widget: markdown }
 
       - name: contact
@@ -56,7 +60,7 @@ collections:
         file: content/contact.md
         fields:
           - { name: title, label: Title, widget: string }
-          - { name: description, label: SEO Description, widget: string, required: false }
+          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
 
   # ── Training Programs ─────────────────────────────────────────────────────
   - name: training
@@ -64,6 +68,14 @@ collections:
     media_folder: /static/images/training
     public_folder: /images/training
     files:
+
+      - name: training_index
+        label: "Training Landing Page"
+        file: content/training/_index.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
+          - { name: body, label: Intro Text, widget: markdown, required: false, hint: "Short intro shown above the cards on this landing page." }
       - name: zero_to_sixty
         label: Zero to Sixty
         file: content/training/zero-to-sixty.md
@@ -71,7 +83,8 @@ collections:
           - { name: title, label: Title, widget: string }
           - { name: subtitle, label: Subtitle, widget: string, required: false }
           - { name: hero_image, label: Hero Image, widget: image, required: false }
-          - { name: description, label: Card Description, widget: string, required: false }
+          - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
+          - { name: description, label: Card Description, widget: text, required: false, hint: "Used on the programme cards AND as the page's SEO description. Shown in Google results and link previews. Aim for 120-160 characters." }
           - { name: body, label: Body, widget: markdown }
 
       - name: half_ironman
@@ -81,7 +94,8 @@ collections:
           - { name: title, label: Title, widget: string }
           - { name: subtitle, label: Subtitle, widget: string, required: false }
           - { name: hero_image, label: Hero Image, widget: image, required: false }
-          - { name: description, label: Card Description, widget: string, required: false }
+          - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
+          - { name: description, label: Card Description, widget: text, required: false, hint: "Used on the programme cards AND as the page's SEO description. Shown in Google results and link previews. Aim for 120-160 characters." }
           - { name: body, label: Body, widget: markdown }
 
       - name: ironman
@@ -91,7 +105,8 @@ collections:
           - { name: title, label: Title, widget: string }
           - { name: subtitle, label: Subtitle, widget: string, required: false }
           - { name: hero_image, label: Hero Image, widget: image, required: false }
-          - { name: description, label: Card Description, widget: string, required: false }
+          - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
+          - { name: description, label: Card Description, widget: text, required: false, hint: "Used on the programme cards AND as the page's SEO description. Shown in Google results and link previews. Aim for 120-160 characters." }
           - { name: body, label: Body, widget: markdown }
 
       - name: training_weekend
@@ -101,7 +116,8 @@ collections:
           - { name: title, label: Title, widget: string }
           - { name: subtitle, label: Subtitle, widget: string, required: false }
           - { name: hero_image, label: Hero Image, widget: image, required: false }
-          - { name: description, label: Card Description, widget: string, required: false }
+          - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
+          - { name: description, label: Card Description, widget: text, required: false, hint: "Used on the programme cards AND as the page's SEO description. Shown in Google results and link previews. Aim for 120-160 characters." }
           - { name: body, label: Body, widget: markdown }
 
       - name: coaching
@@ -111,7 +127,8 @@ collections:
           - { name: title, label: Title, widget: string }
           - { name: subtitle, label: Subtitle, widget: string, required: false }
           - { name: hero_image, label: Hero Image, widget: image, required: false }
-          - { name: description, label: Card Description, widget: string, required: false }
+          - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
+          - { name: description, label: Card Description, widget: text, required: false, hint: "Used on the programme cards AND as the page's SEO description. Shown in Google results and link previews. Aim for 120-160 characters." }
           - { name: body, label: Body, widget: markdown }
 
   # ── Sports ────────────────────────────────────────────────────────────────
@@ -120,13 +137,24 @@ collections:
     media_folder: /static/images/sports
     public_folder: /images/sports
     files:
+
+      - name: sports_index
+        label: "Sports Landing Page"
+        file: content/sports/_index.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
+          - { name: body, label: Intro Text, widget: markdown, required: false, hint: "Short intro shown above the cards on this landing page." }
       - name: swim
         label: Swim
         file: content/sports/swim.md
         fields:
           - { name: title, label: Title, widget: string }
           - { name: hero_image, label: Hero Image, widget: image, required: false }
-          - { name: description, label: SEO Description, widget: string, required: false }
+          - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
+          - { name: hero_position, label: Hero Image Focal Point, widget: string, required: false, hint: "CSS object-position, e.g. \"center 25%\". Leave blank to centre the image." }
+          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
+          - { name: weight, label: Sort Order, widget: number, required: false, value_type: int, hint: "Controls the order of the sport cards on the homepage and the Sports page." }
           - { name: body, label: Body, widget: markdown }
 
       - name: bike
@@ -135,7 +163,10 @@ collections:
         fields:
           - { name: title, label: Title, widget: string }
           - { name: hero_image, label: Hero Image, widget: image, required: false }
-          - { name: description, label: SEO Description, widget: string, required: false }
+          - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
+          - { name: hero_position, label: Hero Image Focal Point, widget: string, required: false, hint: "CSS object-position, e.g. \"center 25%\". Leave blank to centre the image." }
+          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
+          - { name: weight, label: Sort Order, widget: number, required: false, value_type: int, hint: "Controls the order of the sport cards on the homepage and the Sports page." }
           - { name: body, label: Body, widget: markdown }
 
       - name: run
@@ -144,7 +175,10 @@ collections:
         fields:
           - { name: title, label: Title, widget: string }
           - { name: hero_image, label: Hero Image, widget: image, required: false }
-          - { name: description, label: SEO Description, widget: string, required: false }
+          - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
+          - { name: hero_position, label: Hero Image Focal Point, widget: string, required: false, hint: "CSS object-position, e.g. \"center 25%\". Leave blank to centre the image." }
+          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
+          - { name: weight, label: Sort Order, widget: number, required: false, value_type: int, hint: "Controls the order of the sport cards on the homepage and the Sports page." }
           - { name: body, label: Body, widget: markdown }
 
   # ── About ─────────────────────────────────────────────────────────────────
@@ -155,12 +189,20 @@ collections:
     media_folder: /static/images/about
     public_folder: /images/about
     files:
+
+      - name: about_index
+        label: "About Landing Page"
+        file: content/about/_index.md
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
+          - { name: body, label: Intro Text, widget: markdown, required: false, hint: "Short intro shown above the cards on this landing page." }
       - name: mission
         label: Our Mission
         file: content/about/mission.md
         fields:
           - { name: title, label: Title, widget: string }
-          - { name: description, label: SEO Description, widget: string, required: false }
+          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
           - { name: body, label: Body, widget: markdown }
 
       - name: code_of_conduct
@@ -168,6 +210,7 @@ collections:
         file: content/about/code-of-conduct.md
         fields:
           - { name: title, label: Title, widget: string }
+          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
           - { name: body, label: Body, widget: markdown }
 
       - name: social_events
@@ -177,6 +220,7 @@ collections:
         public_folder: /images/social
         fields:
           - { name: title, label: Title, widget: string }
+          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
           - { name: body, label: Body, widget: markdown }
 
       - name: giving_back
@@ -186,6 +230,7 @@ collections:
         public_folder: /images/giving_back
         fields:
           - { name: title, label: Title, widget: string }
+          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
           - { name: body, label: Body, widget: markdown }
 
       - name: club_season
@@ -193,6 +238,7 @@ collections:
         file: content/about/club-season.md
         fields:
           - { name: title, label: Title, widget: string }
+          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
           - { name: body, label: Body, widget: markdown }
 
       - name: faq
@@ -200,6 +246,8 @@ collections:
         file: content/about/faq.md
         fields:
           - { name: title, label: Title, widget: string }
+          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
+          - { name: layout, label: Layout, widget: hidden, default: faq }
           - name: questions
             label: Questions
             widget: list
@@ -219,8 +267,9 @@ collections:
       - { name: title, label: Title, widget: string }
       - { name: date, label: Date, widget: datetime }
       - { name: author, label: Author, widget: string }
-      - { name: summary, label: Summary, widget: string, hint: "1-2 sentences shown on the news listing and homepage teaser." }
+      - { name: summary, label: Summary, widget: text, hint: "1-2 sentences shown on the news listing and homepage teaser. Also used as the post's SEO description, so keep it under 160 characters." }
       - { name: hero_image, label: Hero Image, widget: image, required: false }
+      - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
       - { name: body, label: Body, widget: markdown }
 
   # ── Member Spotlight ─────────────────────────────────────────────────────
@@ -236,7 +285,7 @@ collections:
     fields:
       - { name: title, label: Name, widget: string }
       - { name: date, label: Date, widget: datetime }
-      - { name: summary, label: Summary, widget: text, hint: "1-2 sentences shown on the spotlight listing." }
+      - { name: summary, label: Summary, widget: text, hint: "1-2 sentences shown on the spotlight listing. Also used as the page's SEO description, so keep it under 160 characters." }
       - { name: hero_image, label: Hero Photo, widget: image }
       - { name: hero_image_alt, label: "Hero Photo Alt Text (optional)", widget: string, required: false, hint: "For screen readers. Defaults to the member's name." }
       - { name: secondary_image, label: "Secondary Photo (optional)", widget: image, required: false }
