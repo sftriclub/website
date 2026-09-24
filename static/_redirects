@@ -3,5 +3,35 @@
 /login-redirect/   https://heylo.group/sftriclub      302
 
 # Legacy Squarespace URL redirects
-# Add entries here if any Squarespace URLs differ from the new Hugo slugs.
-# Format: /old-path/    /new-path/    301
+#
+# Source: the live Squarespace sitemap at sftriclub.org/sitemap.xml, captured
+# 2026-09-23 before cutover. Every target below was confirmed by reading the
+# old page's <title>, not inferred from the slug -- /whatshappening really is
+# the Club Season page, and /training/weekend was still titled "About 3".
+#
+# /about was the old Mission page, but it points at the new About landing page
+# so that /about and /about/ both end up in the same place.
+#
+# Format: /old-path    /new-path    301
+
+/home                     /                             301
+/about                    /about/                       301
+/about/social             /about/social-events/         301
+/boardofficers            /about/board/                 301
+/code-of-conduct          /about/code-of-conduct/       301
+/faq                      /about/faq/                   301
+/givingback               /about/giving-back/           301
+/sponsors                 /about/sponsors/              301
+/whatshappening           /about/club-season/           301
+/swim                     /sports/swim/                 301
+/bike                     /sports/bike/                 301
+/run                      /sports/run/                  301
+/coaching                 /training/coaching/           301
+/training/703             /training/half-ironman/       301
+/training/ironman         /training/ironman/            301
+/training/weekend         /training/training-weekend/   301
+/training/zero-to-sixty   /training/zero-to-sixty/      301
+/jointheclub              /membership/                  301
+/freetrial                /trial-workout/               301
+/membershowcase           /member-spotlight/            301
+/contact                  /contact/                     301
