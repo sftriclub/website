@@ -1,0 +1,6 @@
+{{- /* Markdown images go through the responsive partial so body images carry
+       dimensions and a srcset like every other image on the site. */ -}}
+{{- partial "image.html" (dict
+      "src" .Destination
+      "alt" .PlainText
+      "sizes" "(max-width: 800px) 100vw, 800px") -}}

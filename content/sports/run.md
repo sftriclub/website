@@ -1,7 +1,8 @@
 ---
 title: "Run"
 weight: 3
-hero_image: "/images/sports/run.jpg"
+hero_image: "/images/sports/run.webp"
+hero_image_alt: "Six SF Tri Club members in running kit and race bibs with their arms around each other at the Wildflower race."
 hero_position: "center 25%"
 description: "Track workouts, member-led group runs, and running clinics with Coach JD."
 ---

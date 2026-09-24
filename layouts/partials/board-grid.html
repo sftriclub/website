@@ -2,13 +2,12 @@
   {{ range hugo.Data.board.members }}
   <li class="board-card">
     <div class="board-card__photo-wrap">
-      <img
-        src="{{ .photo }}"
-        alt="{{ .name }}"
-        class="board-card__photo"
-        loading="lazy"
-        onerror="this.src='/images/shared/placeholder.jpg'"
-      >
+      {{ partial "image.html" (dict
+        "src" .photo
+        "alt" .name
+        "class" "board-card__photo"
+        "sizes" "(max-width: 700px) 40vw, 180px"
+        "onerror" "this.src='/images/shared/placeholder.jpg'") }}
     </div>
     <div class="board-card__body">
       <h3 class="board-card__name">{{ .name }}</h3>

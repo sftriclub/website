@@ -1,0 +1,74 @@
+{{- /*
+  Responsive <img> for a site-relative path such as /images/sports/swim.webp.
+
+  Emits intrinsic width/height (so the browser reserves the right box) and a
+  srcset of downscaled variants, but only when the source is a raster image
+  Hugo can actually process. SVGs, remote paths and anything missing from the
+  asset mount fall back to a plain <img>, so a broken or unusual src degrades
+  instead of failing the build.
+
+  Params:
+    src            (required) site-relative path, e.g. /images/sports/swim.webp
+    alt            alt text; defaults to "" (decorative)
+    class          class attribute
+    sizes          sizes attribute; defaults to 100vw
+    loading        "lazy" (default) or "eager"
+    fetchpriority  e.g. "high" for the LCP image
+    style          inline style passthrough (used for hero object-position)
+    onerror        inline JS fallback, for images sourced from editable data
+*/ -}}
+{{- $src := .src -}}
+{{- $alt := .alt | default "" -}}
+{{- $class := .class -}}
+{{- $sizes := .sizes | default "100vw" -}}
+{{- $loading := .loading | default "lazy" -}}
+{{- $priority := .fetchpriority -}}
+{{- $style := .style -}}
+{{- $onerror := .onerror -}}
+
+{{- $res := "" -}}
+{{- if and $src (hasPrefix $src "/") -}}
+  {{- $res = resources.Get (strings.TrimPrefix "/" $src) -}}
+{{- end -}}
+
+{{- $isRaster := false -}}
+{{- if $res -}}
+  {{- $sub := $res.MediaType.SubType -}}
+  {{- if and (eq $res.MediaType.MainType "image") (in (slice "jpeg" "png" "webp") $sub) -}}
+    {{- $isRaster = true -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Build the srcset. Each resize is wrapped in `try` so a file whose
+       extension lies about its format (or any other decode failure) degrades
+       to a plain <img> instead of failing the whole build. */ -}}
+{{- $srcset := slice -}}
+{{- $ok := false -}}
+{{- if $isRaster -}}
+  {{- $probe := try ($res.Resize "64x") -}}
+  {{- if not $probe.Err -}}
+    {{- $ok = true -}}
+    {{- range (slice 480 768 1200 1600) -}}
+      {{- if lt . $res.Width -}}
+        {{- $v := $res.Resize (printf "%dx q82" .) -}}
+        {{- $srcset = $srcset | append (printf "%s %dw" $v.RelPermalink $v.Width) -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $srcset = $srcset | append (printf "%s %dw" $src $res.Width) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if $ok -}}
+  <img src="{{ $src }}"{{ if gt (len $srcset) 1 }} srcset="{{ delimit $srcset ", " }}" sizes="{{ $sizes }}"{{ end }}
+       width="{{ $res.Width }}" height="{{ $res.Height }}" alt="{{ $alt }}"
+       {{ with $class }}class="{{ . }}" {{ end }}loading="{{ $loading }}"
+       {{ with $priority }}fetchpriority="{{ . }}" {{ end }}decoding="async"
+       {{- with $style }} style="{{ . | safeCSS }}"{{ end }}
+       {{- with $onerror }} onerror="{{ . | safeJS }}"{{ end }}>
+{{- else -}}
+  <img src="{{ $src }}" alt="{{ $alt }}"
+       {{ with $class }}class="{{ . }}" {{ end }}loading="{{ $loading }}"
+       {{ with $priority }}fetchpriority="{{ . }}" {{ end }}decoding="async"
+       {{- with $style }} style="{{ . | safeCSS }}"{{ end }}
+       {{- with $onerror }} onerror="{{ . | safeJS }}"{{ end }}>
+{{- end -}}
