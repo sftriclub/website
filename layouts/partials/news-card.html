@@ -1,7 +1,7 @@
 <article class="news-card">
   {{ with .Params.hero_image }}
   <a class="news-card__image-link" href="{{ $.RelPermalink }}" tabindex="-1" aria-hidden="true">
-    <img class="news-card__image" src="{{ . }}" alt="{{ $.Title }}" loading="lazy" onerror="this.parentElement.remove()">
+    {{ partial "image.html" (dict "src" . "alt" ($.Params.hero_image_alt | default "") "class" "news-card__image" "sizes" "(max-width: 700px) 100vw, 33vw" "onerror" "this.parentElement.remove()") }}
   </a>
   {{ end }}
   <div class="news-card__body">

@@ -2,8 +2,49 @@ baseURL = "https://sftriclub.org/"
 languageCode = "en-us"
 title = "San Francisco Triathlon Club"
 
+# Generate robots.txt from layouts/robots.txt (points crawlers at the sitemap).
+enableRobotsTXT = true
+
+# No content uses tags or categories, so the empty /tags/ and /categories/
+# pages were thin content sitting in the sitemap.
+disableKinds = ["taxonomy", "term"]
+
+# The CMS uploads to static/images, but Hugo's image pipeline can only read
+# from assets/. Mounting the same directory into assets/images lets templates
+# read intrinsic dimensions and build srcsets from those files while they
+# continue to be served verbatim at /images/...  Declaring any mount replaces
+# Hugo's defaults, so the standard ones are repeated below.
+[[module.mounts]]
+  source = "content"
+  target = "content"
+[[module.mounts]]
+  source = "data"
+  target = "data"
+[[module.mounts]]
+  source = "layouts"
+  target = "layouts"
+[[module.mounts]]
+  source = "i18n"
+  target = "i18n"
+[[module.mounts]]
+  source = "archetypes"
+  target = "archetypes"
+[[module.mounts]]
+  source = "assets"
+  target = "assets"
+[[module.mounts]]
+  source = "static"
+  target = "static"
+[[module.mounts]]
+  source = "static/images"
+  target = "assets/images"
+
 [params]
   description = "A multi-sport club and 501(c)(3) nonprofit in San Francisco."
+  # Appended to the site title on the homepage <title> tag.
+  tagline = "Swim, Bike and Run in San Francisco"
+  # Fallback social share image for pages without a hero image.
+  ogImage = "/sf-tri-logo-cream.png"
   email = "info@sftriclub.org"
   instagram = "https://www.instagram.com/sftriclub"
   facebook = "https://www.facebook.com/sftriclub"

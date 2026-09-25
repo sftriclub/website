@@ -1,7 +1,8 @@
 {{ define "main" }}
 <article class="news-post">
   {{ with .Params.hero_image }}
-  <div class="news-post__hero" style="background-image: url('{{ . }}')">
+  <div class="news-post__hero">
+    {{ partial "image.html" (dict "src" . "alt" ($.Params.hero_image_alt | default "") "class" "hero-bg-image" "sizes" "100vw" "loading" "eager" "fetchpriority" "high") }}
     <div class="news-post__hero-overlay"></div>
   </div>
   {{ end }}

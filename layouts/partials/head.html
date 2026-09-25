@@ -1,7 +1,69 @@
+{{- /* ── Title ─────────────────────────────────────────────────────────────
+     Home gets "Site Title | Tagline" so the most-linked page says what the
+     club actually is; every other page gets "Page | Site Title".            */ -}}
+{{- $title := printf "%s | %s" .Title .Site.Title -}}
+{{- if .IsHome -}}
+  {{- $title = .Site.Title -}}
+  {{- with .Site.Params.tagline }}{{ $title = printf "%s | %s" $.Site.Title . }}{{ end -}}
+{{- end -}}
+
+{{- /* ── Description ───────────────────────────────────────────────────────
+     Falls back through description → summary → generated summary → site
+     description, so news posts and spotlights stop sharing one meta tag.    */ -}}
+{{- $description := .Site.Params.description -}}
+{{- with .Description -}}
+  {{- $description = . -}}
+{{- else -}}
+  {{- with .Params.summary -}}
+    {{- $description = . -}}
+  {{- else -}}
+    {{- with .Summary }}{{ $description = . }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- $description = $description | plainify | htmlUnescape | chomp | truncate 160 -}}
+
+{{- /* ── Social share image ────────────────────────────────────────────── */ -}}
+{{- $image := .Site.Params.ogImage -}}
+{{- with .Params.hero_image }}{{ $image = . }}{{ end -}}
+{{- with .Params.image }}{{ $image = . }}{{ end -}}
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
-<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $description }}">
+<link rel="canonical" href="{{ .Permalink }}">
+{{- if .Params.noindex }}
+<meta name="robots" content="noindex, follow">
+{{- end }}
+
+{{/* ── Open Graph ───────────────────────────────────────────────────────── */}}
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:locale" content="en_US">
+{{- with $image }}
+<meta property="og:image" content="{{ . | absURL }}">
+<meta property="og:image:alt" content="{{ with $.Params.hero_image_alt }}{{ . }}{{ else }}{{ $.Title }}{{ end }}">
+{{- end }}
+{{- if and .IsPage (not .Date.IsZero) }}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+{{- with .Lastmod }}<meta property="article:modified_time" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}">{{ end }}
+{{- with .Params.author }}<meta property="article:author" content="{{ . }}">{{ end }}
+{{- end }}
+
+{{/* ── Twitter / X card ─────────────────────────────────────────────────── */}}
+<meta name="twitter:card" content="{{ if $image }}summary_large_image{{ else }}summary{{ end }}">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $description }}">
+{{- with $image }}
+<meta name="twitter:image" content="{{ . | absURL }}">
+{{- end }}
+
+{{ partial "schema.html" . }}
+
 <meta name="theme-color" content="#05422C">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

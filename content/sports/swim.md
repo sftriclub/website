@@ -1,7 +1,8 @@
 ---
 title: "Swim"
 weight: 1
-hero_image: "/images/sports/swim.jpg"
+hero_image: "/images/sports/swim.webp"
+hero_image_alt: "A club swimmer in a wetsuit and pink swim cap smiling on the beach after an open water swim, with other SF Tri Club swimmers and the bay behind her."
 description: "Pool workouts, open water clinics, and the annual Alcatraz Escape Swim."
 ---
 
