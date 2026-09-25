@@ -10,10 +10,8 @@
   </div>
   <div class="list-page__grid container">
     {{/* Member spotlights live in their own section and keep their own landing
-         page, but they're club news too — merge both sets and sort by date so
-         the feed is chronological rather than grouped by section. */}}
-    {{ $feed := union .Pages (where .Site.RegularPages "Section" "member-spotlight") }}
-    {{ range $feed.ByDate.Reverse }}
+         page, but they're club news too. See the partial for the merge. */}}
+    {{ range partial "news-feed-pages.html" . }}
       {{ partial "feed-card.html" . }}
     {{ else }}
       <p>No updates yet.</p>
