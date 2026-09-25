@@ -4,10 +4,17 @@ backend:
   branch: main
   base_url: https://sveltia-cms-auth.sf-tri-club.workers.dev
 
-# Enables editing against the local filesystem via the Decap proxy server (Sveltia
-# speaks the same protocol). Run `mise run cms` and `mise run dev` in two terminals,
-# then visit http://localhost:1313/admin/. The proxy is ignored in production builds.
-local_backend: true
+# Developers can edit a local checkout without logging in: in Chrome or Edge,
+# open http://localhost:1313/admin/ while `hugo server` is running and choose
+# "Work with Local Repository".
+
+site_url: https://sftriclub.org
+
+# Don't write empty optional fields into the files. Some templates check
+# whether a field exists at all (e.g. cta_secondary_text), so an empty value
+# would behave differently from a missing one.
+output:
+  omit_empty_optional_fields: true
 
 # Fallback for anything without its own media folder. Each collection below sets a
 # `media_folder` so uploads land in the right subfolder of static/images/ instead of
@@ -15,6 +22,13 @@ local_backend: true
 # (leading slash = repository root); `public_folder` is the matching site URL path.
 media_folder: static/images
 public_folder: /images
+
+# IMPORTANT: every front matter key a page uses must be listed in its fields,
+# including ones admins shouldn't touch (use `widget: hidden`). Anything
+# missing here may be dropped when an admin saves the page.
+#
+# Reused fields are defined once with a YAML anchor (&name) the first time
+# they appear and repeated with an alias (*name).
 
 collections:
 
@@ -28,39 +42,106 @@ collections:
         label: Homepage
         file: content/_index.md
         fields:
-          - { name: title, label: Title, widget: string }
-          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
-          - { name: hero_headline, label: Hero Headline, widget: string }
-          - { name: hero_subheadline, label: Hero Subheadline, widget: string }
-          - { name: hero_cta_text, label: CTA Button Text, widget: string }
-          - { name: hero_cta_url, label: CTA Button URL, widget: string }
-          - { name: hero_image, label: Hero Image, widget: image }
-          - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
-
-      - name: trial_workout
-        label: Trial Workout
-        file: content/trial-workout.md
-        fields:
-          - { name: title, label: Title, widget: string }
-          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
-          - { name: cta_secondary_text, label: Secondary CTA Text, widget: string, required: false }
-          - { name: body, label: Body, widget: markdown }
+          - &title { name: title, label: Title, widget: string }
+          - &seo { name: description, label: Search engine description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
+          - { name: hero_headline, label: Big headline, widget: string }
+          - { name: hero_subheadline, label: Text under the headline, widget: string }
+          - { name: hero_cta_text, label: Button text, widget: string }
+          - { name: hero_cta_url, label: Button link, widget: string, hint: "A page on this site like /membership/, or a full web address." }
+          - { name: hero_image, label: Background photo, widget: image }
+          - &hero_alt { name: hero_image_alt, label: Photo description, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
 
       - name: membership
         label: Membership
         file: content/membership.md
         fields:
-          - { name: title, label: Title, widget: string }
-          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
-          - { name: no_cta, label: Hide the footer call-to-action, widget: boolean, required: false, default: true }
-          - { name: body, label: Body, widget: markdown }
+          - *title
+          - { name: subtitle, label: Text under the title, widget: string, required: false }
+          - *seo
+          - { name: layout, widget: hidden, default: membership }
+          - { name: no_cta, widget: hidden, default: true }
+          - { name: week_heading, label: Weekly calendar heading, widget: string }
+          - name: week
+            label: Weekly calendar
+            label_singular: Day
+            widget: list
+            summary: "{{fields.day}}"
+            collapsed: true
+            fields:
+              - { name: day, label: Day, widget: string, hint: "Short form, e.g. Tue" }
+              - name: items
+                label: Workouts
+                label_singular: Workout
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { name: sport, label: Sport, widget: select, options: [swim, bike, run], hint: "Sets the color of the card." }
+                  - { name: title, label: Workout name, widget: string }
+                  - { name: when, label: Time of day, widget: string, hint: "e.g. Morning, Evening, 6:45pm" }
+                  - { name: detail, label: Extra detail, widget: string, required: false, hint: "e.g. With Coach JD" }
+          - { name: programs_heading, label: Programs section heading, widget: string }
+          - name: programs
+            label: Programs
+            label_singular: Program
+            widget: list
+            summary: "{{fields.title}}"
+            collapsed: true
+            fields: &membership_card
+              - { name: title, label: Title, widget: string }
+              - { name: text, label: Text, widget: richtext, minimal: true, buttons: [bold, italic, link], editor_components: [] }
+              - { name: url, label: '"Learn more" link', widget: string, required: false, hint: "Leave blank to hide the link." }
+              - { name: show_sponsors, label: Show sponsor logos, widget: boolean, required: false }
+          - { name: perks_heading, label: Perks section heading, widget: string }
+          - name: perks
+            label: Perks
+            label_singular: Perk
+            widget: list
+            summary: "{{fields.title}}"
+            collapsed: true
+            fields: *membership_card
+          - { name: closing_heading, label: Closing heading, widget: string }
+          - { name: closing_image, label: Closing photo, widget: image, media_folder: /static/images/social, public_folder: /images/social }
+          - { name: closing_image_alt, label: Closing photo description, widget: string, required: false }
+          - { name: price, label: Price, widget: string, hint: "e.g. $145 per year" }
+          - { name: price_note, label: Text after the price, widget: string, required: false }
+          - { name: join_text, label: Join button text, widget: string }
+          - { name: join_url, label: Join button link, widget: string }
+
+      - name: trial_workout
+        label: Trial Workout
+        file: content/trial-workout.md
+        fields:
+          - *title
+          - *seo
+          - { name: layout, widget: hidden, default: trial-workout }
+          - { name: no_cta, widget: hidden, default: true }
+          - { name: body, label: Intro text, widget: richtext, minimal: true, editor_components: [] }
+          - name: details
+            label: When, where and who
+            label_singular: Detail
+            widget: list
+            summary: "{{fields.label}}: {{fields.value}}"
+            fields:
+              - { name: label, label: Label, widget: string, hint: "e.g. When" }
+              - { name: value, label: Value, widget: string, hint: "e.g. Tuesday evenings" }
+              - { name: note, label: Small print, widget: string, required: false }
+              - { name: link, label: Link, widget: string, required: false, hint: "e.g. a Google Maps link" }
+              - { name: link_text, label: Link text, widget: string, required: false }
+          - name: steps
+            label: Steps to join
+            label_singular: Step
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: Step, widget: string }
+              - { name: text, label: Details, widget: richtext, minimal: true, buttons: [bold, italic, link], editor_components: [] }
 
       - name: contact
         label: Contact
         file: content/contact.md
         fields:
-          - { name: title, label: Title, widget: string }
-          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
+          - *title
+          - *seo
 
   # ── Training Programs ─────────────────────────────────────────────────────
   - name: training
@@ -73,63 +154,46 @@ collections:
         label: "Training Landing Page"
         file: content/training/_index.md
         fields:
-          - { name: title, label: Title, widget: string }
-          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
-          - { name: body, label: Intro Text, widget: markdown, required: false, hint: "Short intro shown above the cards on this landing page." }
+          - *title
+          - *seo
+          - &intro { name: body, label: Intro text, widget: richtext, required: false, editor_components: [], hint: "Short intro shown above the cards on this landing page." }
       - name: zero_to_sixty
         label: Zero to Sixty
         file: content/training/zero-to-sixty.md
-        fields:
-          - { name: title, label: Title, widget: string }
-          - { name: subtitle, label: Subtitle, widget: string, required: false }
-          - { name: hero_image, label: Hero Image, widget: image, required: false }
-          - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
-          - { name: description, label: Card Description, widget: text, required: false, hint: "Used on the programme cards AND as the page's SEO description. Shown in Google results and link previews. Aim for 120-160 characters." }
-          - { name: body, label: Body, widget: markdown }
+        fields: &program_fields
+          - *title
+          - { name: subtitle, label: Text under the title, widget: string, required: false }
+          - { name: hero_image, label: Top photo, widget: image, required: false, hint: "Optional. Shown as a banner behind the title." }
+          - *hero_alt
+          - { name: card_text, label: Card text, widget: text, required: false, hint: "Short blurb on the homepage and Training page cards. Falls back to the search engine description." }
+          - *seo
+          - &weight { name: weight, label: Sort order, widget: number, required: false, value_type: int, hint: "Lower numbers come first on the homepage and landing page." }
+          - &body
+            name: body
+            label: Page content
+            widget: richtext
+            editor_components: [image, image-section, notice, faq, columns]
+            hint: 'Use the "Insert" menu to add photos next to text, notices, Q&A lists and side-by-side boxes.'
 
       - name: half_ironman
         label: Half Ironman
         file: content/training/half-ironman.md
-        fields:
-          - { name: title, label: Title, widget: string }
-          - { name: subtitle, label: Subtitle, widget: string, required: false }
-          - { name: hero_image, label: Hero Image, widget: image, required: false }
-          - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
-          - { name: description, label: Card Description, widget: text, required: false, hint: "Used on the programme cards AND as the page's SEO description. Shown in Google results and link previews. Aim for 120-160 characters." }
-          - { name: body, label: Body, widget: markdown }
+        fields: *program_fields
 
       - name: ironman
         label: Ironman
         file: content/training/ironman.md
-        fields:
-          - { name: title, label: Title, widget: string }
-          - { name: subtitle, label: Subtitle, widget: string, required: false }
-          - { name: hero_image, label: Hero Image, widget: image, required: false }
-          - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
-          - { name: description, label: Card Description, widget: text, required: false, hint: "Used on the programme cards AND as the page's SEO description. Shown in Google results and link previews. Aim for 120-160 characters." }
-          - { name: body, label: Body, widget: markdown }
+        fields: *program_fields
 
       - name: training_weekend
         label: Training Weekend
         file: content/training/training-weekend.md
-        fields:
-          - { name: title, label: Title, widget: string }
-          - { name: subtitle, label: Subtitle, widget: string, required: false }
-          - { name: hero_image, label: Hero Image, widget: image, required: false }
-          - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
-          - { name: description, label: Card Description, widget: text, required: false, hint: "Used on the programme cards AND as the page's SEO description. Shown in Google results and link previews. Aim for 120-160 characters." }
-          - { name: body, label: Body, widget: markdown }
+        fields: *program_fields
 
       - name: coaching
         label: Coaching
         file: content/training/coaching.md
-        fields:
-          - { name: title, label: Title, widget: string }
-          - { name: subtitle, label: Subtitle, widget: string, required: false }
-          - { name: hero_image, label: Hero Image, widget: image, required: false }
-          - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
-          - { name: description, label: Card Description, widget: text, required: false, hint: "Used on the programme cards AND as the page's SEO description. Shown in Google results and link previews. Aim for 120-160 characters." }
-          - { name: body, label: Body, widget: markdown }
+        fields: *program_fields
 
   # ── Sports ────────────────────────────────────────────────────────────────
   - name: sports
@@ -142,44 +206,31 @@ collections:
         label: "Sports Landing Page"
         file: content/sports/_index.md
         fields:
-          - { name: title, label: Title, widget: string }
-          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
-          - { name: body, label: Intro Text, widget: markdown, required: false, hint: "Short intro shown above the cards on this landing page." }
+          - *title
+          - *seo
+          - *intro
       - name: swim
         label: Swim
         file: content/sports/swim.md
-        fields:
-          - { name: title, label: Title, widget: string }
-          - { name: hero_image, label: Hero Image, widget: image, required: false }
-          - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
-          - { name: hero_position, label: Hero Image Focal Point, widget: string, required: false, hint: "CSS object-position, e.g. \"center 25%\". Leave blank to centre the image." }
-          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
-          - { name: weight, label: Sort Order, widget: number, required: false, value_type: int, hint: "Controls the order of the sport cards on the homepage and the Sports page." }
-          - { name: body, label: Body, widget: markdown }
+        fields: &sport_fields
+          - *title
+          - { name: hero_image, label: Top photo, widget: image, required: false, hint: "Also used on the sport's card on the homepage." }
+          - *hero_alt
+          - { name: hero_position, label: Photo focus point, widget: string, required: false, hint: "Which part of the photo to keep when it's cropped, e.g. \"center 25%\" keeps the upper part. Leave blank to center it." }
+          - { name: card_text, label: Card text, widget: text, required: false, hint: "Short blurb on the homepage and Sports page cards. Falls back to the search engine description." }
+          - *seo
+          - *weight
+          - *body
 
       - name: bike
         label: Bike
         file: content/sports/bike.md
-        fields:
-          - { name: title, label: Title, widget: string }
-          - { name: hero_image, label: Hero Image, widget: image, required: false }
-          - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
-          - { name: hero_position, label: Hero Image Focal Point, widget: string, required: false, hint: "CSS object-position, e.g. \"center 25%\". Leave blank to centre the image." }
-          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
-          - { name: weight, label: Sort Order, widget: number, required: false, value_type: int, hint: "Controls the order of the sport cards on the homepage and the Sports page." }
-          - { name: body, label: Body, widget: markdown }
+        fields: *sport_fields
 
       - name: run
         label: Run
         file: content/sports/run.md
-        fields:
-          - { name: title, label: Title, widget: string }
-          - { name: hero_image, label: Hero Image, widget: image, required: false }
-          - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
-          - { name: hero_position, label: Hero Image Focal Point, widget: string, required: false, hint: "CSS object-position, e.g. \"center 25%\". Leave blank to centre the image." }
-          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
-          - { name: weight, label: Sort Order, widget: number, required: false, value_type: int, hint: "Controls the order of the sport cards on the homepage and the Sports page." }
-          - { name: body, label: Body, widget: markdown }
+        fields: *sport_fields
 
   # ── About ─────────────────────────────────────────────────────────────────
   # Most About pages share /images/about; Social Events and Giving Back keep the
@@ -194,118 +245,148 @@ collections:
         label: "About Landing Page"
         file: content/about/_index.md
         fields:
-          - { name: title, label: Title, widget: string }
-          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
-          - { name: body, label: Intro Text, widget: markdown, required: false, hint: "Short intro shown above the cards on this landing page." }
+          - *title
+          - *seo
+          - *intro
       - name: mission
         label: Our Mission
         file: content/about/mission.md
-        fields:
-          - { name: title, label: Title, widget: string }
-          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
-          - { name: body, label: Body, widget: markdown }
+        fields: &about_fields
+          - *title
+          - *seo
+          - *body
 
       - name: code_of_conduct
         label: Code of Conduct
         file: content/about/code-of-conduct.md
-        fields:
-          - { name: title, label: Title, widget: string }
-          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
-          - { name: body, label: Body, widget: markdown }
+        fields: *about_fields
 
       - name: social_events
         label: Social Events
         file: content/about/social-events.md
         media_folder: /static/images/social
         public_folder: /images/social
-        fields:
-          - { name: title, label: Title, widget: string }
-          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
-          - { name: body, label: Body, widget: markdown }
+        fields: *about_fields
 
       - name: giving_back
         label: Giving Back
         file: content/about/giving-back.md
         media_folder: /static/images/giving_back
         public_folder: /images/giving_back
-        fields:
-          - { name: title, label: Title, widget: string }
-          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
-          - { name: body, label: Body, widget: markdown }
+        fields: *about_fields
 
       - name: club_season
         label: Club Season
         file: content/about/club-season.md
-        fields:
-          - { name: title, label: Title, widget: string }
-          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
-          - { name: body, label: Body, widget: markdown }
+        fields: *about_fields
 
       - name: faq
         label: FAQ
         file: content/about/faq.md
         fields:
-          - { name: title, label: Title, widget: string }
-          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
-          - { name: layout, label: Layout, widget: hidden, default: faq }
+          - *title
+          - *seo
+          - { name: layout, widget: hidden, default: faq }
           - name: questions
             label: Questions
+            label_singular: Question
             widget: list
-            fields:
+            summary: "{{fields.q}}"
+            collapsed: true
+            fields: &qa
               - { name: q, label: Question, widget: string }
-              - { name: a, label: Answer, widget: text }
+              - { name: a, label: Answer, widget: richtext, minimal: true, editor_components: [] }
+
+      # The board and sponsor lists themselves are under "Board Members" and
+      # "Sponsors" in the sidebar. These are just the page titles and intros.
+      - name: board_page
+        label: Board and Officers Page
+        file: content/about/board.md
+        fields:
+          - *title
+          - { name: description, label: Text under the title, widget: text, required: false, hint: "Also used in Google results and link previews." }
+          - { name: layout, widget: hidden, default: board }
+
+      - name: sponsors_page
+        label: Sponsors Page
+        file: content/about/sponsors.md
+        fields:
+          - *title
+          - { name: description, label: Text under the title, widget: text, required: false, hint: "Also used in Google results and link previews." }
+          - { name: layout, widget: hidden, default: sponsors }
 
   # ── News ─────────────────────────────────────────────────────────────────
   - name: news
     label: News
+    label_singular: News post
     folder: content/news
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "/news/{{filename}}/"
+    sortable_fields: [date, title]
     media_folder: /static/images/news
     public_folder: /images/news
     fields:
-      - { name: title, label: Title, widget: string }
+      - *title
       - { name: date, label: Date, widget: datetime }
       - { name: author, label: Author, widget: string }
-      - { name: summary, label: Summary, widget: text, hint: "1-2 sentences shown on the news listing and homepage teaser. Also used as the post's SEO description, so keep it under 160 characters." }
-      - { name: hero_image, label: Hero Image, widget: image, required: false }
-      - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
-      - { name: body, label: Body, widget: markdown }
+      - { name: summary, label: Summary, widget: text, hint: "1-2 sentences shown on the news listing and homepage teaser. Also used as the post's search engine description, so keep it under 160 characters." }
+      - { name: hero_image, label: Top photo, widget: image, required: false }
+      - *hero_alt
+      - *body
+    # The News landing page (content/news/_index.md), shown at the top of the list
+    index_file:
+      fields:
+        - *title
+        - *seo
 
   # ── Member Spotlight ─────────────────────────────────────────────────────
   # Each member gets their own folder, named after the entry file, e.g.
   # static/images/spotlights/mike-locke/portrait.webp
   - name: member_spotlight
     label: Member Spotlight
+    label_singular: Spotlight
     folder: content/member-spotlight
     create: true
     slug: "{{slug}}"
+    preview_path: "/member-spotlight/{{filename}}/"
+    sortable_fields: [date, title]
     media_folder: "/static/images/spotlights/{{filename}}"
     public_folder: "/images/spotlights/{{filename}}"
     fields:
       - { name: title, label: Name, widget: string }
       - { name: date, label: Date, widget: datetime }
-      - { name: summary, label: Summary, widget: text, hint: "1-2 sentences shown on the spotlight listing. Also used as the page's SEO description, so keep it under 160 characters." }
-      - { name: hero_image, label: Hero Photo, widget: image }
-      - { name: hero_image_alt, label: "Hero Photo Alt Text (optional)", widget: string, required: false, hint: "For screen readers. Defaults to the member's name." }
-      - { name: secondary_image, label: "Secondary Photo (optional)", widget: image, required: false }
-      - { name: secondary_image_alt, label: "Secondary Photo Alt Text (optional)", widget: string, required: false, hint: "Defaults to the member's name. Override when the photo shows something other than the member alone." }
+      - { name: summary, label: Summary, widget: text, hint: "1-2 sentences shown on the spotlight listing. Also used as the page's search engine description, so keep it under 160 characters." }
+      - { name: hero_image, label: Main photo, widget: image }
+      - { name: hero_image_alt, label: "Main photo description (optional)", widget: string, required: false, hint: "For screen readers. Defaults to the member's name." }
+      - { name: secondary_image, label: "Second photo (optional)", widget: image, required: false }
+      - { name: secondary_image_alt, label: "Second photo description (optional)", widget: string, required: false, hint: "Defaults to the member's name. Change it when the photo shows something other than the member alone." }
       - name: questions
         label: Q&A
+        label_singular: Question
         widget: list
-        fields:
-          - { name: q, label: Question, widget: string }
-          - { name: a, label: Answer, widget: text }
+        summary: "{{fields.q}}"
+        collapsed: true
+        fields: *qa
       - name: race_groups
         label: Race Resume
+        label_singular: Race category
         widget: list
+        summary: "{{fields.title}}"
         fields:
-          - { name: title, label: Category, widget: string, hint: "e.g. Ironman, Long Course 70.3, Olympic, Sprint" }
+          - { name: title, label: Category, widget: string, required: false, hint: "e.g. Ironman, Long Course 70.3, Olympic, Sprint. Leave blank for a single list with no heading." }
           - name: races
             label: Races
+            label_singular: Race
             widget: list
             field: { name: race, label: Race, widget: string }
-      - { name: body, label: "Body (optional intro/notes)", widget: markdown, required: false }
+      - { name: body, label: "Intro or notes (optional)", widget: richtext, required: false, editor_components: [image] }
+    # The Member Spotlight landing page (content/member-spotlight/_index.md)
+    index_file:
+      fields:
+        - *title
+        - *seo
+        - { name: body, label: Intro text, widget: richtext, required: false, editor_components: [] }
 
   # ── Sponsors ──────────────────────────────────────────────────────────────
   - name: sponsors
@@ -319,11 +400,15 @@ collections:
         fields:
           - name: sponsors
             label: Sponsors
+            label_singular: Sponsor
             widget: list
+            summary: "{{fields.name}}"
+            collapsed: true
+            hint: "Drag to reorder. The first 4 also appear on the Membership page."
             fields:
               - { name: name, label: Name, widget: string }
               - { name: logo, label: Logo, widget: image }
-              - { name: url, label: Website URL, widget: string }
+              - { name: url, label: Website, widget: string }
               - { name: description, label: Description, widget: string, required: false }
 
   # ── Board Members ─────────────────────────────────────────────────────────
@@ -338,9 +423,13 @@ collections:
         fields:
           - name: members
             label: Members
+            label_singular: Member
             widget: list
+            summary: "{{fields.name}} ({{fields.role}})"
+            collapsed: true
+            hint: "Drag to reorder."
             fields:
               - { name: name, label: Name, widget: string }
-              - { name: role, label: Role/Title, widget: string }
+              - { name: role, label: Role, widget: string }
               - { name: photo, label: Photo, widget: image, required: false }
               - { name: bio, label: Bio, widget: text, required: false }
