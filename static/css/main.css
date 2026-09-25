@@ -899,6 +899,53 @@ a:hover > .sponsor-name-fallback { opacity: 1; }
 @media (max-width: 600px) { .list-page__grid { grid-template-columns: 1fr; } }
 
 /* ==========================================================================
+   NEWS FEED: news posts and member spotlights interleaved by date
+   Both use the shared card look above; only the differences live here.
+   ========================================================================== */
+
+/* News images are framed 16/9, spotlight portraits 4/5. In a mixed grid 3/2
+   splits the difference, so neither type gets cropped hard. */
+.news-feed .news-card__image-link { aspect-ratio: 3/2; }
+
+/* Portraits still lose the most, so bias their crop upward to keep faces in frame. */
+.news-card--spotlight .news-card__image { object-position: center 25%; }
+
+/* Tells a spotlight apart at a glance. z-index clears the whole-card link overlay. */
+.news-card__badge {
+  position: absolute;
+  top: var(--space-sm);
+  left: var(--space-sm);
+  z-index: 2;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(255, 254, 245, 0.94);
+  color: var(--color-forest);
+  font-family: var(--font-display);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  font-stretch: 112%;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: var(--shadow-sm);
+  pointer-events: none;
+}
+
+/* Posts with no hero image get a branded panel, so the grid keeps an even rhythm. */
+.news-card__image-link--empty {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--color-forest) 0%, var(--color-forest-soft) 100%);
+}
+/* The logo is ~2:1 and the panel 3/2, so cap the width and let height follow.
+   Held slightly back so the panel reads as a quiet stand-in, not an ad. */
+.news-card__placeholder {
+  width: 58%;
+  max-width: 220px;
+  height: auto;
+  opacity: 0.92;
+}
+
+/* ==========================================================================
    BOARD GRID
    ========================================================================== */
 .board-grid {

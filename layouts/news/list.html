@@ -1,0 +1,23 @@
+{{ define "main" }}
+<section class="list-page news-feed">
+  <div class="list-page__header container">
+    <h1 class="page-title">{{ .Title }}</h1>
+    {{ with .Content }}
+      <div class="page-body">{{ . }}</div>
+    {{ else }}
+      {{ with .Description }}<div class="page-body"><p>{{ . }}</p></div>{{ end }}
+    {{ end }}
+  </div>
+  <div class="list-page__grid container">
+    {{/* Member spotlights live in their own section and keep their own landing
+         page, but they're club news too — merge both sets and sort by date so
+         the feed is chronological rather than grouped by section. */}}
+    {{ $feed := union .Pages (where .Site.RegularPages "Section" "member-spotlight") }}
+    {{ range $feed.ByDate.Reverse }}
+      {{ partial "feed-card.html" . }}
+    {{ else }}
+      <p>No updates yet.</p>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

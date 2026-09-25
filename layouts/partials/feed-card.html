@@ -1,0 +1,30 @@
+{{- /*
+  Card for the combined news feed, which interleaves news posts and member
+  spotlights. Both types render the same card shape so a date-sorted mix reads
+  as one feed instead of two designs colliding; only the badge, the image crop
+  and the link wording change. Styling rides on the shared `.news-card` look —
+  see "CARDS" and "NEWS FEED" in main.css.
+*/ -}}
+{{- $spotlight := eq .Section "member-spotlight" -}}
+<article class="news-card{{ if $spotlight }} news-card--spotlight{{ end }}">
+  {{ with .Params.hero_image }}
+    <a class="news-card__image-link" href="{{ $.RelPermalink }}" tabindex="-1" aria-hidden="true">
+      {{ partial "image.html" (dict "src" . "alt" ($.Params.hero_image_alt | default "") "class" "news-card__image" "sizes" "(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw") }}
+    </a>
+  {{ else }}
+    {{/* Imageless posts get a branded panel rather than a short card, so the grid stays even.
+         Same logo URL the header already loads, so it's served from cache and costs nothing extra. */}}
+    <div class="news-card__image-link news-card__image-link--empty" aria-hidden="true">
+      {{ with resources.Get "sf-tri-logo-cream.png" }}
+        <img class="news-card__placeholder" src="{{ .RelPermalink }}" alt="" width="{{ .Width }}" height="{{ .Height }}" loading="lazy" decoding="async">
+      {{ end }}
+    </div>
+  {{ end }}
+  {{ if $spotlight }}<span class="news-card__badge">Member Spotlight</span>{{ end }}
+  <div class="news-card__body">
+    <time class="news-card__date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+    <h3 class="news-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <p class="news-card__summary">{{ .Params.summary }}</p>
+    <a class="news-card__link" href="{{ .RelPermalink }}">{{ if $spotlight }}Read story{{ else }}Read more{{ end }} →</a>
+  </div>
+</article>
