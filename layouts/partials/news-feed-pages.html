@@ -1,0 +1,17 @@
+{{- /*
+  Returns the combined news feed: news posts plus member spotlights, newest
+  first. Both the /news/ list and the homepage "Latest News" teaser call this,
+  so the teaser can never disagree with the page it links to, and adding
+  another section to the feed is a one-line change here.
+
+  The explicit sort matters: `union` gives no ordering guarantee, so callers
+  taking `first N` off an unsorted set would get arbitrary posts.
+
+  Usage: {{ $feed := partial "news-feed-pages.html" . }}
+*/ -}}
+{{- $sections := slice "news" "member-spotlight" -}}
+{{- $feed := slice -}}
+{{- range $sections -}}
+  {{- $feed = $feed | union (where site.RegularPages "Section" .) -}}
+{{- end -}}
+{{- return $feed.ByDate.Reverse -}}

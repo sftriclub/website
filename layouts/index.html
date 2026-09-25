@@ -57,17 +57,16 @@
 </section>
 
 {{/* ── Latest News ─────────────────────────────────────────────────────── */}}
-{{ $news := where .Site.RegularPages "Section" "news" }}
-{{ if $news }}
-<section class="news-teaser-section">
+{{ with first 3 (partial "news-feed-pages.html" .) }}
+<section class="news-teaser-section news-feed">
   <div class="container">
     <div class="section-header">
       <h2 class="section-title">Latest News</h2>
       <a class="section-link" href="/news/">All posts →</a>
     </div>
     <div class="news-teaser-grid">
-      {{ range first 3 $news }}
-        {{ partial "news-card.html" . }}
+      {{ range . }}
+        {{ partial "feed-card.html" . }}
       {{ end }}
     </div>
   </div>

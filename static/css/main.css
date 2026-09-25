@@ -901,6 +901,8 @@ a:hover > .sponsor-name-fallback { opacity: 1; }
 /* ==========================================================================
    NEWS FEED: news posts and member spotlights interleaved by date
    Both use the shared card look above; only the differences live here.
+   `.news-feed` marks any container holding a mixed feed — the /news/ list
+   and the homepage "Latest News" teaser both set it.
    ========================================================================== */
 
 /* News images are framed 16/9, spotlight portraits 4/5. In a mixed grid 3/2
