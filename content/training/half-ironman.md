@@ -2,12 +2,11 @@
 weight: 2
 title: "Half Ironman"
 subtitle: "70.3 miles. Build the endurance to get there."
-hero_image: "/images/sports/swim.webp"
 description: "A structured training program for athletes targeting a 70.3-mile Half Ironman race."
 ---
 
 {{< notice title="Registration closed!" >}}
-Our half-iron training program (60 to 70.3) is offered once a year in June, so keep an eye out for when we announce registration dates for next year, likely around April/May 2026. In the meanwhile, there's no need to wait to start training. [Join the club now!](/membership)
+Our half-iron training program (70.3) is offered once a year in June, so keep an eye out for when we announce registration dates for next year, likely around April/May 2026. In the meanwhile, there's no need to wait to start training. [Join the club now!](/membership)
 
 As a member you'll get access to weekly coached track and swim workouts, member-led bike workouts, discounts on gear/races, and many other perks. [Learn more here.](/membership)
 
@@ -21,9 +20,9 @@ Either way, you're welcome to [drop in for a free track workout](/trial-workout)
 Join our 12-week training program and get coaching, structure, and mentorship to kick butt 💥 in your Half Ironman! 💪 The program begins in June 2026.
 {{< /image-section >}}
 
-## What is the 60 to 70.3 training program?
+## What is the 70.3 training program?
 
-60-70.3 is a 12-week program that provides coaching, structured training, and mentorship to get you ready for a half-iron distance triathlon (1.2 mile swim, 56 mile bike, and 13.1 mile run)! To save you the conversion, that's a 1.9 km swim, 90 km bike ride, and 21 km run 😉.
+The 70.3 training program is a 12-week program that provides coaching, structured training, and mentorship to get you ready for a half-iron distance triathlon (1.2 mile swim, 56 mile bike, and 13.1 mile run)! To save you the conversion, that's a 1.9 km swim, 90 km bike ride, and 21 km run 😉.
 
 The program runs from June to September and will get you ready for our target race: Ironman 70.3 Santa Cruz!
 
@@ -42,7 +41,7 @@ You'll need a baseline level of fitness to begin this program. We do expect you 
 {{< faq-item q="What does the program include?" >}}
 - 12-week training plan with Coach Megan Tobin
 - Weekly track and swim workouts with Coach JD
-- Weekly group bike rides and open water swims with fellow 60-70.3 members, led by seasoned club members
+- Weekly group bike rides and open water swims with fellow 70.3 program members, led by seasoned club members
 - Group sessions on nutrition, transition, pacing, and other topics
 - A private Slack group to communicate with your cohort members and club mentors
 - Discounts from our sponsors on gear, services, and races
@@ -54,7 +53,7 @@ You'll need a baseline level of fitness to begin this program. We do expect you 
 {{< /faq-item >}}
 
 {{< faq-item q="How much does the program cost?" >}}
-For 2025, the 60-70.3 program cost $300 for members (plus annual club fee for non-members). Stay tuned for 2026 program costs in Spring 2026.
+For 2025, the 70.3 training program cost $300 for members (plus annual club fee for non-members). Stay tuned for 2026 program costs in Spring 2026.
 
 For non-members, the requisite 1-year membership with the club enables you to continue working out with us even after the race! You'll continue to have access to coached track and swim workouts, member-led workouts, discounts with our sponsors/races, training groups, social events, and more!
 {{< /faq-item >}}

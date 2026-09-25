@@ -2,7 +2,6 @@
 weight: 4
 title: "Training Weekend"
 subtitle: "An immersive weekend of focused multi-sport training."
-hero_image: "/images/shared/placeholder.jpg"
 description: "An annual training weekend for club members to train together outside the city."
 ---
 

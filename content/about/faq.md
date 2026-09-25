@@ -8,7 +8,7 @@ questions:
 
   - q: "What does the membership include?"
     a: |
-      The primary function of our club is to bring together people who want to train and race together. Membership benefits include:
+      Membership is $145 per year. The primary function of our club is to bring together people who want to train and race together. Membership benefits include:
 
       * Weekly coached track workouts
       * Weekly coached swim workouts

@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{- $width := "container--narrow" -}}{{- if or (in .RawContent "image-section") (in .RawContent "{{< columns") -}}{{- $width = "container--medium" -}}{{- end -}}
 <article class="page">
   {{ with .Params.hero_image }}
   <div class="page-hero">
@@ -16,7 +17,7 @@
   </div>
   {{ end }}
 
-  <div class="page-body container">
+  <div class="page-body container {{ $width }}">
     {{ .Content }}
   </div>
 

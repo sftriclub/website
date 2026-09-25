@@ -53,7 +53,6 @@
       {{ range (where .Site.RegularPages "Section" "training").ByWeight }}
       <article class="program-card">
         <h3 class="program-card__title">{{ .Title }}</h3>
-        <p class="program-card__subtitle">{{ .Params.subtitle }}</p>
         <p class="program-card__description">{{ .Params.description }}</p>
         <a class="program-card__link" href="{{ .RelPermalink }}">Learn more →</a>
       </article>

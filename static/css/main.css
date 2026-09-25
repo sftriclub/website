@@ -127,8 +127,10 @@ h1, h2, h3, h4 {
   .container { padding-inline: 1.25rem; }
 }
 
-/* Narrow reading column for long-form prose */
-.container--narrow { max-width: 780px; }
+/* Page widths: text-only prose reads in a narrow column; prose with side
+   photos or column layouts gets a medium column; card grids use the full 1200 */
+.container--narrow { max-width: 760px; }
+.container--medium { max-width: 1040px; }
 
 .visually-hidden {
   position: absolute;
@@ -483,7 +485,8 @@ h1, h2, h3, h4 {
   padding-block: var(--space-lg) var(--space-md);
   text-align: center;
 }
-.page-header::after,
+/* Accent bar always sits directly under the page title, above any subtitle */
+.page-header .page-title::after,
 .list-page__header .page-title::after,
 .contact-page__header .page-title::after,
 .spotlight-list__header .page-title::after {
@@ -495,8 +498,6 @@ h1, h2, h3, h4 {
   background: var(--color-accent);
   margin: var(--space-sm) auto 0;
 }
-.list-page__header .page-title::after,
-.contact-page__header .page-title::after { margin-left: 0; }
 
 .page-title {
   font-size: var(--font-size-3xl);
@@ -508,7 +509,7 @@ h1, h2, h3, h4 {
 .page-subtitle {
   font-size: var(--font-size-lg);
   color: var(--color-text-muted);
-  margin: var(--space-xs) auto 0;
+  margin: var(--space-sm) auto 0;
   max-width: 40rem;
 }
 
@@ -517,9 +518,12 @@ h1, h2, h3, h4 {
   color: var(--color-text);
 }
 
+/* A photo header ends flush at its edge, so give the first text real breathing room */
+.page-hero + .page-body { padding-top: var(--space-lg); }
+
 /* Prose styles for .Content */
-.page-body h2 { font-size: var(--font-size-2xl); margin-top: var(--space-lg); margin-bottom: var(--space-sm); }
-.page-body h3 { font-size: var(--font-size-xl);  margin-top: var(--space-md); margin-bottom: var(--space-xs); }
+.page-body h2 { font-size: clamp(1.5rem, 1.25rem + 0.8vw, 1.875rem); margin-top: 3rem; margin-bottom: 0.75rem; }
+.page-body h3 { font-size: 1.3125rem; margin-top: 2rem; margin-bottom: 0.5rem; }
 .page-body > :first-child,
 .page-body .image-section__content > :first-child { margin-top: 0; }
 .page-body p  { margin-bottom: var(--space-sm); }
@@ -537,6 +541,8 @@ h1, h2, h3, h4 {
   transition: text-decoration-color var(--transition-fast);
 }
 .page-body a:not(.btn):hover { text-decoration-color: currentColor; }
+/* Long URLs / emails may break anywhere so they can't widen the page on phones */
+.page-body a { overflow-wrap: anywhere; }
 .page-body strong { font-weight: 700; }
 .page-body img { border-radius: var(--radius-md); }
 .page-body blockquote {
@@ -693,7 +699,7 @@ h1, h2, h3, h4 {
 .sport-card:hover .sport-card__image { transform: scale(1.04); }
 .sport-card__body { padding: var(--space-md); flex: 1; display: flex; flex-direction: column; gap: var(--space-xs); }
 .sport-card__title { font-size: var(--font-size-xl); font-weight: 900; font-stretch: 120%; text-transform: uppercase; letter-spacing: 0.02em; }
-.sport-card__description { color: var(--color-text-muted); flex: 1; margin-bottom: var(--space-xs); }
+.sport-card__description { font-size: 0.9375rem; line-height: 1.55; color: var(--color-text-muted); flex: 1; margin-bottom: var(--space-xs); }
 
 /* Training program grid */
 .programs-section {
@@ -717,9 +723,8 @@ h1, h2, h3, h4 {
   transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
 }
 .program-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-top-color: var(--color-forest); }
-.program-card__title { font-size: var(--font-size-xl); font-weight: 800; }
-.program-card__subtitle { font-size: var(--font-size-sm); font-weight: 600; line-height: 1.4; color: var(--color-forest-soft); }
-.program-card__description { color: var(--color-text-muted); flex: 1; }
+.program-card__title { font-size: 1.375rem; font-weight: 800; }
+.program-card__description { font-size: 0.9375rem; line-height: 1.55; color: var(--color-text-muted); flex: 1; }
 .program-card__link { margin-top: var(--space-xs); }
 
 /* News teaser */
@@ -824,8 +829,8 @@ a:hover > .sponsor-name-fallback { opacity: 1; }
 
 /* Listing page */
 .list-page { padding-bottom: var(--space-xl); }
-.list-page__header { padding-block: var(--space-lg) var(--space-md); }
-.list-page__header .page-body { padding-bottom: 0; max-width: 46rem; color: var(--color-text-muted); font-size: var(--font-size-lg); }
+.list-page__header { padding-block: var(--space-lg) var(--space-md); text-align: center; }
+.list-page__header .page-body { padding-bottom: 0; max-width: 42rem; margin-inline: auto; color: var(--color-text-muted); font-size: var(--font-size-lg); }
 .list-page__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -873,7 +878,7 @@ a:hover > .sponsor-name-fallback { opacity: 1; }
 
 .news-card__summary,
 .section-card__summary,
-.spotlight-card__summary { color: var(--color-text-muted); flex: 1; }
+.spotlight-card__summary { font-size: 0.9375rem; line-height: 1.55; color: var(--color-text-muted); flex: 1; }
 .news-card__link,
 .section-card__link,
 .spotlight-card__link { margin-top: var(--space-xs); }
@@ -955,7 +960,7 @@ a:hover > .sponsor-name-fallback { opacity: 1; }
 /* ==========================================================================
    FAQ
    ========================================================================== */
-.faq { padding-block: var(--space-sm) var(--space-xl); max-width: 820px; }
+.faq { padding-block: var(--space-sm) var(--space-xl); max-width: 760px; }
 .page-body .faq { padding-block: var(--space-sm); }
 .faq-item {
   background: #fff;
@@ -1001,7 +1006,7 @@ details[open] .faq-question::after { content: '−'; background: var(--color-for
 /* ==========================================================================
    SPONSORS DETAIL PAGE
    ========================================================================== */
-.sponsors-page { padding-bottom: var(--space-xl); }
+.sponsors-page { padding-bottom: var(--space-xl); max-width: 1040px; }
 .sponsors-detail-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 460px), 1fr)); gap: var(--space-md); padding-block: var(--space-md); }
 .sponsor-detail-card {
   display: flex;
@@ -1069,8 +1074,8 @@ details[open] .faq-question::after { content: '−'; background: var(--color-for
   margin-block: var(--space-md);
 }
 .image-section--left { flex-direction: row-reverse; }
-.image-section__content { flex: 1; }
-.image-section__image { flex: 1 1 280px; max-width: 50%; }
+.image-section__content { flex: 1; min-width: 0; }
+.image-section__image { flex: 0 0 40%; max-width: 40%; }
 .image-section__image img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
 
 @media (max-width: 768px) {
@@ -1127,8 +1132,9 @@ details[open] .faq-question::after { content: '−'; background: var(--color-for
    CONTACT PAGE
    ========================================================================== */
 .contact-page { padding-bottom: var(--space-xl); }
-.contact-page__header { padding-block: var(--space-lg) var(--space-md); }
+.contact-page__header { padding-block: var(--space-lg) var(--space-md); text-align: center; }
 .contact-page__body {
+  max-width: 1040px;
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: var(--space-lg);
@@ -1208,7 +1214,14 @@ details[open] .faq-question::after { content: '−'; background: var(--color-for
   margin-top: 0.3rem;
 }
 .trial__detail-note { font-size: 0.8125rem; line-height: 1.4; color: var(--color-text-muted); margin-top: 0.2rem; text-wrap: balance; }
-.page-body .trial__detail-note a { font-weight: 600; }
+/* Map link reads as the same quiet note text as "Coach JD splits us…" */
+.page-body .trial__detail-note a {
+  color: inherit;
+  font-weight: 400;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 1px;
+}
+.page-body .trial__detail-note a:hover { color: var(--color-text); }
 
 .page-body .trial__heading { margin-top: 0; text-align: center; }
 .page-body .trial__requirement {
@@ -1259,6 +1272,157 @@ details[open] .faq-question::after { content: '−'; background: var(--color-for
   .trial__detail { padding-inline: 0; text-align: left; }
   .trial__detail + .trial__detail { border-left: none; border-top: 1px solid var(--color-border); }
   .trial__intro p { text-align: left; }
+}
+
+/* ==========================================================================
+   MEMBERSHIP PAGE
+   ========================================================================== */
+.membership__eyebrow { transform-origin: center; }
+.membership__section { padding-block: var(--space-md) var(--space-lg); }
+.membership__heading {
+  font-size: clamp(1.5rem, 1.25rem + 0.8vw, 1.875rem);
+  text-align: center;
+  margin-bottom: var(--space-md);
+}
+
+/* Week calendar: seven day columns, workouts stacked under their day */
+.week {
+  list-style: none;
+  display: grid;
+  /* Only days with club workouts are listed, so the week never reads as empty */
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  gap: var(--space-sm);
+  max-width: 960px;
+  margin-inline: auto;
+}
+.week__day {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-height: 10rem;
+  padding: 0.75rem;
+  background: #fff;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+.week__label {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 800;
+  font-stretch: 118%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-forest);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+.week__items { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+.week__item {
+  --sport: var(--color-forest);
+  --sport-bg: var(--color-sage-light);
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.6rem 0.65rem;
+  border-radius: var(--radius-sm);
+  background: var(--sport-bg);
+  border-left: 3px solid var(--sport);
+}
+.week__item--swim { --sport: #2F6F8F; --sport-bg: #E3EFF4; }
+.week__item--bike { --sport: #B5651D; --sport-bg: #F7EBDD; }
+.week__item--run  { --sport: var(--color-forest-soft); --sport-bg: var(--color-sage-light); }
+.week__tag {
+  font-family: var(--font-display);
+  font-size: 0.625rem;
+  font-weight: 800;
+  font-stretch: 118%;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sport);
+}
+.week__title { font-weight: 700; font-size: 0.875rem; line-height: 1.25; }
+.week__meta { font-size: 0.75rem; line-height: 1.35; color: var(--color-text-muted); }
+
+@media (max-width: 900px) {
+  /* Phones/tablets: a vertical agenda */
+  .week { grid-template-columns: 1fr; gap: 0.5rem; }
+  .week__day { flex-direction: row; align-items: flex-start; min-height: 0; gap: 1rem; }
+  .week__label { flex: 0 0 2.75rem; padding: 0.35rem 0 0; border-bottom: none; }
+  .week__items { flex: 1; }
+}
+
+/* Programs + perks cards */
+.membership__cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-sm); }
+.membership-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border-top: 4px solid var(--color-sage);
+}
+.membership-card--perks { border-top-color: var(--color-forest); }
+.membership-card__title { font-size: 1.25rem; font-weight: 800; }
+.membership-card__text { font-size: 0.9375rem; line-height: 1.55; color: var(--color-text-muted); flex: 1; }
+.membership-card__logos { list-style: none; display: flex; gap: 0.5rem; margin-top: 0.25rem; }
+.membership-card__logos li {
+  flex: 1;
+  aspect-ratio: 1;
+  max-width: 3.25rem;
+  padding: 0.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  display: grid;
+  place-items: center;
+}
+.membership-card__logos img { width: 100%; height: 100%; object-fit: contain; }
+.membership-card__link {
+  margin-top: 0.25rem;
+  font-family: var(--font-display);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  font-stretch: 112%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.membership-card__link:hover { color: var(--color-forest-soft); }
+@media (max-width: 800px) { .membership__cards { grid-template-columns: 1fr; } }
+
+/* Closing: photo beside a forest panel */
+.membership-join { padding-block: var(--space-md) var(--space-xl); }
+.membership-join__inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-forest);
+  box-shadow: var(--shadow-md);
+  padding-inline: 0;
+}
+.membership-join__photo { position: relative; min-height: 22rem; }
+.membership-join__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.membership-join__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-lg) var(--space-md);
+  color: var(--color-text-light);
+}
+.membership-join__heading { font-size: clamp(1.75rem, 1.3rem + 1.6vw, 2.5rem); font-weight: 900; font-stretch: 118%; }
+.membership-join__price { font-size: var(--font-size-sm); line-height: 1.5; color: rgba(255, 254, 245, 0.8); max-width: 26rem; }
+.membership-join__price strong { display: block; font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; font-stretch: 112%; color: var(--color-cream); }
+.membership-join__actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-sm) var(--space-md); margin-top: var(--space-xs); }
+.membership-join .btn--primary { background-color: var(--color-cream); color: var(--color-forest); }
+.membership-join .btn--primary:hover { background-color: var(--color-sage); color: var(--color-forest-deep); }
+.membership-join__alt { font-size: var(--font-size-sm); font-weight: 600; color: rgba(255, 254, 245, 0.85); text-decoration: underline; text-decoration-color: var(--color-sage); text-underline-offset: 3px; }
+.membership-join__alt:hover { color: var(--color-cream); }
+@media (max-width: 900px) {
+  .membership-join__inner { grid-template-columns: 1fr; margin-inline: 1.25rem; }
+  .membership-join__photo { aspect-ratio: 4 / 3; }
+  .membership-join__body { padding: var(--space-md) 1.5rem; }
 }
 
 /* ============================================

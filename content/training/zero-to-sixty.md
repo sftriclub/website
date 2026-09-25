@@ -2,7 +2,6 @@
 weight: 1
 title: "Zero to Sixty"
 subtitle: "First triathlon? No sweat. Our beginner program has your back!"
-hero_image: "/images/sports/swim.webp"
 description: "A 12-week beginner training program to get you ready for your first Olympic-distance triathlon."
 ---
 
@@ -23,7 +22,7 @@ This 12-week program provides coaching, structured training, and mentorship to g
 
 You'll make lasting friendships, learn proper technique and injury prevention, and become faster, stronger, and more confident. You'll surprise yourself and everyone who knows you with what you're capable of accomplishing.
 
-If you already have prior triathlon experience, consider our [60-70.3 training program](/training/half-ironman) for a Half Ironman instead.
+If you already have prior triathlon experience, consider our [70.3 training program](/training/half-ironman) for a Half Ironman instead.
 
 {{< faq >}}
 

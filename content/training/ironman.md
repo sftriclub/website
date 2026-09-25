@@ -15,7 +15,7 @@ That's longer than the average Alcatraz swim ([1.8 miles](https://www.pacificswi
 
 Training for an iron-distance race is a BIG commitment that typically involves anywhere from 6 to 12 months of consistent, and sometimes grueling, training. The weekend long rides alone are 4-7 hours, followed by 3-4 hours of swimming and running the next day, with several more workouts on weekdays.
 
-If you are new to triathlon, we recommend spending your first season with us training for a shorter (but still street-cred-worthy) race distance with the [0-60](/training/zero-to-sixty/) or [60-70.3](/training/half-ironman/) training programs instead. You'll learn triathlon-specific knowledge for training, pacing, nutrition, hydration, and more. These are the foundations that enable a successful Ironman race.
+If you are new to triathlon, we recommend spending your first season with us training for a shorter (but still street-cred-worthy) race distance with the [0-60](/training/zero-to-sixty/) or [70.3](/training/half-ironman/) training programs instead. You'll learn triathlon-specific knowledge for training, pacing, nutrition, hydration, and more. These are the foundations that enable a successful Ironman race.
 
 ## SF Tri's Approach
 
