@@ -65,7 +65,6 @@
       </div>
       {{ end }}
       <div class="membership-join__body">
-        <span class="eyebrow">Come join us</span>
         {{ with .Params.closing_heading }}<h2 class="membership-join__heading">{{ . }}</h2>{{ end }}
         {{ with .Params.price }}<p class="membership-join__price"><strong>{{ . }}</strong>{{ with $.Params.price_note }}{{ . }}{{ end }}</p>{{ end }}
         <div class="membership-join__actions">

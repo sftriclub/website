@@ -1,12 +1,12 @@
 ---
 title: "Free Track Workout"
 layout: trial-workout
-eyebrow: "Come run with us"
 description: "Drop in for a free track session with the SF Tri Club. All levels welcome."
-cta_secondary_text: ""
+no_cta: true
 details:
   - label: "When"
     value: "Tuesday evenings"
+    note: "Starts at 6:45pm"
   - label: "Where"
     value: "Kezar Stadium"
     link_text: "Open in Google Maps ↗"
@@ -14,20 +14,13 @@ details:
   - label: "Who"
     value: "All levels welcome"
     note: "Coach JD splits us into groups by pace"
-requirement: >-
-  To train with us, you'll need a free 7-day trial membership on
-  [Heylo](https://www.heylo.com/g/a48c491e-6366-468e-9db9-45e9586ba5e2?inviteId=30b897c1-3bba-4511-9a25-c2bde97b9491),
-  our club platform. Registering includes signing a liability waiver and
-  providing emergency contact information.
 steps:
-  - title: "Accept the trial invite"
-    text: "Once you know which Tuesday you'd like to attend, accept the trial membership invite on Heylo."
-    button_text: "Accept the invite"
-    button_url: "https://www.heylo.com/invite/rIE1KF9Sze"
+  - title: "Accept the trial invite on Heylo"
+    text: "Heylo is our club platform. [Accept the free 7-day trial invite here](https://www.heylo.com/invite/rIE1KF9Sze). It's mandatory to train with us, and it covers the liability waiver and emergency contact info."
   - title: "Set up your trial account"
     text: "No credit card or payment information required."
   - title: "Register for a Track Tuesday"
-    text: "Sign up for the next Tuesday track workout before your trial ends. Each Track Tuesday event page has all the details you'll need to attend."
+    text: "Sign up for a Tuesday track workout before your trial ends. The event page has all the details you'll need."
 ---
 
-Thinking of joining the SF Tri Club? Just moved to the city and want to make new friends? Looking for more fun and fitness in your life? Drop in for a free track session with us! Whether you're just getting started or are an experienced runner, you'll get a good workout for your level.
+Thinking of joining the SF Tri Club? Just moved to the city and want to make new friends? Looking for more fun and fitness in your life? Drop in for a free track session with us! Whether you're just getting started or are an experienced runner, you'll get a good workout.

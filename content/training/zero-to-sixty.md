@@ -3,6 +3,7 @@ weight: 1
 title: "Zero to Sixty"
 subtitle: "First triathlon? No sweat. Our beginner program has your back!"
 description: "A 12-week beginner training program to get you ready for your first Olympic-distance triathlon."
+card_text: "Our coached 12-week program for beginners. Coaching, structure, and mentorship to get you ready for your first Olympic distance triathlon!"
 ---
 
 {{< notice title="Sold out for 2026!!" >}}

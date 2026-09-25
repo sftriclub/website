@@ -562,29 +562,8 @@ h1, h2, h3, h4 {
   color: var(--color-text-light);
   padding-block: var(--space-xl);
 }
-/* Soft sage glow for depth */
-.cta-block::before {
-  content: "";
-  position: absolute;
-  inset: -40% -10% auto auto;
-  width: 60%;
-  aspect-ratio: 1;
-  background: radial-gradient(circle, rgba(151, 191, 136, 0.22), transparent 65%);
-  pointer-events: none;
-}
 .cta-block__inner { position: relative; text-align: center; }
 .cta-block__title { font-size: var(--font-size-3xl); font-weight: 900; font-stretch: 118%; color: var(--color-text-light); }
-.cta-block__title::before {
-  content: "Let's go!";
-  display: block;
-  font-family: var(--font-script);
-  font-size: clamp(1.6rem, 1.3rem + 1vw, 2.1rem);
-  font-weight: 400;
-  font-stretch: 100%;
-  color: var(--color-accent);
-  margin-bottom: 0.5rem;
-  transform: rotate(-3deg);
-}
 .cta-block__text { color: rgba(255, 254, 245, 0.85); margin-top: var(--space-sm); font-size: var(--font-size-lg); }
 .cta-block__actions {
   display: flex;
@@ -1184,8 +1163,7 @@ details[open] .faq-question::after { content: '−'; background: var(--color-for
    TRIAL WORKOUT PAGE
    ========================================================================== */
 .trial .page-header { padding-bottom: var(--space-sm); }
-.trial__eyebrow { transform-origin: center; }
-.trial__intro p { font-size: var(--font-size-lg); line-height: 1.6; text-align: center; }
+.trial__intro p { font-size: 1.125rem; line-height: 1.6; text-align: center; }
 
 /* When / Where / Who — one ruled strip with hairline column dividers */
 .trial__details {
@@ -1223,19 +1201,13 @@ details[open] .faq-question::after { content: '−'; background: var(--color-for
 }
 .page-body .trial__detail-note a:hover { color: var(--color-text); }
 
-.page-body .trial__heading { margin-top: 0; text-align: center; }
-.page-body .trial__requirement {
-  background: var(--color-sage-light);
-  border-radius: var(--radius-md);
-  padding: 1rem 1.25rem;
-  margin-bottom: var(--space-md);
-}
+.page-body .trial__heading { margin-top: 0; margin-bottom: var(--space-md); text-align: center; }
 
 .page-body .trial__steps { list-style: none; padding: 0; counter-reset: step; margin-bottom: var(--space-md); }
 .page-body .trial__step {
   counter-increment: step;
   position: relative;
-  padding: 0 0 var(--space-md) 3.75rem;
+  padding: 0 0 1.5rem 3.25rem;
   margin: 0;
 }
 /* Numbered circle joined to the next step by a line */
@@ -1245,7 +1217,7 @@ details[open] .faq-question::after { content: '−'; background: var(--color-for
   left: 0; top: -0.2rem;
   display: grid;
   place-items: center;
-  width: 2.5rem; height: 2.5rem;
+  width: 2rem; height: 2rem;
   border-radius: 50%;
   background: var(--color-forest);
   color: var(--color-cream);
@@ -1255,9 +1227,9 @@ details[open] .faq-question::after { content: '−'; background: var(--color-for
 .trial__step:not(:last-child)::after {
   content: "";
   position: absolute;
-  left: calc(1.25rem - 1px);
-  top: 2.6rem;
-  bottom: 0.4rem;
+  left: calc(1rem - 1px);
+  top: 2.1rem;
+  bottom: 0.3rem;
   width: 2px;
   background: var(--color-border);
 }

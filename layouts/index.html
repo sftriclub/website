@@ -20,10 +20,6 @@
 {{/* ── Sports Cards ────────────────────────────────────────────────────── */}}
 <section class="sports-section">
   <div class="container">
-    <div class="section-heading section-heading--center">
-      <span class="eyebrow eyebrow--dark">Three sports, one club</span>
-      <h2 class="section-title">Swim. Bike. Run.</h2>
-    </div>
     <div class="sports-grid">
       {{ range (where .Site.RegularPages "Section" "sports").ByWeight }}
       <article class="sport-card">
@@ -33,7 +29,7 @@
         </div>
         <div class="sport-card__body">
           <h2 class="sport-card__title">{{ .Title }}</h2>
-          <p class="sport-card__description">{{ .Params.description }}</p>
+          <p class="sport-card__description">{{ .Params.card_text | default .Params.description }}</p>
           <a class="btn btn--outline" href="{{ .RelPermalink }}">Learn more</a>
         </div>
       </article>
@@ -46,14 +42,13 @@
 <section class="programs-section">
   <div class="container">
     <div class="section-heading">
-      <span class="eyebrow eyebrow--dark">Find your distance</span>
       <h2 class="section-title">Training Programs</h2>
     </div>
     <div class="programs-grid">
       {{ range (where .Site.RegularPages "Section" "training").ByWeight }}
       <article class="program-card">
         <h3 class="program-card__title">{{ .Title }}</h3>
-        <p class="program-card__description">{{ .Params.description }}</p>
+        <p class="program-card__description">{{ (.Params.card_text | default .Params.description) }}</p>
         <a class="program-card__link" href="{{ .RelPermalink }}">Learn more →</a>
       </article>
       {{ end }}
@@ -83,11 +78,10 @@
 <section class="sponsors-section">
   <div class="container">
     <div class="section-heading section-heading--center">
-      <span class="eyebrow eyebrow--dark">Thanks to our partners</span>
       <h2 class="section-title">Our Sponsors</h2>
     </div>
     {{ partial "sponsor-grid.html" . }}
-    <p class="sponsors-note">Members can access exclusive discount codes in Heylo.</p>
+    <p class="sponsors-note">Thanks to our sponsors for their support (and discounts!). Members can find discount codes on Heylo.</p>
   </div>
 </section>
 

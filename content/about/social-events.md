@@ -20,7 +20,7 @@ No better way to end a workout than heading over to a local bakery and enjoying 
 {{< image-section src="/images/social/party.webp" alt="Club Party" side="right" >}}
 ## Parties
 
-The club occasionally hosts more formal celebrations — a chance to dress up and celebrate the season together.
+Every so often we dress up and throw a proper party, like our Holiday Gala at the end of the season.
 
 For upcoming events and RSVPs, check the club calendar on [Heylo](https://heylo.group/sftriclub).
 {{< /image-section >}}

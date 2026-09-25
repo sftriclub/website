@@ -1,7 +1,6 @@
 {{ define "main" }}
 <article class="page trial">
   <header class="page-header container">
-    {{ with .Params.eyebrow }}<span class="eyebrow eyebrow--dark trial__eyebrow">{{ . }}</span>{{ end }}
     <h1 class="page-title">{{ .Title }}</h1>
   </header>
 
@@ -23,24 +22,19 @@
 
     <h2 class="trial__heading">How to sign up</h2>
 
-    {{ with .Params.requirement }}
-    <p class="trial__requirement">{{ . | markdownify }}</p>
-    {{ end }}
-
     {{ with .Params.steps }}
     <ol class="trial__steps">
       {{ range $s := . }}
       <li class="trial__step">
         <h3 class="trial__step-title">{{ .title }}</h3>
         {{ with .text }}<p class="trial__step-text">{{ . | markdownify }}</p>{{ end }}
-        {{ with .button_url }}<a class="btn btn--primary trial__step-btn" href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ $s.button_text }} →</a>{{ end }}
       </li>
       {{ end }}
     </ol>
     {{ end }}
 
     <p class="trial__closing">
-      We look forward to training with you! Questions? Email us at
+      Questions? Email us at
       <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>.
     </p>
   </div>

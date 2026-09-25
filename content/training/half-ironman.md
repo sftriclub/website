@@ -3,6 +3,7 @@ weight: 2
 title: "Half Ironman"
 subtitle: "70.3 miles. Build the endurance to get there."
 description: "A structured training program for athletes targeting a 70.3-mile Half Ironman race."
+card_text: "Completed 0-60 and want to do a longer race? Seasoned 70.3 athlete looking to PR? Somewhere in between? This coached program will get you there!"
 ---
 
 {{< notice title="Registration closed!" >}}
