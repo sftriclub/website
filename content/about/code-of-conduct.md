@@ -3,7 +3,7 @@ title: "Code of Conduct"
 description: "SF Tri Club community standards and expectations for all members."
 ---
 
-Community is one of the top reasons why triathletes love the sport of triathlon. It might seem paradoxical—after all, when we cross that finish line, we do so individually. Our times are our own. Our journeys are deeply personal. Yet, ask any triathlete about their evolution from beginner to competitor. You’ll hear about the people who made it possible: the swimmer who showed up early to refine their stroke, the cyclist who taught them how to change a flat, and the runner who showed them that most limits come from within. We may race as individuals, but we transform as a community.
+Community is one of the top reasons why triathletes love the sport of triathlon. It might seem paradoxical. After all, when we cross that finish line, we do so individually. Our times are our own. Our journeys are deeply personal. Yet, ask any triathlete about their evolution from beginner to competitor. You’ll hear about the people who made it possible: the swimmer who showed up early to refine their stroke, the cyclist who taught them how to change a flat, and the runner who showed them that most limits come from within. We may race as individuals, but we transform as a community.
 
 This Code of Conduct exists because community-building is core to our [Mission](/about/mission). Doing so successfully requires ongoing investment from each new generation of members. The result is a place where Ironman champions and first-time finishers train side-by-side, and where today's mentee becomes tomorrow's mentor.
 
@@ -13,7 +13,7 @@ We are the San Francisco Triathlon Club and these are our standards.
 
 **Welcoming.** Creating an environment where every athlete thrives is our foundation. Share knowledge freely, pass on skills to others, and ensure both newcomers and veterans feel they belong. Our stumbles become someone else's stepping stones through the lessons we pass on.
 
-**Challenge Seekers.** Growth happens just outside our comfort zones. Embrace the learning process—share those humbling training moments, celebrate each milestone, and foster an environment where pushing past yesterday's limits matters more than outpacing others.
+**Challenge Seekers.** Growth happens just outside our comfort zones. Embrace the learning process: share those humbling training moments, celebrate each milestone, and foster an environment where pushing past yesterday's limits matters more than outpacing others.
 
 **First to Serve.** Volunteers built this club and continue to make it possible. We raise our hands first when help is needed, mentor those who follow in our footsteps, and spread the transformative power of triathlon throughout the Bay Area.
 
@@ -64,4 +64,4 @@ No refunds will be provided for suspended or terminated memberships. Appeals for
 
 ## Commitment
 
-By joining the San Francisco Triathlon Club, you commit to upholding these standards. This is a special place. We’re excited to see how you will grow and contribute to our community. And we will always be cheering for you at the finish line. 💚
+By joining the San Francisco Triathlon Club, you commit to upholding these standards. This is a special place. We’re excited to see how you will grow and contribute to our community. And we will always be cheering for you at the finish line.

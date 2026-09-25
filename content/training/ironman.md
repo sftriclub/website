@@ -7,7 +7,7 @@ card_text: "Whether you're training for your first (or next!) Ironman, we've got
 
 {{< image-section src="/images/training/im_santa_rosa_medals.webp" alt="IM Santa Rosa Medals" side="right" >}}
 ### The full distance - 140.6 miles!!!
-Looking for a fun and friendly group to train with for your next (or first!) Ironman 140.6 or full-iron distance triathlon? Each year, we have members signed up for local and destination Ironman races. These members self-organize training groups to take on the titanic amount of training needed to swim 2.4 miles, bike 112 miles, and run 26.2 miles—consecutively, while still meeting [cutoff times](https://marathonhandbook.com/ironman-cutoff-times/). For the metric lovers, that's a 3.86 km swim, 180.24 km bike, and 42.16 km run.
+Looking for a fun and friendly group to train with for your next (or first!) Ironman 140.6 or full-iron distance triathlon? Each year, we have members signed up for local and destination Ironman races. These members self-organize training groups to take on the titanic amount of training needed to swim 2.4 miles, bike 112 miles, and run 26.2 miles, consecutively, while still meeting [cutoff times](https://marathonhandbook.com/ironman-cutoff-times/). For the metric lovers, that's a 3.86 km swim, 180.24 km bike, and 42.16 km run.
 
 That's longer than the average Alcatraz swim ([1.8 miles](https://www.pacificswim.co/alcatraz-swims/)), almost enough to bike around the entire Bay Area ([138 miles](https://www.strava.com/routes/3153093688844610786)), and a full marathon ([26.2 miles](https://www.runnersworld.com/advanced/a25471238/why-the-heck-is-a-marathon-exactly-262/))!
 {{< /image-section >}}

@@ -11,7 +11,7 @@ card_text: "Group and private coaching with Coach Meg and Coach JD, with discoun
 
 Coach Megan Tobin from [TMT Coaching](https://www.tmtcoaching.com/) has been working with the SF Tri Club for several years, leading our popular training programs (0 to 60, Escape From Alcatraz, and 70.3) and coaching many of our members privately.
 
-She‘s a multiple Ironman 140.6 and 70.3 World Championship qualifier and finisher 💪. And she has more coaching certifications than we have room to list here—Ironman U Certified Coach, USAT Certified Level 1 & 2 Coach, USMS Certified Coach, Women's Specific Training Program Specialist, and more.
+She‘s a multiple Ironman 140.6 and 70.3 World Championship qualifier and finisher. And she has more coaching certifications than we have room to list here: Ironman U Certified Coach, USAT Certified Level 1 & 2 Coach, USMS Certified Coach, Women's Specific Training Program Specialist, and more.
 
 Having begun her triathlon journey as a mom of 3, full-time corporate marketer, and single mom, Megan understands the demands of a busy life. But she also knows that finding time for training and racing can bring so much to you as an athlete, while also helping you become a better person, parent, and professional. (Yes, really.) 
 

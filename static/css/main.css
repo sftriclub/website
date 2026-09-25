@@ -5,17 +5,17 @@
    ========================================================================== */
 :root {
   /* Color defs */
-  --color-forest:       #05422C;   /* brand forest green — primary */
-  --color-forest-deep:  #032C1D;   /* darker forest — footer, hover */
-  --color-forest-soft:  #0B5A3D;   /* lighter forest — hover on dark */
+  --color-forest:       #05422C;   /* brand forest green: primary */
+  --color-forest-deep:  #032C1D;   /* darker forest: footer, hover */
+  --color-forest-soft:  #0B5A3D;   /* lighter forest: hover on dark */
   --color-cream:        #FFFEF5;   /* brand cream */
-  --color-cream-warm:   #F6F2E3;   /* warm cream — alternating sections */
-  --color-sage:         #97BF88;   /* brand sage green — accents on dark */
-  --color-sage-light:   #E4EFDD;   /* light sage — notice boxes */
+  --color-cream-warm:   #F6F2E3;   /* warm cream: alternating sections */
+  --color-sage:         #97BF88;   /* brand sage green: accents on dark */
+  --color-sage-light:   #E4EFDD;   /* light sage: notice boxes */
   --color-sage-tint:    #D5E3CC;   /* sage-tinted border */
   --color-ink-muted:    #3E5E50;   /* muted forest for secondary text */
 
-  /* Section colors — reference color defs above */
+  /* Section colors: reference color defs above */
   --color-primary:      var(--color-forest);
   --color-primary-hover: var(--color-forest-deep);
   --color-accent:       var(--color-sage);
@@ -63,7 +63,7 @@
   --max-width:     1200px;
   --header-height: 76px;
 
-  /* Transitions — kept short so hovers feel immediate */
+  /* Transitions: kept short so hovers feel immediate */
   --transition-fast: 120ms ease-out;
   --transition-base: 200ms ease-out;
 }
@@ -142,7 +142,7 @@ h1, h2, h3, h4 {
   border: 0;
 }
 
-/* Script eyebrow — echoes the logo's "SF Tri" lettering */
+/* Script eyebrow: echoes the logo's "SF Tri" lettering */
 .eyebrow {
   display: block;
   font-family: var(--font-script);
@@ -365,7 +365,7 @@ h1, h2, h3, h4 {
 }
 .dropdown-link:hover { background-color: var(--color-sage-light); }
 
-/* Hamburger toggle — hidden on desktop */
+/* Hamburger toggle: hidden on desktop */
 .nav-toggle { display: none; flex-direction: column; gap: 5px; padding: 0.5rem; margin-left: auto; }
 .nav-toggle__bar {
   display: block;
@@ -803,7 +803,7 @@ a:hover > .sponsor-name-fallback { opacity: 1; }
 .sponsor-detail-card .sponsor-name-fallback { width: 140px; min-height: 80px; flex-shrink: 0; font-size: 1rem; }
 
 /* ==========================================================================
-   CARDS — news / section / spotlight share one look
+   CARDS: news / section / spotlight share one look
    ========================================================================== */
 
 /* Listing page */
@@ -1165,7 +1165,7 @@ details[open] .faq-question::after { content: '−'; background: var(--color-for
 .trial .page-header { padding-bottom: var(--space-sm); }
 .trial__intro p { font-size: 1.125rem; line-height: 1.6; text-align: center; }
 
-/* When / Where / Who — one ruled strip with hairline column dividers */
+/* When / Where / Who: one ruled strip with hairline column dividers */
 .trial__details {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

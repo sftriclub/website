@@ -4,7 +4,7 @@ weight: 2
 hero_image: "/images/sports/bike.webp"
 hero_image_alt: "Eight SF Tri Club cyclists standing with their road bikes at a viewpoint in front of a fog-shrouded Golden Gate Bridge."
 description: "Saturday group rides, bike clinics, and the Triple Mountain Challenge."
-card_text: "Learn more about our member-led bike rides, bike challenges, and helpful clinics. Beautiful coastline views and delicious baked goods 🥐 await you!"
+card_text: "Learn more about our member-led bike rides, bike challenges, and helpful clinics. Beautiful coastline views and delicious baked goods await you!"
 ---
 
 ## Member-led Rides
