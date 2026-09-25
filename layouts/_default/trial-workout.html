@@ -1,0 +1,44 @@
+{{ define "main" }}
+<article class="page trial">
+  <header class="page-header container">
+    <h1 class="page-title">{{ .Title }}</h1>
+  </header>
+
+  <div class="page-body container container--narrow">
+    <div class="trial__intro">{{ .Content }}</div>
+
+    {{ with .Params.details }}
+    <dl class="trial__details">
+      {{ range $d := . }}
+      <div class="trial__detail">
+        <dt class="trial__detail-label">{{ .label }}</dt>
+        <dd class="trial__detail-value">{{ .value }}</dd>
+        {{ with .note }}<dd class="trial__detail-note">{{ . }}</dd>{{ end }}
+        {{ with .link }}<dd class="trial__detail-note"><a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ $d.link_text | default "Map" }}</a></dd>{{ end }}
+      </div>
+      {{ end }}
+    </dl>
+    {{ end }}
+
+    <h2 class="trial__heading">How to sign up</h2>
+
+    {{ with .Params.steps }}
+    <ol class="trial__steps">
+      {{ range $s := . }}
+      <li class="trial__step">
+        <h3 class="trial__step-title">{{ .title }}</h3>
+        {{ with .text }}<p class="trial__step-text">{{ . | markdownify }}</p>{{ end }}
+      </li>
+      {{ end }}
+    </ol>
+    {{ end }}
+
+    <p class="trial__closing">
+      Questions? Email us at
+      <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>.
+    </p>
+  </div>
+
+  {{ partial "cta-block.html" . }}
+</article>
+{{ end }}

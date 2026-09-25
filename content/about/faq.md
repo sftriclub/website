@@ -8,7 +8,7 @@ questions:
 
   - q: "What does the membership include?"
     a: |
-      The primary function of our club is to bring together people who want to train and race together. Membership benefits include:
+      Membership is $145 per year. The primary function of our club is to bring together people who want to train and race together. Membership benefits include:
 
       * Weekly coached track workouts
       * Weekly coached swim workouts
@@ -27,7 +27,7 @@ questions:
 
   - q: "I’m interested in your club, can I join in for a workout before becoming member?"
     a: |
-      Yes! You may [try a track workout](/trial-workout) before you sign-up. After that, we’ll ask you sign up for a membership. t's not fair to our members to reap the same benefits they have without contributing yourself. We do hope you'll join us—we don’t bite, just train!
+      Yes! You may [try a track workout](/trial-workout) before you sign-up. After that, we’ll ask you sign up for a membership. t's not fair to our members to reap the same benefits they have without contributing yourself. We do hope you'll join us. We don’t bite, just train!
 
   - q: "I’m a triathlete visiting from out of town. Can I join in for a workout without being a member?"
     a: "Yes, you may join for a single free track workout! We also offer a heavily discounted membership for folks who are visiting, e.g., for a summer internship."

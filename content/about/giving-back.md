@@ -8,11 +8,11 @@ description: "The SF Tri Club's community and charitable involvement."
 
 Giving back to the community and taking care of our Bay Area playground is an integral part of the SF Tri experience. Join us to volunteer at a local race, to get your hands dirty with the Golden Gate Parks Conservancy, or to raise a glass in support of organizations that inspire us. Previous events have included:
 
-**Trail Maintenance Day** — Help Golden Gate Parks Conservancy maintain our wonderful trail systems.
+**Trail Maintenance Day:** Help Golden Gate Parks Conservancy maintain our wonderful trail systems.
 
-**[Bike to Work Day](https://bayareabiketowork.com/)** — Plan on biking to work, leading others in group rides to work, and consider volunteering with your local bike coalition.
+**[Bike to Work Day](https://bayareabiketowork.com/)**: Plan on biking to work, leading others in group rides to work, and consider volunteering with your local bike coalition.
 
-**[Sunday Streets](http://sundaystreetssf.com/)** — Sunday Streets is San Francisco's open street program, where 1-4 miles of city streets are transformed into car-free spaces for community health and connection.
+**[Sunday Streets](http://sundaystreetssf.com/)**: Sunday Streets is San Francisco's open street program, where 1-4 miles of city streets are transformed into car-free spaces for community health and connection.
 {{< /image-section >}}
 
 {{< image-section src="/images/giving_back/CAF.webp" alt="Challenged Athletes Foundation fundraiser" side="right" >}}

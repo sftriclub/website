@@ -1,0 +1,78 @@
+{{ define "main" }}
+<article class="page membership">
+  <header class="page-header container">
+    {{ with .Params.eyebrow }}<span class="eyebrow eyebrow--dark membership__eyebrow">{{ . }}</span>{{ end }}
+    <h1 class="page-title">{{ .Title }}</h1>
+    {{ with .Params.subtitle }}<p class="page-subtitle">{{ . }}</p>{{ end }}
+  </header>
+
+  {{/* ── A week of club workouts, laid out as a calendar ─────────────── */}}
+  {{ with .Params.week }}
+  <section class="membership__section container">
+    {{ with $.Params.week_heading }}<h2 class="membership__heading">{{ . }}</h2>{{ end }}
+    <ol class="week">
+      {{ range . }}
+      <li class="week__day">
+        <span class="week__label">{{ .day }}</span>
+        {{ with .items }}
+        <ul class="week__items">
+          {{ range . }}
+          <li class="week__item week__item--{{ .sport }}">
+            <span class="week__tag">{{ .sport }}</span>
+            <span class="week__title">{{ .title }}</span>
+            <span class="week__meta">{{ .when }}{{ with .detail }}<br>{{ . }}{{ end }}</span>
+          </li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      </li>
+      {{ end }}
+    </ol>
+  </section>
+  {{ end }}
+
+  {{/* ── Programs and perks as card rows ───────────────────────────────── */}}
+  {{ range $group := slice (dict "heading" .Params.programs_heading "items" .Params.programs "mod" "programs") (dict "heading" .Params.perks_heading "items" .Params.perks "mod" "perks") }}
+  {{ with $group.items }}
+  <section class="membership__section container">
+    {{ with $group.heading }}<h2 class="membership__heading">{{ . }}</h2>{{ end }}
+    <div class="membership__cards">
+      {{ range . }}
+      <div class="membership-card membership-card--{{ $group.mod }}">
+        <h3 class="membership-card__title">{{ .title }}</h3>
+        <p class="membership-card__text">{{ .text | markdownify }}</p>
+        {{ if .show_sponsors }}
+        <ul class="membership-card__logos">
+          {{ range first 4 hugo.Data.sponsors.sponsors }}
+          <li><img src="{{ .logo }}" alt="{{ .name }}" loading="lazy"></li>
+          {{ end }}
+        </ul>
+        {{ end }}
+        {{ with .url }}<a class="membership-card__link" href="{{ . }}">Learn more →</a>{{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+  {{ end }}
+
+  {{/* ── Closing: community photo + join ──────────────────────────────── */}}
+  <section class="membership-join">
+    <div class="membership-join__inner container">
+      {{ with .Params.closing_image }}
+      <div class="membership-join__photo">
+        {{ partial "image.html" (dict "src" . "alt" ($.Params.closing_image_alt | default "") "sizes" "(max-width: 900px) 100vw, 55vw") }}
+      </div>
+      {{ end }}
+      <div class="membership-join__body">
+        {{ with .Params.closing_heading }}<h2 class="membership-join__heading">{{ . }}</h2>{{ end }}
+        {{ with .Params.price }}<p class="membership-join__price"><strong>{{ . }}</strong>{{ with $.Params.price_note }}{{ . }}{{ end }}</p>{{ end }}
+        <div class="membership-join__actions">
+          {{ with .Params.join_url }}<a class="btn btn--primary btn--lg" href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ $.Params.join_text | default "Join" }}</a>{{ end }}
+          <a class="membership-join__alt" href="/trial-workout/">Or try a free workout first →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+{{ end }}

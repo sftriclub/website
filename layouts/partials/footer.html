@@ -1,6 +1,8 @@
 <footer class="site-footer">
   <div class="site-footer__inner container">
     <div class="site-footer__brand">
+      {{ $logo := resources.Get "sf-tri-logo-cream.png" }}
+      <a href="/" aria-label="{{ .Site.Title }} home"><img class="site-footer__logo" src="{{ $logo.RelPermalink }}" alt="" width="111" height="56"></a>
       <p class="site-footer__name">{{ .Site.Title }}</p>
       <a class="site-footer__email" href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
     </div>
@@ -18,5 +20,6 @@
         <img src="/images/icons/strava.svg" alt="Strava" width="24" height="24">
       </a>
     </nav>
+    <p class="site-footer__legal">&copy; {{ now.Year }} {{ .Site.Title }} &middot; {{ .Site.Params.description }}</p>
   </div>
 </footer>

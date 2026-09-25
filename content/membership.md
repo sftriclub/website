@@ -1,22 +1,65 @@
 ---
 title: "Membership"
+layout: membership
+subtitle: "Here's everything that comes with an SF Tri membership."
 description: "Join the San Francisco Triathlon Club and access all member programs."
 no_cta: true
+
+week_heading: "Your week with SF Tri"
+week:
+  - day: "Tue"
+    items:
+      - sport: "run"
+        title: "Track workout"
+        when: "Evening"
+        detail: "With Coach JD"
+  - day: "Fri"
+    items:
+      - sport: "swim"
+        title: "Swim workout"
+        when: "Evening"
+        detail: "With Coach JD"
+  - day: "Sat"
+    items:
+      - sport: "bike"
+        title: "Member-led bike ride"
+        when: "Morning"
+  - day: "Sun"
+    items:
+      - sport: "swim"
+        title: "Social open-water swim"
+        when: "Morning"
+      - sport: "run"
+        title: "Social group run"
+        when: "Morning"
+
+programs_heading: "Programs & clinics"
+programs:
+  - title: "Race training programs"
+    text: "Structured programs for specific races: [0 to 60](/training/zero-to-sixty/) and [Half Ironman](/training/half-ironman/)."
+    url: "/training/"
+  - title: "Training weekends"
+    text: "A weekend away training together, once a year."
+    url: "/training/training-weekend/"
+  - title: "Skill-building clinics"
+    text: "Open Water Swimming, Run Technique, Roadside Flat Repair, and more."
+
+perks_heading: "Member perks"
+perks:
+  - title: "Social events"
+    text: "Picnics, brunches, karaoke, potluck dinners, bonfires, BBQs, happy hours (non-alcoholic options always available), and more!"
+  - title: "Sponsor discounts"
+    text: "Discounts from our sponsors on gear and races."
+    show_sponsors: true
+    url: "/about/sponsors/"
+  - title: "Heylo community"
+    text: "Our community space, chats, and events calendar, all on [Heylo](https://heylo.group/sftriclub)."
+
+price: "$145 per year"
+price_note: "Covers everything on this page."
+closing_heading: "And best of all, a great community!"
+closing_image: "/images/social/bbq.webp"
+closing_image_alt: "Dozens of SF Tri Club members gathered on the grass at a sunny park picnic"
+join_text: "Join on Heylo"
+join_url: "https://heylo.group/sftriclub"
 ---
-
-## Become a member
-
-- **Weekly track workouts** — Tuesday evenings with Coach JD
-- **Weekly swim workouts** — Friday evenings with Coach JD (Jan–Dec) + Sunday mornings with Coach Laura (Jan–Apr)
-- **Member-led bike rides** — Saturday mornings
-- **Social group runs** — Sunday mornings
-- **Social group open-water swims** — Sunday mornings
-- **Social events** — picnics, brunches, karaoke, potluck dinners, bonfires, BBQs, happy hours (non-alcoholic options always available), and more!
-- **Training programs for specific races** — [0 to 60](/training/zero-to-sixty) and [Half Ironman](/training/half-ironman)
-- **Training weekends**
-- **Skill-building clinics** — e.g. Open Water Swimming, Run Technique, Roadside Flat Repair
-- **Discounts from sponsors** on gear and races
-- **Access to our [Heylo](https://heylo.group/sftriclub) community** — community space, chats, and events calendar
-- **And best of all, a great community!**
-
-[Join on Heylo](https://heylo.group/sftriclub)

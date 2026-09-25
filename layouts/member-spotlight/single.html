@@ -37,7 +37,7 @@
     <div class="spotlight-race-resume__body">
       {{ range . }}
       <div class="spotlight-race-group">
-        <h3 class="spotlight-race-group__title">{{ .title }}</h3>
+        {{ with .title }}<h3 class="spotlight-race-group__title">{{ . }}</h3>{{ end }}
         <ul class="spotlight-race-group__list">
           {{ range .races }}
           <li>{{ . }}</li>

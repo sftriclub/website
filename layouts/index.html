@@ -7,9 +7,13 @@
   {{ end }}
   <div class="hero__overlay"></div>
   <div class="hero__content container">
+    <span class="eyebrow">Welcome to SF Tri</span>
     <h1 class="hero__headline">{{ .Params.hero_headline }}</h1>
     <p class="hero__subheadline">{{ .Params.hero_subheadline }}</p>
-    <a class="btn btn--primary" href="{{ .Params.hero_cta_url }}">{{ .Params.hero_cta_text }}</a>
+    <div class="hero__actions">
+      <a class="btn btn--primary btn--lg" href="{{ .Params.hero_cta_url }}">{{ .Params.hero_cta_text }}</a>
+      <a class="btn btn--outline btn--lg" href="/membership/">Membership</a>
+    </div>
   </div>
 </section>
 
@@ -25,7 +29,7 @@
         </div>
         <div class="sport-card__body">
           <h2 class="sport-card__title">{{ .Title }}</h2>
-          <p class="sport-card__description">{{ .Params.description }}</p>
+          <p class="sport-card__description">{{ .Params.card_text | default .Params.description }}</p>
           <a class="btn btn--outline" href="{{ .RelPermalink }}">Learn more</a>
         </div>
       </article>
@@ -37,13 +41,14 @@
 {{/* ── Training Programs ───────────────────────────────────────────────── */}}
 <section class="programs-section">
   <div class="container">
-    <h2 class="section-title">Training Programs</h2>
+    <div class="section-heading">
+      <h2 class="section-title">Training Programs</h2>
+    </div>
     <div class="programs-grid">
-      {{ range where .Site.RegularPages "Section" "training" }}
+      {{ range (where .Site.RegularPages "Section" "training").ByWeight }}
       <article class="program-card">
         <h3 class="program-card__title">{{ .Title }}</h3>
-        <p class="program-card__subtitle">{{ .Params.subtitle }}</p>
-        <p class="program-card__description">{{ .Params.description }}</p>
+        <p class="program-card__description">{{ (.Params.card_text | default .Params.description) }}</p>
         <a class="program-card__link" href="{{ .RelPermalink }}">Learn more →</a>
       </article>
       {{ end }}
@@ -72,15 +77,18 @@
 {{/* ── Sponsors ────────────────────────────────────────────────────────── */}}
 <section class="sponsors-section">
   <div class="container">
-    <h2 class="section-title">Our Sponsors</h2>
+    <div class="section-heading section-heading--center">
+      <h2 class="section-title">Our Sponsors</h2>
+    </div>
     {{ partial "sponsor-grid.html" . }}
-    <p class="sponsors-note">Members can access exclusive discount codes in Heylo.</p>
+    <p class="sponsors-note">Thanks to our sponsors for their support (and discounts!). Members can find discount codes on Heylo.</p>
   </div>
 </section>
 
 {{/* ── Strava CTA ──────────────────────────────────────────────────────── */}}
 <section class="strava-section">
   <div class="container">
+    <p class="strava-text">Follow our workouts on Strava</p>
     <a class="btn btn--primary" href="{{ .Site.Params.strava }}" target="_blank" rel="noopener noreferrer">
       Join us on Strava
     </a>

@@ -1,6 +1,6 @@
 ---
 title: "Rocky Gowni"
-date: 2026-03-15
+date: 2026-04-15
 summary: "First-season Ironman finisher who started 2025 with no triathlon background and finished Ironman Arizona by year-end."
 hero_image: "/images/spotlights/rocky-gowni/portrait.webp"
 secondary_image: "/images/spotlights/rocky-gowni/with-finishers.webp"
@@ -8,35 +8,29 @@ questions:
   - q: "What inspired you to sign up for your very first triathlon?"
     a: "I entered 2025 knowing I wanted to challenge myself physically. Over the prior winter break, I read a book called Born to Run that kind of opened my eyes to our innate human ability for endurance. Didn't find any books called Born to Bike or Born to Swim but I kind of took a leap of faith that if I figured out running, I could figure out the other two. :)"
   - q: "What were your initial triathlon aspirations?"
-    a: "I've found it helps me to be pot-committed on hard goals, so I worked backward from a full Ironman in Arizona, which I signed up for first. From there, I built up through shorter distances."
+    a: "I’ve found it helps me to be pot-committed on hard goals, so I worked backward from a full Ironman in Arizona, which I signed up for first. From there, I built up through shorter distances."
   - q: "What was your athletic baseline when you first started training for triathlons?"
-    a: |
-      I don't have an athletic background from college or otherwise but I had a solid cardio base from sports like soccer and squash, plus gym/workout classes like Barry's, Orangetheory, F45 etc.
-
-      All three disciplines were new. Running came naturally — I bought my first pair of running shoes and ran a half marathon in February, which gave me a lot of confidence to take it up a notch. Swimming was the toughest by far; you can power through biking and running, but swimming really requires technique and repetition.
+    a: "I don't have an athletic background from college or otherwise but I had a solid cardio base from sports like soccer and squash, plus gym/workout classes like Barry’s, Orangetheory, F45 etc.\n\nAll three disciplines were new. Running came naturally - I bought my first pair of running shoes and ran a half marathon in February, which gave me a lot of confidence to take it up a notch. Swimming was the toughest by far; you can power through biking and running, but swimming really requires technique and repetition."
   - q: "At what point did you decide to join SF Tri as part of your training?"
-    a: "Pretty early on I attended the info session at Manny's. While I was too late to join the official 0-60 program I made a point to attend all the open training sessions & was really grateful for how welcoming the club was. Honestly, I don't think I could have crossed the finish line without SF Tri. Whether through the formal training programs or more generally — endurance sports can get really lonely when training on your own. Having a set of peers around me who were also pushing themselves really helped me push through as well."
+    a: "Pretty early on I attended the info session at Manny's. While I was too late to join the official 0-60 program I made a point to attend all the open training sessions & was really grateful or how welcoming the club was. Honestly, I don't think I could have crossed the finish line without SF Tri. Whether through the formal training programs or more generally - endurance sports can get really lonely when training on your own. Having a set of peers around me who were also pushing themselves really helped me push through as well."
   - q: "How many avg. hours / week were you training once you decided to train up towards a 70.3 and full IM?"
-    a: "Leading up to 70.3 it got to 10 hours per week and in the final ramp to the full it got up to 15-20 hours some weeks."
+    a: "Leading up to 70.3 it got to 10 hours per week and in the final ramp to the full it got up to 15-20 hours some weeks"
   - q: "What are some of the unexpected discoveries you've had about triathlon training, the tri world and/or yourself as you've become the accomplished triathlete you are today?"
     a: "Hah not sure I can call myself an accomplished triathlete, still have a ton to learn but I'd say an unexpected discovery is anyone can become an athlete. Oh and I love running :)"
   - q: "What's been your favorite race to date?"
-    a: "Santa Cruz 70.3 for multiple reasons — the course itself is so beautiful. There were many points during the bike course where I forgot we were even racing. Having my cohort of 60-70.3 peers, the SF tri cheer squad & family/friends there to cheer me on made the experience even more special."
+    a: "Santa Cruz 70.3 for multiple reasons - the course itself is so beautiful. There were many points during the bike course where I forgot we were even racing. Having my cohort of 60-70.3 peers, the SF tri cheer squad & family/friends there to cheer me on made the experience even more special."
   - q: "What's been one of your hardest race moments and how did you prevail?"
     a: "At Ironman Arizona had a couple of unexpected & perhaps avoidable issues. First my goggle lens cap came off right before the swim start, and then on my bike computer lost connectivity to both my HR and power meter. On both I just stopped trying to fix things and just raced on feel. It was a good reminder not to rely too much on technology :)"
   - q: "If you could give any advice to someone in their first season of triathlon training, what would it be?"
-    a: "Have fun. It's a hard (and slightly masochistic) sport, but what sustains you is enjoying the process and the community."
+    a: "Have fun. It’s a hard (and slightly masochistic) sport, but what sustains you is enjoying the process and the community."
   - q: "What are 1-2 training habits that have made the biggest difference for you as you've trained up to become an accomplished Iron(wo)man athlete?"
-    a: |
-      Don't skip the gym & mobility work. These were the first sessions I scheduled every week and I think they really helped me stay injury free as my training volume ramped up.
-
-      Nutrition wise carb up! I was on a low carb diet leading into the season & I found that to be a pretty hard adjustment but incredibly important to keep my energy levels up.
-  - q: "What's a mistake you made early in your triathlon journey that you'd encourage newer triathletes to avoid?"
-    a: "Don't cut your sessions short — especially the discipline you feel least strong in. Early on I think I was a pretty lax when it came to swimming sessions — I'd convince myself I could make up for it on race day but your body has a funny way of remembering when it's in uncharted territory — learned this the hard way during the Napa Oly swim!"
+    a: "Don't skip the gym & mobility work. These were the first sessions I scheduled every week and I think they really helped me stay injury free as my training volume ramped up.\n\nNutrition wise carb up! I was a on a low carb diet leading into the season & I found that to be a pretty hard adjustment but incredibly important to keep my energy levels up"
+  - q: "What's a mistake you made early in your triathlon journey that you’d encourage newer triathletes to avoid?"
+    a: "Don't cut your sessions short - especially the discipline you feel least strong in. Early on I think I was a pretty lax when it came to swimming sessions - I'd convince myself I could make up for it on race day but your body has a funny way of remembering when it's in uncharted territory - learned this the hard way during the Napa Oly swim!"
   - q: "What keeps you motivated to keep racing and training?"
-    a: "I think a lot of it is intrinsic motivation to keep becoming a better version of myself. The beautiful thing about all 3 of these sports is you're ultimately only competing with you from yesterday."
+    a: "I think a lot of it is intrinsic motivation to keep becoming a better version of myself. The beautiful thing about all 3 of these sports is you're utlimately only competing with you from yesterday."
   - q: "What races are you targeting this year?"
-    a: "Taking a sabbatical this year :) But I will be back next year — I definitely want to do another Full IM but want to build up a solid base & shoot for a time goal next time around. Still training in the meanwhile but mostly for the vibes."
+    a: "Taking a sabbatical this year :) But I will be back next year - I definitely want to another Full IM but want to build up a solid base & shoot for a time goal next time around. Still training in the meanwhile but mostly for the vibes."
 race_groups:
   - title: "2025"
     races:
