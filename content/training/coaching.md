@@ -1,4 +1,5 @@
 ---
+weight: 5
 title: Coaching
 subtitle: ''
 hero_image: /images/sports/placeholder.jpg

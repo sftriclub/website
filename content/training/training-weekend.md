@@ -1,4 +1,5 @@
 ---
+weight: 4
 title: "Training Weekend"
 subtitle: "An immersive weekend of focused multi-sport training."
 hero_image: "/images/sports/placeholder.jpg"

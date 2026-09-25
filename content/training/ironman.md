@@ -1,4 +1,5 @@
 ---
+weight: 3
 title: "Ironman"
 description: "A structured training program for athletes targeting a full 140.6-mile Ironman race."
 ---

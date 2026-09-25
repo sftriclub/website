@@ -1,4 +1,5 @@
 ---
+weight: 1
 title: "Zero to Sixty"
 subtitle: "First triathlon? No sweat. Our beginner program has your back!"
 hero_image: "/images/sports/swim.jpg"

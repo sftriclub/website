@@ -41,7 +41,7 @@
 
   // Close mobile nav on resize to desktop
   window.addEventListener('resize', function () {
-    if (window.innerWidth > 768 && navWrapper) {
+    if (window.innerWidth > 1000 && navWrapper) {
       navWrapper.classList.remove('is-open');
       if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
     }

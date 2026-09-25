@@ -1,4 +1,5 @@
 ---
+weight: 2
 title: "Half Ironman"
 subtitle: "70.3 miles. Build the endurance to get there."
 hero_image: "/images/sports/swim.jpg"
