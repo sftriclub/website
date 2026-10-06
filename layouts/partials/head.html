@@ -64,6 +64,17 @@
 
 {{ partial "schema.html" . }}
 
+{{/* ── Favicons ──────────────────────────────────────────────────────────
+     The logo is a wide cream wordmark on transparency, which would vanish
+     on a light browser tab and get squashed into a square. Pad it onto a
+     square forest-green tile first, then resize for each use.             */}}
+{{- with resources.Get "sf-tri-logo-cream.png" }}
+  {{- $tile := .Filter (images.Padding 770 150 769 150 "#05422C") }}
+<link rel="icon" type="image/png" sizes="32x32" href="{{ ($tile.Resize "32x32 png").RelPermalink }}">
+<link rel="icon" type="image/png" sizes="192x192" href="{{ ($tile.Resize "192x192 png").RelPermalink }}">
+<link rel="apple-touch-icon" href="{{ ($tile.Resize "180x180 png").RelPermalink }}">
+{{- end }}
+
 <meta name="theme-color" content="#05422C">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
