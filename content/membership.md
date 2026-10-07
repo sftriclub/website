@@ -53,7 +53,7 @@ perks:
     show_sponsors: true
     url: "/about/sponsors/"
   - title: "Heylo community"
-    text: "Our community space, chats, and events calendar, all on [Heylo](https://heylo.group/sftriclub)."
+    text: "Our community space, chats, and events calendar, all on [Heylo](https://www.heylo.com/g/a48c491e-6366-468e-9db9-45e9586ba5e2)."
 
 price: "$145 per year"
 price_note: "Covers everything on this page."
