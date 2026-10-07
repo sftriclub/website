@@ -3,7 +3,7 @@
     {{ partial "image.html" (dict "src" .Params.hero_image "alt" (.Params.hero_image_alt | default .Title) "class" "spotlight-card__image" "sizes" "(max-width: 700px) 100vw, 33vw") }}
   </a>
   <div class="spotlight-card__body">
-    <h3 class="spotlight-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <h2 class="spotlight-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
     <p class="spotlight-card__summary">{{ .Params.summary }}</p>
     <a class="spotlight-card__link" href="{{ .RelPermalink }}">Read story<span class="visually-hidden">: {{ .Title }}</span> →</a>
   </div>

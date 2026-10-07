@@ -1,6 +1,7 @@
 ---
 title: "FAQ"
 description: "Frequently asked questions about the SF Tri Club."
+meta_description: "Answers to common questions about the San Francisco Triathlon Club: membership, coached workouts, beginner programs, trial workouts, bike rentals and kits."
 layout: "faq"
 questions:
   - q: "What is the San Francisco Triathlon Club?"

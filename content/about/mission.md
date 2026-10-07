@@ -1,6 +1,7 @@
 ---
 title: "Our Mission"
 description: "The SF Tri Club is a multi-sport club and 501(c)(3) nonprofit."
+meta_description: "The San Francisco Triathlon Club is a 501(c)(3) multi-sport nonprofit offering coached workouts, clinics and beginner programs for all ages and abilities."
 ---
 
 San Francisco Triathlon Club (SFTC) is a multi-sport club and 501(c)(3) nonprofit. SF Tri Club members have a keen interest in giving back through charitable contributions and volunteering for community events. As a multi-sport club, we have members competing in triathlons, marathons, adventure races, and more. Our club offers a wide range of opportunities, including new-to-the-sport programs, sponsorship benefits, triathlon information resources, and a social and highly energetic team atmosphere for all ages and abilities. Our goal is to provide a safe, healthy, fun, and positive environment for all of our members.

@@ -1,6 +1,7 @@
 ---
 title: "Social Events"
 description: "Club social events throughout the season."
+meta_description: "Monthly socials at Kezar Pub, post-workout pastries, club BBQs and an end-of-season Holiday Gala: the social side of the San Francisco Triathlon Club."
 ---
 
 {{< image-section src="/images/social/bbq.webp" alt="Club BBQ" side="right" >}}
@@ -22,5 +23,5 @@ No better way to end a workout than heading over to a local bakery and enjoying 
 
 Every so often we dress up and throw a proper party, like our Holiday Gala at the end of the season.
 
-For upcoming events and RSVPs, check the club calendar on [Heylo](https://heylo.group/sftriclub).
+For upcoming events and RSVPs, check the club calendar on [Heylo](https://www.heylo.com/g/a48c491e-6366-468e-9db9-45e9586ba5e2).
 {{< /image-section >}}

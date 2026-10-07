@@ -1,6 +1,7 @@
 ---
 title: "Giving Back"
 description: "The SF Tri Club's community and charitable involvement."
+meta_description: "How the SF Tri Club gives back: trail days with the Golden Gate Parks Conservancy, race aid stations and a Challenged Athletes Foundation fundraiser."
 ---
 
 {{< image-section src="/images/giving_back/tri2help.webp" alt="Tri 2 Help volunteers" side="left" >}}

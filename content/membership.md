@@ -53,7 +53,7 @@ perks:
     show_sponsors: true
     url: "/about/sponsors/"
   - title: "Heylo community"
-    text: "Our community space, chats, and events calendar, all on [Heylo](https://heylo.group/sftriclub)."
+    text: "Our community space, chats, and events calendar, all on [Heylo](https://www.heylo.com/g/a48c491e-6366-468e-9db9-45e9586ba5e2)."
 
 price: "$145 per year"
 price_note: "Covers everything on this page."
@@ -61,5 +61,4 @@ closing_heading: "And best of all, a great community!"
 closing_image: "/images/social/bbq.webp"
 closing_image_alt: "Dozens of SF Tri Club members gathered on the grass at a sunny park picnic"
 join_text: "Join on Heylo"
-join_url: "https://heylo.group/sftriclub"
 ---

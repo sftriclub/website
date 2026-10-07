@@ -43,14 +43,15 @@ disableKinds = ["taxonomy", "term"]
   description = "A multi-sport club and 501(c)(3) nonprofit in San Francisco."
   # Appended to the site title on the homepage <title> tag.
   tagline = "Swim, Bike, Run"
-  # Fallback social share image for pages without a hero image.
-  ogImage = "/sf-tri-logo-cream.png"
+  # Optional: a fixed social share image for pages without a hero image.
+  # Unset, head.html generates one from the logo on the brand green.
   email = "info@sftriclub.org"
   instagram = "https://www.instagram.com/sftriclub"
   facebook = "https://www.facebook.com/sftriclub"
   tiktok = "https://www.tiktok.com/@sftriclub"
   strava = "https://www.strava.com/clubs/sftriclub"
   login = "https://www.heylo.com/login"
+  # Heylo invite link: the Join button on /membership/ (unless the page sets join_url).
   heyloSignup = "https://www.heylo.com/invite/30b897c1-3bba-4511-9a25-c2bde97b9491"
 
 # Top-level nav items. Items with identifier are dropdown parents (no URL).
