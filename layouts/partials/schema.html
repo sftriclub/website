@@ -27,6 +27,19 @@
 <script type="application/ld+json">{{ (merge (dict "@context" "https://schema.org") $org) | jsonify | safeJS }}</script>
 {{- end -}}
 
+{{- /* ── Breadcrumbs: lets search results show the section path ────────── */ -}}
+{{- if not (or .IsHome (eq .Kind "404")) -}}
+  {{- $items := slice -}}
+  {{- range $i, $p := (.Ancestors.Reverse | append .) -}}
+    {{- $items = $items | append (dict
+          "@type" "ListItem"
+          "position" (add $i 1)
+          "name" (cond $p.IsHome "Home" $p.Title)
+          "item" $p.Permalink) -}}
+  {{- end -}}
+<script type="application/ld+json">{{ (dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $items) | jsonify | safeJS }}</script>
+{{- end -}}
+
 {{- /* ── FAQ page: eligible for the FAQ rich result ────────────────────── */ -}}
 {{- with .Params.questions -}}
   {{- if eq $.Layout "faq" -}}
