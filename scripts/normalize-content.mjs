@@ -12,7 +12,9 @@
 //
 // Anything the CMS would silently delete on save (a key with no matching
 // field, or page body text with no body field) is reported as an error and
-// the file is left untouched; add the field to config.yml first.
+// the file is left untouched; add the field to config.yml first. So is a
+// required field that the content leaves empty, because the CMS would refuse
+// to save that entry until someone fills it in.
 
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { join, relative, resolve } from 'node:path';
@@ -51,6 +53,9 @@ function normalizeObject(data, fields, where, errors) {
     let value = normalizeValue(data?.[field.name], field, `${where}.${field.name}`, errors);
     if (value === undefined && field.widget === 'hidden' && field.default !== undefined) value = field.default;
     const optional = field.required === false;
+    if (!optional && isEmpty(value) && field.widget !== 'hidden') {
+      errors.push(`${where}: required field "${field.name}" is empty, so the CMS would refuse to save this entry (add required: false if it's optional)`);
+    }
     if (isEmpty(value) && (optional && omitEmpty)) continue;
     if (value === undefined) continue;
     out[field.name] = value;

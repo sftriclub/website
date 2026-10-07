@@ -395,7 +395,7 @@ collections:
         label: Race Resume
         widget: list
         fields:
-          - { name: title, label: Category, widget: string, hint: "e.g. Ironman, Long Course 70.3, Olympic, Sprint" }
+          - { name: title, label: "Category (optional)", widget: string, required: false, hint: "Heading above this group, e.g. Ironman, Long Course 70.3, or a year. Leave blank to show the races without a heading, e.g. to split one list into columns." }
           - name: races
             label: Races
             widget: list
