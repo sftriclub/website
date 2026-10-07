@@ -43,7 +43,27 @@ collections:
         fields:
           - { name: title, label: Title, widget: string }
           - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
+          - { name: layout, widget: hidden, default: trial-workout }
+          - { name: no_cta, label: Hide the footer call-to-action, widget: boolean, required: false, default: true }
           - { name: cta_secondary_text, label: Secondary CTA Text, widget: string, required: false }
+          - name: details
+            label: Workout Details
+            label_singular: Detail
+            widget: list
+            hint: "The When / Where / Who facts shown at the top of the page."
+            fields:
+              - { name: label, label: Label, widget: string, hint: "e.g. When, Where, Who" }
+              - { name: value, label: Value, widget: string }
+              - { name: note, label: Note, widget: string, required: false }
+              - { name: link_text, label: Link Text, widget: string, required: false }
+              - { name: link, label: Link URL, widget: string, required: false }
+          - name: steps
+            label: Steps
+            label_singular: Step
+            widget: list
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: text, label: Text, widget: text, required: false, hint: "Markdown links allowed, e.g. [text](https://...)" }
           - { name: body, label: Body, widget: markdown }
 
       - name: membership
@@ -51,9 +71,52 @@ collections:
         file: content/membership.md
         fields:
           - { name: title, label: Title, widget: string }
+          - { name: layout, widget: hidden, default: membership }
+          - { name: subtitle, label: Subtitle, widget: string, required: false }
           - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
           - { name: no_cta, label: Hide the footer call-to-action, widget: boolean, required: false, default: true }
-          - { name: body, label: Body, widget: markdown }
+          - { name: week_heading, label: Weekly Schedule Heading, widget: string, required: false }
+          - name: week
+            label: Weekly Schedule
+            label_singular: Day
+            widget: list
+            fields:
+              - { name: day, label: Day, widget: string, hint: "Short label, e.g. Tue" }
+              - name: items
+                label: Workouts
+                label_singular: Workout
+                widget: list
+                fields:
+                  - { name: sport, label: Sport, widget: select, options: [swim, bike, run], hint: "Sets the colour and tag." }
+                  - { name: title, label: Title, widget: string }
+                  - { name: when, label: When, widget: string, hint: "e.g. Morning, Evening" }
+                  - { name: detail, label: Detail, widget: string, required: false, hint: "e.g. With Coach JD" }
+          - { name: programs_heading, label: Programs Heading, widget: string, required: false }
+          - name: programs
+            label: Programs
+            label_singular: Program
+            widget: list
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: text, label: Text, widget: text, hint: "Markdown links allowed." }
+              - { name: url, label: Learn More Link, widget: string, required: false }
+          - { name: perks_heading, label: Perks Heading, widget: string, required: false }
+          - name: perks
+            label: Perks
+            label_singular: Perk
+            widget: list
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: text, label: Text, widget: text, hint: "Markdown links allowed." }
+              - { name: show_sponsors, label: Show sponsor logos, widget: boolean, required: false, default: false }
+              - { name: url, label: Learn More Link, widget: string, required: false }
+          - { name: price, label: Price, widget: string, required: false, hint: "e.g. $145 per year" }
+          - { name: price_note, label: Price Note, widget: string, required: false }
+          - { name: closing_heading, label: Closing Heading, widget: string, required: false }
+          - { name: closing_image, label: Closing Photo, widget: image, required: false, media_folder: /static/images/social, public_folder: /images/social }
+          - { name: closing_image_alt, label: Closing Photo Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
+          - { name: join_text, label: Join Button Text, widget: string, required: false, default: "Join on Heylo" }
+          - { name: join_url, label: Join Button Link, widget: string, required: false, hint: "Leave blank to use the club's Heylo invite link (heyloSignup in hugo.toml)." }
 
       - name: contact
         label: Contact
@@ -85,7 +148,9 @@ collections:
           - { name: subtitle, label: Subtitle, widget: string, required: false }
           - { name: hero_image, label: Hero Image, widget: image, required: false }
           - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
-          - { name: description, label: Card Description, widget: text, required: false, hint: "Used on the programme cards AND as the page's SEO description. Shown in Google results and link previews. Aim for 120-160 characters." }
+          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Also used on the program cards when Card Text is empty. Aim for 120-160 characters." }
+          - { name: card_text, label: Card Text, widget: text, required: false, hint: "Short blurb on this program's card on the homepage and Training page." }
+          - { name: weight, label: Sort Order, widget: number, required: false, value_type: int, hint: "Controls the order of the program cards on the homepage and the Training page." }
           - { name: body, label: Body, widget: markdown }
 
       - name: half_ironman
@@ -96,7 +161,9 @@ collections:
           - { name: subtitle, label: Subtitle, widget: string, required: false }
           - { name: hero_image, label: Hero Image, widget: image, required: false }
           - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
-          - { name: description, label: Card Description, widget: text, required: false, hint: "Used on the programme cards AND as the page's SEO description. Shown in Google results and link previews. Aim for 120-160 characters." }
+          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Also used on the program cards when Card Text is empty. Aim for 120-160 characters." }
+          - { name: card_text, label: Card Text, widget: text, required: false, hint: "Short blurb on this program's card on the homepage and Training page." }
+          - { name: weight, label: Sort Order, widget: number, required: false, value_type: int, hint: "Controls the order of the program cards on the homepage and the Training page." }
           - { name: body, label: Body, widget: markdown }
 
       - name: ironman
@@ -107,7 +174,9 @@ collections:
           - { name: subtitle, label: Subtitle, widget: string, required: false }
           - { name: hero_image, label: Hero Image, widget: image, required: false }
           - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
-          - { name: description, label: Card Description, widget: text, required: false, hint: "Used on the programme cards AND as the page's SEO description. Shown in Google results and link previews. Aim for 120-160 characters." }
+          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Also used on the program cards when Card Text is empty. Aim for 120-160 characters." }
+          - { name: card_text, label: Card Text, widget: text, required: false, hint: "Short blurb on this program's card on the homepage and Training page." }
+          - { name: weight, label: Sort Order, widget: number, required: false, value_type: int, hint: "Controls the order of the program cards on the homepage and the Training page." }
           - { name: body, label: Body, widget: markdown }
 
       - name: training_weekend
@@ -118,7 +187,9 @@ collections:
           - { name: subtitle, label: Subtitle, widget: string, required: false }
           - { name: hero_image, label: Hero Image, widget: image, required: false }
           - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
-          - { name: description, label: Card Description, widget: text, required: false, hint: "Used on the programme cards AND as the page's SEO description. Shown in Google results and link previews. Aim for 120-160 characters." }
+          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Also used on the program cards when Card Text is empty. Aim for 120-160 characters." }
+          - { name: card_text, label: Card Text, widget: text, required: false, hint: "Short blurb on this program's card on the homepage and Training page." }
+          - { name: weight, label: Sort Order, widget: number, required: false, value_type: int, hint: "Controls the order of the program cards on the homepage and the Training page." }
           - { name: body, label: Body, widget: markdown }
 
       - name: coaching
@@ -129,7 +200,9 @@ collections:
           - { name: subtitle, label: Subtitle, widget: string, required: false }
           - { name: hero_image, label: Hero Image, widget: image, required: false }
           - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
-          - { name: description, label: Card Description, widget: text, required: false, hint: "Used on the programme cards AND as the page's SEO description. Shown in Google results and link previews. Aim for 120-160 characters." }
+          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Also used on the program cards when Card Text is empty. Aim for 120-160 characters." }
+          - { name: card_text, label: Card Text, widget: text, required: false, hint: "Short blurb on this program's card on the homepage and Training page." }
+          - { name: weight, label: Sort Order, widget: number, required: false, value_type: int, hint: "Controls the order of the program cards on the homepage and the Training page." }
           - { name: body, label: Body, widget: markdown }
 
   # ── Sports ────────────────────────────────────────────────────────────────
@@ -155,6 +228,7 @@ collections:
           - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
           - { name: hero_position, label: Hero Image Focal Point, widget: string, required: false, hint: "CSS object-position, e.g. \"center 25%\". Leave blank to centre the image." }
           - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
+          - { name: card_text, label: Card Text, widget: text, required: false, hint: "Short blurb on this sport's card on the homepage and Sports page. Falls back to the SEO Description." }
           - { name: weight, label: Sort Order, widget: number, required: false, value_type: int, hint: "Controls the order of the sport cards on the homepage and the Sports page." }
           - { name: body, label: Body, widget: markdown }
 
@@ -167,6 +241,7 @@ collections:
           - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
           - { name: hero_position, label: Hero Image Focal Point, widget: string, required: false, hint: "CSS object-position, e.g. \"center 25%\". Leave blank to centre the image." }
           - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
+          - { name: card_text, label: Card Text, widget: text, required: false, hint: "Short blurb on this sport's card on the homepage and Sports page. Falls back to the SEO Description." }
           - { name: weight, label: Sort Order, widget: number, required: false, value_type: int, hint: "Controls the order of the sport cards on the homepage and the Sports page." }
           - { name: body, label: Body, widget: markdown }
 
@@ -179,6 +254,7 @@ collections:
           - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
           - { name: hero_position, label: Hero Image Focal Point, widget: string, required: false, hint: "CSS object-position, e.g. \"center 25%\". Leave blank to centre the image." }
           - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
+          - { name: card_text, label: Card Text, widget: text, required: false, hint: "Short blurb on this sport's card on the homepage and Sports page. Falls back to the SEO Description." }
           - { name: weight, label: Sort Order, widget: number, required: false, value_type: int, hint: "Controls the order of the sport cards on the homepage and the Sports page." }
           - { name: body, label: Body, widget: markdown }
 
