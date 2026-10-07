@@ -7,6 +7,6 @@
   <div class="section-card__body">
     <h3 class="section-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
     {{ with (.Params.card_text | default .Params.description) }}<p class="section-card__summary">{{ . }}</p>{{ end }}
-    <a class="section-card__link" href="{{ .RelPermalink }}">Learn more →</a>
+    <a class="section-card__link" href="{{ .RelPermalink }}">Learn more<span class="visually-hidden"> about {{ .Title }}</span> →</a>
   </div>
 </article>

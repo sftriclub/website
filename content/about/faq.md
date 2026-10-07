@@ -15,7 +15,7 @@ questions:
       * Club-sponsored social events
       * Special training activities such as practice triathlons and training weekends for specific races
       * Skill-building clinics subsidized by the club
-      * Discounts from our [sponsors](/sponsors)
+      * Discounts from our [sponsors](/about/sponsors/)
       * The ability to join and post all member-led workouts listed on our event calendar
 
   - q: "Do you offer coached workouts and is there an additional cost?"
@@ -23,11 +23,11 @@ questions:
 
   - q: "I’m new to triathlon. Do you have a beginner program?"
     a: |
-      The [0-60 program](/training/zero-to-sixty) brings together people that are new to the sport and aims to prepare them for an Olympic distance triathlon. Participants will receive professional coaching, a cohort of training buddies, and program-specific group runs and rides each weekend.
+      The [0-60 program](/training/zero-to-sixty/) brings together people that are new to the sport and aims to prepare them for an Olympic distance triathlon. Participants will receive professional coaching, a cohort of training buddies, and program-specific group runs and rides each weekend.
 
   - q: "I’m interested in your club, can I join in for a workout before becoming member?"
     a: |
-      Yes! You may [try a track workout](/trial-workout) before you sign-up. After that, we’ll ask you sign up for a membership. t's not fair to our members to reap the same benefits they have without contributing yourself. We do hope you'll join us. We don’t bite, just train!
+      Yes! You may [try a track workout](/trial-workout/) before you sign-up. After that, we’ll ask you sign up for a membership. t's not fair to our members to reap the same benefits they have without contributing yourself. We do hope you'll join us. We don’t bite, just train!
 
   - q: "I’m a triathlete visiting from out of town. Can I join in for a workout without being a member?"
     a: "Yes, you may join for a single free track workout! We also offer a heavily discounted membership for folks who are visiting, e.g., for a summer internship."
@@ -37,7 +37,7 @@ questions:
 
   - q: "How can I get a uniform?"
     a: |
-      You can purchase uniform items from the club store at the beginning of the season in January. The club places one order per year and the items are delivered in April before the [0-60](/training/zero-to-sixty) target race; if demand is high, we open the store for a second round in late spring.
+      You can purchase uniform items from the club store at the beginning of the season in January. The club places one order per year and the items are delivered in April before the [0-60](/training/zero-to-sixty/) target race; if demand is high, we open the store for a second round in late spring.
 
   - q: "What else should I know?"
     a: |

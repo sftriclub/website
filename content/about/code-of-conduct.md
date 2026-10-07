@@ -5,7 +5,7 @@ description: "SF Tri Club community standards and expectations for all members."
 
 Community is one of the top reasons why triathletes love the sport of triathlon. It might seem paradoxical. After all, when we cross that finish line, we do so individually. Our times are our own. Our journeys are deeply personal. Yet, ask any triathlete about their evolution from beginner to competitor. You’ll hear about the people who made it possible: the swimmer who showed up early to refine their stroke, the cyclist who taught them how to change a flat, and the runner who showed them that most limits come from within. We may race as individuals, but we transform as a community.
 
-This Code of Conduct exists because community-building is core to our [Mission](/about/mission). Doing so successfully requires ongoing investment from each new generation of members. The result is a place where Ironman champions and first-time finishers train side-by-side, and where today's mentee becomes tomorrow's mentor.
+This Code of Conduct exists because community-building is core to our [Mission](/about/mission/). Doing so successfully requires ongoing investment from each new generation of members. The result is a place where Ironman champions and first-time finishers train side-by-side, and where today's mentee becomes tomorrow's mentor.
 
 We are the San Francisco Triathlon Club and these are our standards.
 

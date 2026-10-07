@@ -5,6 +5,6 @@
   <div class="spotlight-card__body">
     <h3 class="spotlight-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
     <p class="spotlight-card__summary">{{ .Params.summary }}</p>
-    <a class="spotlight-card__link" href="{{ .RelPermalink }}">Read story →</a>
+    <a class="spotlight-card__link" href="{{ .RelPermalink }}">Read story<span class="visually-hidden">: {{ .Title }}</span> →</a>
   </div>
 </article>
