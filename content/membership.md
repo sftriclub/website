@@ -1,10 +1,9 @@
 ---
 title: "Membership"
-layout: membership
+layout: "membership"
 subtitle: "Here's everything that comes with an SF Tri membership."
 description: "Join the San Francisco Triathlon Club and access all member programs."
 no_cta: true
-
 week_heading: "Your week with SF Tri"
 week:
   - day: "Tue"
@@ -32,7 +31,6 @@ week:
       - sport: "run"
         title: "Social group run"
         when: "Morning"
-
 programs_heading: "Programs & clinics"
 programs:
   - title: "Race training programs"
@@ -43,18 +41,18 @@ programs:
     url: "/training/training-weekend/"
   - title: "Skill-building clinics"
     text: "Open Water Swimming, Run Technique, Roadside Flat Repair, and more."
-
 perks_heading: "Member perks"
 perks:
   - title: "Social events"
     text: "Picnics, brunches, karaoke, potluck dinners, bonfires, BBQs, happy hours (non-alcoholic options always available), and more!"
+    show_sponsors: false
   - title: "Sponsor discounts"
     text: "Discounts from our sponsors on gear and races."
     show_sponsors: true
     url: "/about/sponsors/"
   - title: "Heylo community"
     text: "Our community space, chats, and events calendar, all on [Heylo](https://www.heylo.com/g/a48c491e-6366-468e-9db9-45e9586ba5e2)."
-
+    show_sponsors: false
 price: "$145 per year"
 price_note: "Covers everything on this page."
 closing_heading: "And best of all, a great community!"

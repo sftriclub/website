@@ -1,50 +1,41 @@
 sponsors:
-  - name: TMT Coaching
-    logo: /images/sponsors/tmt-coaching.png
-    url: https://www.tmtcoaching.com
-    description: Multisport training built to power you, support from a diverse and inclusive team.
-
-  - name: Arena
-    logo: /images/sponsors/arena.png
-    url: https://www.arenasport.com
+  - name: "TMT Coaching"
+    logo: "/images/sponsors/tmt-coaching.png"
+    url: "https://www.tmtcoaching.com"
+    description: "Multisport training built to power you, support from a diverse and inclusive team."
+  - name: "Arena"
+    logo: "/images/sponsors/arena.png"
+    url: "https://www.arenasport.com"
     description: "Iconic swim and sportswear from the cult Italian brand."
-
-  - name: Clubhouse Velo
-    logo: /images/sponsors/clubhouse-velo.png
-    url: https://www.clubhousevelo.com
+  - name: "Clubhouse Velo"
+    logo: "/images/sponsors/clubhouse-velo.png"
+    url: "https://www.clubhousevelo.com"
     description: "Bike fits by Allen Kuo, PTA, to help you find comfort, confidence, and power on your bike."
-
-  - name: Fog Swimming
-    logo: /images/sponsors/fog-swimming.png
-    url: https://gomotionapp.com/team/pcfch
+  - name: "Fog Swimming"
+    logo: "/images/sponsors/fog-swimming.png"
+    url: "https://gomotionapp.com/team/pcfch"
     description: "The premier swim club in San Francisco, and an ASCA top 100 Age Group Swim Team in the US. Home team of Coach JD."
-
-  - name: Pacific Open Water Swim Co.
-    logo: /images/sponsors/pacific-open-water.png
-    url: https://www.pacificswim.co
+  - name: "Pacific Open Water Swim Co."
+    logo: "/images/sponsors/pacific-open-water.png"
+    url: "https://www.pacificswim.co"
     description: "Swim Alcatraz with the best in the business. 20+ years of SF swimming experience."
-
-  - name: Bay Cycles Co
-    logo: /images/sponsors/bay-cycles.jpg
-    url: https://www.baycycles.co
+  - name: "Bay Cycles Co"
+    logo: "/images/sponsors/bay-cycles.jpg"
+    url: "https://www.baycycles.co"
     description: "It's not just about the ride, it's about feeling alive."
-
-  - name: Best Day Brewing
-    logo: /images/sponsors/best-day-brewing.png
-    url: https://bestdaybrewing.com
+  - name: "Best Day Brewing"
+    logo: "/images/sponsors/best-day-brewing.png"
+    url: "https://bestdaybrewing.com"
     description: "Non-alcoholic craft beer, so you can keep doing what you love without slowing down."
-
-  - name: Hummingbird Fuels
-    logo: /images/sponsors/hummingbird-fuels.png
-    url: https://www.hummingbirdfuels.com
+  - name: "Hummingbird Fuels"
+    logo: "/images/sponsors/hummingbird-fuels.png"
+    url: "https://www.hummingbirdfuels.com"
     description: "A \"correctly-carbed\" sports drink: 60 grams of carbs for 60 minutes of sweat. Going longer? Just add more."
-
-  - name: Fitted By Pedro
-    logo: /images/sponsors/fitted-by-pedro.png
-    url: https://fittedbypedro.com
+  - name: "Fitted By Pedro"
+    logo: "/images/sponsors/fitted-by-pedro.png"
+    url: "https://fittedbypedro.com"
     description: "For nearly two decades, Pedro has personally fitted 20,000+ cyclists across the West Coast."
-
-  - name: A Runner's Mind
-    logo: /images/sponsors/a-runners-mind.png
-    url: https://arunnersmind.com
-    description: Running shoes, apparel, and gear.
+  - name: "A Runner's Mind"
+    logo: "/images/sponsors/a-runners-mind.png"
+    url: "https://arunnersmind.com"
+    description: "Running shoes, apparel, and gear."

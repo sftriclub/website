@@ -1,11 +1,11 @@
 ---
 title: "Run"
-weight: 3
 hero_image: "/images/sports/run.webp"
 hero_image_alt: "Six SF Tri Club members in running kit and race bibs with their arms around each other at the Wildflower race."
 hero_position: "center 25%"
 description: "Track workouts, member-led group runs, and running clinics with Coach JD."
 card_text: "Learn more about our weekly track workouts led by Coach JD and other activities like long runs in SF and trail runs throughout the Bay!"
+weight: 3
 ---
 
 ## Weekly track workouts with Coach JD

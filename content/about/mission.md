@@ -11,4 +11,3 @@ The club's spirit comes from our members, best experienced in-person at our week
 Many workouts are member-led in addition to the sessions led by professional coaches. Additionally, the club organizes clinics to develop members’ skills. Past clinics include: introduction to open-water swimming, swim technique, climbing and descending on bike, bike maintenance, and yoga for runners.
 
 We’re always open to new members and are happy for those interested to join us for a [free workout](/trial-workout/). We know you’ll love [becoming a member](/membership/) and continuing to train with us! We look forward to seeing you out there!
-

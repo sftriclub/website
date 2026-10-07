@@ -1,6 +1,6 @@
 ---
 title: "Maddy Adams"
-date: 2026-08-15
+date: "2026-08-15"
 summary: "Ironman California finisher who signed up for a first triathlon at 16 after cheering on mom."
 hero_image: "/images/spotlights/maddy-adams/portrait.webp"
 hero_image_alt: "Maddy finishing IM California"
