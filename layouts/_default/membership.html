@@ -48,7 +48,7 @@
           {{ end }}
         </ul>
         {{ end }}
-        {{ with .url }}<a class="membership-card__link" href="{{ . }}">Learn more →</a>{{ end }}
+        {{ if .url }}<a class="membership-card__link" href="{{ .url }}">Learn more<span class="visually-hidden"> about {{ .title }}</span> →</a>{{ end }}
       </div>
       {{ end }}
     </div>

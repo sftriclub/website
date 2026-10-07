@@ -9,7 +9,7 @@ card_text: "Our coached 12-week program for beginners. Coaching, structure, and 
 {{< notice title="2027 registration opens in December!" >}}
 We offer this program once per year; it runs from late January to April. Check back in early December 2026 for details on registration for our 2027 program. There are only 30 spots and we sold out in 24 hours this year, so don't wait!
 
-In the meantime, you can [join the club](/membership) and take part in our weekly workouts!
+In the meantime, you can [join the club](/membership/) and take part in our weekly workouts!
 {{< /notice >}}
 
 ## First triathlon?
@@ -23,7 +23,7 @@ This 12-week program provides coaching, structured training, and mentorship to g
 
 You'll make lasting friendships, learn proper technique and injury prevention, and become faster, stronger, and more confident. You'll surprise yourself and everyone who knows you with what you're capable of accomplishing.
 
-If you already have prior triathlon experience, consider our [70.3 training program](/training/half-ironman) for a Half Ironman instead.
+If you already have prior triathlon experience, consider our [70.3 training program](/training/half-ironman/) for a Half Ironman instead.
 
 {{< faq >}}
 
@@ -75,9 +75,9 @@ You'll need a few things, but less than you might expect:
 
 **Running:** A good pair of running shoes.
 
-**Biking:** A bike (ideally a road bike, but any bike will do; Sports Basement offers [rentals](https://shop.sportsbasement.com/pages/bike-rental-rates)), a helmet, and padded shorts (your booty will thank you). You'll also need a spare tube, tire levers, and a pump in case of a flat tire. REI or Sports Basement can help you locate all of these items.
+**Biking:** A bike (ideally a road bike, but any bike will do; Sports Basement offers [bike rentals](https://shop.sportsbasement.com/pages/bike-rental-rates)), a helmet, and padded shorts (your booty will thank you). You'll also need a spare tube, tire levers, and a pump in case of a flat tire. REI or Sports Basement can help you locate all of these items.
 
-**Swimming:** A bathing suit, goggles, flip-flops, and a towel. A swim cap is highly recommended for protecting your hair from chlorine. Choose a bright color, as a highly visible swim cap is required in the second half of the program when we begin open water swimming. At that point, you will also need a wetsuit (Sports Basement offers [rentals](https://shop.sportsbasement.com/products/sbrents-rental-womens-fullsleeve-basic-wetsuit)) and TriSlide/Body Glide.
+**Swimming:** A bathing suit, goggles, flip-flops, and a towel. A swim cap is highly recommended for protecting your hair from chlorine. Choose a bright color, as a highly visible swim cap is required in the second half of the program when we begin open water swimming. At that point, you will also need a wetsuit (Sports Basement offers [wetsuit rentals](https://shop.sportsbasement.com/products/sbrents-rental-womens-fullsleeve-basic-wetsuit)) and TriSlide/Body Glide.
 
 **Optional:** A hat, athletic sunglasses, smart watch, swim buoy with dry bag, chest heart rate monitor, cycling gloves, cycling shoes + cleats, neoprene swim cap and/or chamois cream.
 

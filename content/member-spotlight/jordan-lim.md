@@ -3,7 +3,9 @@ title: "Jordan Lim"
 date: 2026-07-15
 summary: "Community Leader and Cheers Squad co-founder who went from college sprints to 70.3s and Escape from Alcatraz."
 hero_image: "/images/spotlights/jordan-lim/portrait.webp"
+hero_image_alt: "Jordan and the SF Tri Cheers Squad celebrating the Escape from Alcatraz finishers"
 secondary_image: "/images/spotlights/jordan-lim/secondary.webp"
+secondary_image_alt: "Jordan biking in a race"
 questions:
   - q: "What inspired you to get into triathlons?"
     a: "I was pretty active growing up, I played soccer and thankfully my mom forced me to do swim team up until middle school which came in handy when I lifeguarded during highschool. I always thought triathlons were cool, so during college, I joined the club tri team and did two sprints but wasn’t as dedicated to the sport. During covid, I did a lot of running and after hitting my goal time at the SF Half Marathon, I was looking for a new challenge. I found the 70.3 distance and figured why not, I could run a half marathon and a 1.2 mile swim and 56 mile bike ride didn’t sound too bad."

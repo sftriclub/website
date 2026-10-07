@@ -30,7 +30,7 @@
         <div class="sport-card__body">
           <h2 class="sport-card__title">{{ .Title }}</h2>
           <p class="sport-card__description">{{ .Params.card_text | default .Params.description }}</p>
-          <a class="btn btn--outline" href="{{ .RelPermalink }}">Learn more</a>
+          <a class="btn btn--outline" href="{{ .RelPermalink }}">Learn more<span class="visually-hidden"> about {{ .Title }}</span></a>
         </div>
       </article>
       {{ end }}
@@ -49,7 +49,7 @@
       <article class="program-card">
         <h3 class="program-card__title">{{ .Title }}</h3>
         <p class="program-card__description">{{ (.Params.card_text | default .Params.description) }}</p>
-        <a class="program-card__link" href="{{ .RelPermalink }}">Learn more →</a>
+        <a class="program-card__link" href="{{ .RelPermalink }}">Learn more<span class="visually-hidden"> about {{ .Title }}</span> →</a>
       </article>
       {{ end }}
     </div>

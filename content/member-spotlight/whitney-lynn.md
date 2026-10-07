@@ -3,7 +3,9 @@ title: "Whitney Lynn"
 date: 2026-06-15
 summary: "Mom of two training for a first 70.3 at Santa Cruz after taking on Escape from Alcatraz."
 hero_image: "/images/spotlights/whitney-lynn/portrait.webp"
+hero_image_alt: "Whitney and her family"
 secondary_image: "/images/spotlights/whitney-lynn/secondary.webp"
+secondary_image_alt: "Whitney after finishing Escape from Alcatraz"
 questions:
   - q: "What inspired you to sign up for your very first triathlon?"
     a: "I signed up for the Big Blue Olympic Triathlon back in 2015, well before becoming a mom. I was looking for a new challenge, a way to spend more time outside, and a chance to push my limits. To be honest, I was completely unprepared; that bike course is incredibly tough! But crossing that finish line gave me that distinct feeling of having accomplished something deeply cool, and I was hooked on the challenge."

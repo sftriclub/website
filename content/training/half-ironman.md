@@ -6,11 +6,11 @@ card_text: "Completed 0-60 and want to do a longer race? Seasoned 70.3 athlete l
 ---
 
 {{< notice title="Registration closed!" >}}
-Our half-iron training program (70.3) is offered once a year in June, so keep an eye out for when we announce registration dates for next year, likely around April/May 2027. In the meanwhile, there's no need to wait to start training. [Join the club now!](/membership)
+Our half-iron training program (70.3) is offered once a year in June, so keep an eye out for when we announce registration dates for next year, likely around April/May 2027. In the meanwhile, there's no need to wait to start training. [Join the club now!](/membership/)
 
-As a member you'll get access to weekly coached track and swim workouts, member-led bike workouts, discounts on gear/races, and many other perks. [Learn more here.](/membership)
+As a member you'll get access to weekly coached track and swim workouts, member-led bike workouts, discounts on gear/races, and many other perks. [Learn more about membership benefits.](/membership/)
 
-Either way, you're welcome to [drop in for a free track workout](/trial-workout).
+Either way, you're welcome to [drop in for a free track workout](/trial-workout/).
 {{< /notice >}}
 
 {{< image-section src="/images/training/im_70-3_santa_cruz_swim.webp" alt="A group of SF Tri Club athletes in wetsuits on the beach after an open water swim at Santa Cruz, with the wharf behind them." side="right" >}}

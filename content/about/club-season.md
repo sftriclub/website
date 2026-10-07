@@ -12,7 +12,7 @@ The mild climate in Northern California allows the triathlon season to stretch o
 - SFTC Holiday Party
 - SFTC Season Kick-off
 - Hot Chocolate 5K & 15K
-- [Swim](/sports/swim), [Track](/sports/run), and [Zero to Sixty](/training/zero-to-sixty/) training programs begin
+- [Swim](/sports/swim/), [Track](/sports/run/), and [Zero to Sixty](/training/zero-to-sixty/) training programs begin
 - SF Half Marathon
 - SFTC uniforms ordering
 {{< /column >}}

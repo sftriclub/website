@@ -3,7 +3,9 @@ title: "Maddy Adams"
 date: 2026-08-15
 summary: "Ironman California finisher who signed up for a first triathlon at 16 after cheering on mom."
 hero_image: "/images/spotlights/maddy-adams/portrait.webp"
+hero_image_alt: "Maddy finishing IM California"
 secondary_image: "/images/spotlights/maddy-adams/secondary.webp"
+secondary_image_alt: "Maddy and other SF Tri Club racers before IM 70.3 Santa Cruz"
 questions:
   - q: "What inspired you to get into triathlons?"
     a: "My first introduction to triathlon was watching my mom compete in a sprint triathlon when I was growing up. I remember cheering her on, feeling incredibly proud, and wanting to do the race myself as soon as I was old enough. When I turned 16, I signed up! It was a women-only race in Maine that raises money for cancer research, and I couldn’t have asked for a better introduction to the sport. I hope to do the race again someday. Right after I graduated college, both of my siblings started running marathons which inspired me to give triathlon another try. At a time when life felt particularly unstructured, I loved having a goal to work toward and a training plan that gave shape to my days. The sense of community I’ve found as well as the structure and accomplishment that training brings to my life has kept me engaged in the sport through today."

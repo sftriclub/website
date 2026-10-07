@@ -3,7 +3,9 @@ title: "Rocky Gowni"
 date: 2026-04-15
 summary: "First-season Ironman finisher who started 2025 with no triathlon background and finished Ironman Arizona by year-end."
 hero_image: "/images/spotlights/rocky-gowni/portrait.webp"
+hero_image_alt: "Rocky celebrating finishing IM Arizona"
 secondary_image: "/images/spotlights/rocky-gowni/with-finishers.webp"
+secondary_image_alt: "Rocky running at IM 70.3 Santa Cruz"
 questions:
   - q: "What inspired you to sign up for your very first triathlon?"
     a: "I entered 2025 knowing I wanted to challenge myself physically. Over the prior winter break, I read a book called Born to Run that kind of opened my eyes to our innate human ability for endurance. Didn't find any books called Born to Bike or Born to Swim but I kind of took a leap of faith that if I figured out running, I could figure out the other two. :)"

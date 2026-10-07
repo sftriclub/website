@@ -8,6 +8,6 @@
     <time class="news-card__date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
     <h3 class="news-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
     <p class="news-card__summary">{{ .Params.summary }}</p>
-    <a class="news-card__link" href="{{ .RelPermalink }}">Read more →</a>
+    <a class="news-card__link" href="{{ .RelPermalink }}">Read more<span class="visually-hidden">: {{ .Title }}</span> →</a>
   </div>
 </article>
