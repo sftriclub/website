@@ -43,8 +43,8 @@ disableKinds = ["taxonomy", "term"]
   description = "A multi-sport club and 501(c)(3) nonprofit in San Francisco."
   # Appended to the site title on the homepage <title> tag.
   tagline = "Swim, Bike, Run"
-  # Fallback social share image for pages without a hero image.
-  ogImage = "/sf-tri-logo-cream.png"
+  # Optional: a fixed social share image for pages without a hero image.
+  # Unset, head.html generates one from the logo on the brand green.
   email = "info@sftriclub.org"
   instagram = "https://www.instagram.com/sftriclub"
   facebook = "https://www.facebook.com/sftriclub"

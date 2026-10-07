@@ -28,9 +28,42 @@
 {{- $description = $description | plainify | htmlUnescape | chomp | truncate 160 -}}
 
 {{- /* ── Social share image ────────────────────────────────────────────── */ -}}
-{{- $image := .Site.Params.ogImage -}}
-{{- with .Params.hero_image }}{{ $image = . }}{{ end -}}
-{{- with .Params.image }}{{ $image = . }}{{ end -}}
+{{- /* A page's own image (or site.Params.ogImage, if set) wins. Otherwise
+       build a 1200×630 card: the cream logo centred on forest green. It is
+       written as a JPG so the logo's transparent areas get the green too,
+       not just the padding — on a transparent PNG, previews in iMessage,
+       Slack etc. would show cream on white. Dimensions are emitted
+       whenever Hugo can read them, so first shares render reliably.     */ -}}
+{{- $image := "" -}}
+{{- $imageW := 0 -}}
+{{- $imageH := 0 -}}
+{{- $imageAlt := "" -}}
+{{- $src := .Site.Params.ogImage -}}
+{{- with .Params.hero_image }}{{ $src = . }}{{ $imageAlt = $.Params.hero_image_alt }}{{ end -}}
+{{- with .Params.image }}{{ $src = . }}{{ end -}}
+{{- with $src -}}
+  {{- $image = . | absURL -}}
+  {{- if hasPrefix . "/" -}}
+    {{- with resources.Get (strings.TrimPrefix "/" .) -}}
+      {{- if and (eq .MediaType.MainType "image") (in (slice "jpeg" "png" "webp" "gif") .MediaType.SubType) -}}
+        {{- $imageW = .Width -}}
+        {{- $imageH = .Height -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- else -}}
+  {{- with resources.Get "sf-tri-logo-cream.png" -}}
+    {{- $logo := .Resize "720x" -}}
+    {{- $padY := sub 630 $logo.Height -}}
+    {{- $top := div $padY 2 -}}
+    {{- $card := ($logo.Filter (images.Padding $top 240 (sub $padY $top) 240 "#05422C")).Process "jpg q85 #05422C" -}}
+    {{- $image = $card.Permalink -}}
+    {{- $imageW = $card.Width -}}
+    {{- $imageH = $card.Height -}}
+    {{- $imageAlt = printf "%s logo" $.Site.Title -}}
+  {{- end -}}
+{{- end -}}
+{{- $imageAlt = $imageAlt | default .Title -}}
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,8 +83,12 @@
 <meta property="og:site_name" content="{{ .Site.Title }}">
 <meta property="og:locale" content="en_US">
 {{- with $image }}
-<meta property="og:image" content="{{ . | absURL }}">
-<meta property="og:image:alt" content="{{ with $.Params.hero_image_alt }}{{ . }}{{ else }}{{ $.Title }}{{ end }}">
+<meta property="og:image" content="{{ . }}">
+{{- if $imageW }}
+<meta property="og:image:width" content="{{ $imageW }}">
+<meta property="og:image:height" content="{{ $imageH }}">
+{{- end }}
+<meta property="og:image:alt" content="{{ $imageAlt }}">
 {{- end }}
 {{- if and .IsPage (not .Date.IsZero) }}
 <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
@@ -64,7 +101,8 @@
 <meta name="twitter:title" content="{{ $title }}">
 <meta name="twitter:description" content="{{ $description }}">
 {{- with $image }}
-<meta name="twitter:image" content="{{ . | absURL }}">
+<meta name="twitter:image" content="{{ . }}">
+<meta name="twitter:image:alt" content="{{ $imageAlt }}">
 {{- end }}
 
 {{ partial "schema.html" . }}
