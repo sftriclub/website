@@ -8,10 +8,15 @@
 {{- end -}}
 
 {{- /* ── Description ───────────────────────────────────────────────────────
-     Falls back through description → summary → generated summary → site
-     description, so news posts and spotlights stop sharing one meta tag.    */ -}}
+     Falls back through meta_description → description → summary → generated
+     summary → site description, so news posts and spotlights stop sharing
+     one meta tag. meta_description exists for pages whose description is
+     also shown on the page (About cards, Board/Sponsors subtitles), so the
+     search snippet can be longer without changing the visible text.        */ -}}
 {{- $description := .Site.Params.description -}}
-{{- with .Description -}}
+{{- with .Params.meta_description -}}
+  {{- $description = . -}}
+{{- else with .Description -}}
   {{- $description = . -}}
 {{- else -}}
   {{- with .Params.summary -}}

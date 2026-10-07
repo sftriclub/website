@@ -1,6 +1,7 @@
 ---
 title: "Social Events"
 description: "Club social events throughout the season."
+meta_description: "Monthly socials at Kezar Pub, post-workout pastries, club BBQs and an end-of-season Holiday Gala: the social side of the San Francisco Triathlon Club."
 ---
 
 {{< image-section src="/images/social/bbq.webp" alt="Club BBQ" side="right" >}}

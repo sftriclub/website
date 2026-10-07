@@ -60,7 +60,8 @@ collections:
         file: content/contact.md
         fields:
           - { name: title, label: Title, widget: string }
-          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
+          - { name: description, label: Description, widget: text, required: false, hint: "Used in Google results and link previews when SEO Description is empty." }
+          - { name: meta_description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews instead of the description above. Aim for 120-155 characters." }
 
   # ── Training Programs ─────────────────────────────────────────────────────
   - name: training
@@ -202,7 +203,8 @@ collections:
         file: content/about/mission.md
         fields:
           - { name: title, label: Title, widget: string }
-          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
+          - { name: description, label: Card Description, widget: text, required: false, hint: "Short summary shown on this page's card on the About page. Also used in Google results when SEO Description is empty." }
+          - { name: meta_description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews instead of the description above. Aim for 120-155 characters." }
           - { name: body, label: Body, widget: markdown }
 
       - name: code_of_conduct
@@ -210,7 +212,8 @@ collections:
         file: content/about/code-of-conduct.md
         fields:
           - { name: title, label: Title, widget: string }
-          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
+          - { name: description, label: Card Description, widget: text, required: false, hint: "Short summary shown on this page's card on the About page. Also used in Google results when SEO Description is empty." }
+          - { name: meta_description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews instead of the description above. Aim for 120-155 characters." }
           - { name: body, label: Body, widget: markdown }
 
       - name: social_events
@@ -220,7 +223,8 @@ collections:
         public_folder: /images/social
         fields:
           - { name: title, label: Title, widget: string }
-          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
+          - { name: description, label: Card Description, widget: text, required: false, hint: "Short summary shown on this page's card on the About page. Also used in Google results when SEO Description is empty." }
+          - { name: meta_description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews instead of the description above. Aim for 120-155 characters." }
           - { name: body, label: Body, widget: markdown }
 
       - name: giving_back
@@ -230,7 +234,8 @@ collections:
         public_folder: /images/giving_back
         fields:
           - { name: title, label: Title, widget: string }
-          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
+          - { name: description, label: Card Description, widget: text, required: false, hint: "Short summary shown on this page's card on the About page. Also used in Google results when SEO Description is empty." }
+          - { name: meta_description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews instead of the description above. Aim for 120-155 characters." }
           - { name: body, label: Body, widget: markdown }
 
       - name: club_season
@@ -238,7 +243,8 @@ collections:
         file: content/about/club-season.md
         fields:
           - { name: title, label: Title, widget: string }
-          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
+          - { name: description, label: Card Description, widget: text, required: false, hint: "Short summary shown on this page's card on the About page. Also used in Google results when SEO Description is empty." }
+          - { name: meta_description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews instead of the description above. Aim for 120-155 characters." }
           - { name: body, label: Body, widget: markdown }
 
       - name: faq
@@ -246,7 +252,8 @@ collections:
         file: content/about/faq.md
         fields:
           - { name: title, label: Title, widget: string }
-          - { name: description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews. Aim for 120-160 characters." }
+          - { name: description, label: Card Description, widget: text, required: false, hint: "Short summary shown on this page's card on the About page. Also used in Google results when SEO Description is empty." }
+          - { name: meta_description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews instead of the description above. Aim for 120-155 characters." }
           - { name: layout, label: Layout, widget: hidden, default: faq }
           - name: questions
             label: Questions
@@ -267,7 +274,8 @@ collections:
       - { name: title, label: Title, widget: string }
       - { name: date, label: Date, widget: datetime }
       - { name: author, label: Author, widget: string }
-      - { name: summary, label: Summary, widget: text, hint: "1-2 sentences shown on the news listing and homepage teaser. Also used as the post's SEO description, so keep it under 160 characters." }
+      - { name: summary, label: Summary, widget: text, hint: "1-2 sentences shown on the news listing and homepage teaser. Also used in Google results when SEO Description is empty, so keep it under 160 characters." }
+      - { name: meta_description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews instead of the summary. Aim for 120-155 characters." }
       - { name: hero_image, label: Hero Image, widget: image, required: false }
       - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
       - { name: body, label: Body, widget: markdown }

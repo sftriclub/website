@@ -1,6 +1,7 @@
 ---
 title: "Code of Conduct"
 description: "SF Tri Club community standards and expectations for all members."
+meta_description: "The standards San Francisco Triathlon Club members train by: a welcoming, safety-first community where first-timers and Ironman finishers train together."
 ---
 
 Community is one of the top reasons why triathletes love the sport of triathlon. It might seem paradoxical. After all, when we cross that finish line, we do so individually. Our times are our own. Our journeys are deeply personal. Yet, ask any triathlete about their evolution from beginner to competitor. You’ll hear about the people who made it possible: the swimmer who showed up early to refine their stroke, the cyclist who taught them how to change a flat, and the runner who showed them that most limits come from within. We may race as individuals, but we transform as a community.
