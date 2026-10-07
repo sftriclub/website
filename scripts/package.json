@@ -1,0 +1,9 @@
+{
+  "name": "sftc-website-scripts",
+  "private": true,
+  "type": "module",
+  "description": "Content tooling. yaml is the same library Sveltia CMS uses to write files.",
+  "dependencies": {
+    "yaml": "2.8.1"
+  }
+}

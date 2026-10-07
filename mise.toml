@@ -1,5 +1,6 @@
 [tools]
 hugo = "0.160.0"
+node = "24"
 
 # One server covers the site and the CMS. Sveltia's local mode needs no proxy:
 # it edits the repo directly through the browser's File System Access API
@@ -20,3 +21,23 @@ run = "hugo --source . --minify"
 [tasks.new]
 description = "Create new content (usage: mise run new -- posts/my-post.md)"
 run = "hugo new --source ."
+
+# Content format: keep hand edits in the exact format the CMS saves, so a CMS
+# save only shows the change that was made (see scripts/normalize-content.mjs).
+[tasks.normalize]
+description = "Rewrite CMS-managed content into the format the CMS saves"
+run = [
+  "npm ci --prefix scripts --silent --no-audit --no-fund",
+  "node scripts/normalize-content.mjs",
+]
+
+[tasks.check-render]
+description = "Show what a change does to the built site, vs a git ref (default origin/main). No diff = formatting only."
+run = "scripts/check-render.sh"
+
+[tasks.check-format]
+description = "Fail if CMS-managed content isn't in the format the CMS saves"
+run = [
+  "npm ci --prefix scripts --silent --no-audit --no-fund",
+  "node scripts/normalize-content.mjs --check",
+]
