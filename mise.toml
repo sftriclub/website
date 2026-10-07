@@ -1,9 +1,17 @@
 [tools]
 hugo = "0.160.0"
 
+# One server covers the site and the CMS. Sveltia's local mode needs no proxy:
+# it edits the repo directly through the browser's File System Access API
+# (Chromium only). The CMS page is static, so Hugo doesn't live-reload it on
+# save, while open site tabs refresh to show the change.
 [tasks.dev]
-description = "Start Hugo development server"
-run = "hugo server --source . --buildDrafts --navigateToChanged"
+description = "Start the dev server for the site and the CMS (/admin/)"
+alias = "cms"
+run = [
+  "echo 'CMS: open http://localhost:1313/admin/ in Chrome, Edge or Brave, click \"Work with Local Repository\" and pick this folder.'",
+  "hugo server --source . --buildDrafts --navigateToChanged",
+]
 
 [tasks.build]
 description = "Build site for production"
