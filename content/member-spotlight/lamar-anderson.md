@@ -3,7 +3,9 @@ title: "Lamar Anderson"
 date: 2026-09-15
 summary: "Learned to swim for a first Ironman after an Achilles tear, finishing Santa Cruz 70.3 on the way to Ironman California."
 hero_image: "/images/spotlights/lamar-anderson/portrait.webp"
+hero_image_alt: "Lamar celebrating finishing IM 70.3 Santa Cruz"
 secondary_image: "/images/spotlights/lamar-anderson/secondary.webp"
+secondary_image_alt: "Lamar celebrating finishing a Spartan race"
 questions:
   - q: "What prompted you to get into triathlon training (and sign up for a full Ironman out the gate)?"
     a: "I love the ocean, so I’ve always wanted to learn how to swim properly. On top of that, I’ve always wanted to become a certified scuba diver and do fun swims like Alcatraz. Every year, I would tell myself that it would be the year I learned how to swim and every year, I didn’t. So there was only one route, in my mind, to force myself to learn, and that was to sign up for a full Ironman. Something I never thought I would ever do. Especially… because it involved swimming. It also just seemed insane.\n\nI do have a reason number two. Last year, I tore my achilles. From the moment it happened, I saw it as a sign from the universe that I was going to achieve greater things physically than I had ever expected. But first, I had to be broken down so I could start from literally zero and build a proper foundation.\n\nGrowing up, the people that knew me generally knew me as someone who was athletic. Approaching 30 at the time, I didn’t want to be looked at as the guy who USED to be an athlete but now was getting old and injured. And so I told myself I would come back better than I was before. Without that achilles tear, I don’t think I would’ve discovered the world of triathlon."

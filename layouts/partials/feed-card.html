@@ -9,7 +9,7 @@
 <article class="news-card{{ if $spotlight }} news-card--spotlight{{ end }}">
   {{ with .Params.hero_image }}
     <a class="news-card__image-link" href="{{ $.RelPermalink }}" tabindex="-1" aria-hidden="true">
-      {{ partial "image.html" (dict "src" . "alt" ($.Params.hero_image_alt | default "") "class" "news-card__image" "sizes" "(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw") }}
+      {{ partial "image.html" (dict "src" . "alt" ($.Params.hero_image_alt | default (cond $spotlight $.Title "")) "class" "news-card__image" "sizes" "(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw") }}
     </a>
   {{ else }}
     {{/* Imageless posts get a branded panel rather than a short card, so the grid stays even.

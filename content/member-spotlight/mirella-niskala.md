@@ -3,6 +3,7 @@ title: "Mirella Niskala"
 date: 2026-03-15
 summary: "Ironman age-group winner racing the 70.3 World Championship in Marbella and the Ironman World Championship in Kona."
 hero_image: "/images/spotlights/mirella-niskala/portrait.webp"
+hero_image_alt: "Mirella running during Escape from Alcatraz"
 questions:
   - q: "What inspired you to sign up for your very first triathlon?"
     a: "I blame my older brother. He completed his first triathlon in 2014 (and being the lunatic he is, went all in, completing IM Cour d'Alene 2 months later). While I had cheered him on from afar for years, I finally went to see him race at 70.3 Worlds in St. George in October 2022. The athletes, the atmosphere and the strong sense of community there all inspired me to sign up for a triathlon. Also, my mother in law passed away from ALS just a month before and seeing the disease rob her of the ability to move pushed me toward making the most of what I had."
