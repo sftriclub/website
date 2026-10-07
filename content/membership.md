@@ -61,5 +61,4 @@ closing_heading: "And best of all, a great community!"
 closing_image: "/images/social/bbq.webp"
 closing_image_alt: "Dozens of SF Tri Club members gathered on the grass at a sunny park picnic"
 join_text: "Join on Heylo"
-join_url: "https://heylo.group/sftriclub"
 ---

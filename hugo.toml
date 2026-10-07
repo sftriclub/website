@@ -51,6 +51,7 @@ disableKinds = ["taxonomy", "term"]
   tiktok = "https://www.tiktok.com/@sftriclub"
   strava = "https://www.strava.com/clubs/sftriclub"
   login = "https://www.heylo.com/login"
+  # Heylo invite link: the Join button on /membership/ (unless the page sets join_url).
   heyloSignup = "https://www.heylo.com/invite/30b897c1-3bba-4511-9a25-c2bde97b9491"
 
 # Top-level nav items. Items with identifier are dropdown parents (no URL).
