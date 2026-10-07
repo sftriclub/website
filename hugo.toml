@@ -42,7 +42,7 @@ disableKinds = ["taxonomy", "term"]
 [params]
   description = "A multi-sport club and 501(c)(3) nonprofit in San Francisco."
   # Appended to the site title on the homepage <title> tag.
-  tagline = "Swim, Bike and Run in San Francisco"
+  tagline = "Swim, Bike, Run"
   # Fallback social share image for pages without a hero image.
   ogImage = "/sf-tri-logo-cream.png"
   email = "info@sftriclub.org"
