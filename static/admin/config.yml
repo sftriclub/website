@@ -18,6 +18,15 @@ local_backend: true
 media_folder: static/images
 public_folder: /images
 
+# How the CMS writes files. Hand edits should match this so a CMS save only
+# shows the change that was made: every string double-quoted, and optional
+# fields left out when empty rather than written as "". Run
+# `mise run normalize` after hand-editing content to apply the same format.
+output:
+  omit_empty_optional_fields: true
+  yaml:
+    quote: double
+
 collections:
 
   # ── Top-level pages ──────────────────────────────────────────────────────
@@ -350,7 +359,7 @@ collections:
     public_folder: /images/news
     fields:
       - { name: title, label: Title, widget: string }
-      - { name: date, label: Date, widget: datetime }
+      - { name: date, label: Date, widget: datetime, time_format: false }
       - { name: author, label: Author, widget: string }
       - { name: summary, label: Summary, widget: text, hint: "1-2 sentences shown on the news listing and homepage teaser. Also used in Google results when SEO Description is empty, so keep it under 160 characters." }
       - { name: meta_description, label: SEO Description, widget: text, required: false, hint: "Shown in Google results and link previews instead of the summary. Aim for 120-155 characters." }
@@ -370,7 +379,7 @@ collections:
     public_folder: "/images/spotlights/{{filename}}"
     fields:
       - { name: title, label: Name, widget: string }
-      - { name: date, label: Date, widget: datetime }
+      - { name: date, label: Date, widget: datetime, time_format: false }
       - { name: summary, label: Summary, widget: text, hint: "1-2 sentences shown on the spotlight listing. Also used as the page's SEO description, so keep it under 160 characters." }
       - { name: hero_image, label: Hero Photo, widget: image }
       - { name: hero_image_alt, label: "Hero Photo Alt Text (optional)", widget: string, required: false, hint: "For screen readers. Defaults to the member's name." }
