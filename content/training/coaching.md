@@ -1,9 +1,8 @@
 ---
-weight: 5
-title: Coaching
-subtitle: ''
-description: SF Tri Club partners with professional coaches to support member development.
+title: "Coaching"
+description: "SF Tri Club partners with professional coaches to support member development."
 card_text: "Group and private coaching with Coach Meg and Coach JD, with discounts for members."
+weight: 5
 ---
 
 {{< image-section src="/images/training/coach_megan.webp" alt="Coach Megan Tobin in a TMT Coaching kit by the water" side="right" >}}

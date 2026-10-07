@@ -1,6 +1,6 @@
 ---
 title: "Rocky Gowni"
-date: 2026-04-15
+date: "2026-04-15"
 summary: "First-season Ironman finisher who started 2025 with no triathlon background and finished Ironman Arizona by year-end."
 hero_image: "/images/spotlights/rocky-gowni/portrait.webp"
 hero_image_alt: "Rocky celebrating finishing IM Arizona"
@@ -12,7 +12,10 @@ questions:
   - q: "What were your initial triathlon aspirations?"
     a: "I’ve found it helps me to be pot-committed on hard goals, so I worked backward from a full Ironman in Arizona, which I signed up for first. From there, I built up through shorter distances."
   - q: "What was your athletic baseline when you first started training for triathlons?"
-    a: "I don't have an athletic background from college or otherwise but I had a solid cardio base from sports like soccer and squash, plus gym/workout classes like Barry’s, Orangetheory, F45 etc.\n\nAll three disciplines were new. Running came naturally - I bought my first pair of running shoes and ran a half marathon in February, which gave me a lot of confidence to take it up a notch. Swimming was the toughest by far; you can power through biking and running, but swimming really requires technique and repetition."
+    a: "I don't have an athletic background from college or otherwise but I had a solid cardio base from sports like soccer and squash, plus gym/workout classes like Barry’s, Orangetheory, F45 etc.
+
+
+      All three disciplines were new. Running came naturally - I bought my first pair of running shoes and ran a half marathon in February, which gave me a lot of confidence to take it up a notch. Swimming was the toughest by far; you can power through biking and running, but swimming really requires technique and repetition."
   - q: "At what point did you decide to join SF Tri as part of your training?"
     a: "Pretty early on I attended the info session at Manny's. While I was too late to join the official 0-60 program I made a point to attend all the open training sessions & was really grateful or how welcoming the club was. Honestly, I don't think I could have crossed the finish line without SF Tri. Whether through the formal training programs or more generally - endurance sports can get really lonely when training on your own. Having a set of peers around me who were also pushing themselves really helped me push through as well."
   - q: "How many avg. hours / week were you training once you decided to train up towards a 70.3 and full IM?"
@@ -26,7 +29,10 @@ questions:
   - q: "If you could give any advice to someone in their first season of triathlon training, what would it be?"
     a: "Have fun. It’s a hard (and slightly masochistic) sport, but what sustains you is enjoying the process and the community."
   - q: "What are 1-2 training habits that have made the biggest difference for you as you've trained up to become an accomplished Iron(wo)man athlete?"
-    a: "Don't skip the gym & mobility work. These were the first sessions I scheduled every week and I think they really helped me stay injury free as my training volume ramped up.\n\nNutrition wise carb up! I was a on a low carb diet leading into the season & I found that to be a pretty hard adjustment but incredibly important to keep my energy levels up"
+    a: "Don't skip the gym & mobility work. These were the first sessions I scheduled every week and I think they really helped me stay injury free as my training volume ramped up.
+
+
+      Nutrition wise carb up! I was a on a low carb diet leading into the season & I found that to be a pretty hard adjustment but incredibly important to keep my energy levels up"
   - q: "What's a mistake you made early in your triathlon journey that you’d encourage newer triathletes to avoid?"
     a: "Don't cut your sessions short - especially the discipline you feel least strong in. Early on I think I was a pretty lax when it came to swimming sessions - I'd convince myself I could make up for it on race day but your body has a funny way of remembering when it's in uncharted territory - learned this the hard way during the Napa Oly swim!"
   - q: "What keeps you motivated to keep racing and training?"

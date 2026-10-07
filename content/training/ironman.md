@@ -1,8 +1,8 @@
 ---
-weight: 3
 title: "Ironman"
 description: "A structured training program for athletes targeting a full 140.6-mile Ironman race."
 card_text: "Whether you're training for your first (or next!) Ironman, we've got you covered."
+weight: 3
 ---
 
 {{< image-section src="/images/training/im_santa_rosa_medals.webp" alt="IM Santa Rosa Medals" side="right" >}}

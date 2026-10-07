@@ -1,7 +1,7 @@
 ---
 title: "Free Track Workout"
-layout: trial-workout
 description: "Drop in for a free track session with the SF Tri Club. All levels welcome."
+layout: "trial-workout"
 no_cta: true
 details:
   - label: "When"

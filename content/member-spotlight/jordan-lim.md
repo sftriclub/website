@@ -1,6 +1,6 @@
 ---
 title: "Jordan Lim"
-date: 2026-07-15
+date: "2026-07-15"
 summary: "Community Leader and Cheers Squad co-founder who went from college sprints to 70.3s and Escape from Alcatraz."
 hero_image: "/images/spotlights/jordan-lim/portrait.webp"
 hero_image_alt: "Jordan and the SF Tri Cheers Squad celebrating the Escape from Alcatraz finishers"
@@ -12,7 +12,10 @@ questions:
   - q: "What are some of the unexpected discoveries you've encountered as you've become a triathlete?"
     a: "I learned that I really enjoy swimming! Growing up, I really hated it but now I actually enjoy swimming, I think it’s pretty therapeutic to just go back and forth in the pool with nothing but your thoughts, and I think that’s also why I have grown to enjoy open water swimming. Exploring the Bay Area by bike has also been a lot of fun! During rides and sometimes races, I find myself taking in the views and being so happy to live in such a beautiful place."
   - q: "What inspired you to join SF Tri, and what difference has it made for you?"
-    a: "I decided to join SF Tri after signing up for La Quinta 70.3 and having no idea how to train for it. I think I found a Facebook ad for the 70.3 training program, thought it looked interesting, and signed up. I still remember emailing Omar about the deets! Joining the 70.3 program gave me tons of structure and tips for the race, shoutout Coach Meg! Most importantly, joining the club has introduced me to a great community of very cool and interesting people! \n\nJD has been a huge help in running, I always look forward to Tuesday Track days. His workouts work. And I’ve gotten so many tips on gear, technique, races, logistics from just other people in the club such as hiking up the wetsuit to get more shoulder mobility, to different gels and carb mixes, to running and riding routes. I’m so inspired by everyone in the club and always excited to see what people are doing. I’ve made a lot of memories with the club."
+    a: "I decided to join SF Tri after signing up for La Quinta 70.3 and having no idea how to train for it. I think I found a Facebook ad for the 70.3 training program, thought it looked interesting, and signed up. I still remember emailing Omar about the deets! Joining the 70.3 program gave me tons of structure and tips for the race, shoutout Coach Meg! Most importantly, joining the club has introduced me to a great community of very cool and interesting people!\ 
+
+
+      JD has been a huge help in running, I always look forward to Tuesday Track days. His workouts work. And I’ve gotten so many tips on gear, technique, races, logistics from just other people in the club such as hiking up the wetsuit to get more shoulder mobility, to different gels and carb mixes, to running and riding routes. I’m so inspired by everyone in the club and always excited to see what people are doing. I’ve made a lot of memories with the club."
   - q: "You're one of our club's most dedicated Community Leaders - what motivates you to give back to the club?"
     a: "Since the club has given me so much, I find it very rewarding to give back and help out. I’m always excited and proud to see how much the club has grown since 2022. I want to continue that legacy and openness that I received when I joined. It’s very fulfilling to help people achieve their goals."
   - q: "You're also one of the co-founders of SF Tri's now-beloved Cheers Squad tradition - why is Cheers Squad such an important part of club culture for you?"
@@ -20,7 +23,16 @@ questions:
   - q: "What would you say to members who have yet to form part of a club Cheers Squad? What are they missing out on?"
     a: "I’d say that they’re missing out on a lot of fun! I’ve been told by many people that they have more fun cheering than racing, which makes me a bit worried, but happy to see that we created a solid Cheers Squad tradition. It’s so rewarding to cheer on your friends and teammates at a race. I think the best part of cheering is seeing the impact it has on your friends and racers, seeing a smile is the best."
   - q: "What's been one of your hardest race moments and how did you prevail?"
-    a: "Oh boy, lots to choose from. I’d have to say the hardest race moments were at my first 70.3. It was only my second time in a wetsuit. I got into the water, swam for 25 yards, was getting hit left and right, and immediately wanted to get out. I did a couple breast strokes and stayed with it, I knew I could swim perfectly fine. I counted my strokes, 1,2,3 breathe, 1,2,3 breathe, etc and got back to shore, I was very happy to get out of the water.\n\nThen my bento box with all of my nutrition fell off my bike at mile 3, I didn’t turn back for it. That was a mistake. I knew I needed carbs so I ended up grabbing Gatorade Endurance from each aid station.\n\nThen, at mile 12 of the run, I had a double quad cramp and went down to my hands and knees. I remember someone yelling, “you look great, get up!” In my head, I’m like “I don’t feel great.” I got to my feet and shuffled along. Thankfully, the cramps went away and I was able to finish off the race.\n\nMoral of the story, get used to open water swimming, secure your bento box, and take in nutrition throughout the bike and run."
+    a: "Oh boy, lots to choose from. I’d have to say the hardest race moments were at my first 70.3. It was only my second time in a wetsuit. I got into the water, swam for 25 yards, was getting hit left and right, and immediately wanted to get out. I did a couple breast strokes and stayed with it, I knew I could swim perfectly fine. I counted my strokes, 1,2,3 breathe, 1,2,3 breathe, etc and got back to shore, I was very happy to get out of the water.
+
+
+      Then my bento box with all of my nutrition fell off my bike at mile 3, I didn’t turn back for it. That was a mistake. I knew I needed carbs so I ended up grabbing Gatorade Endurance from each aid station.
+
+
+      Then, at mile 12 of the run, I had a double quad cramp and went down to my hands and knees. I remember someone yelling, “you look great, get up!” In my head, I’m like “I don’t feel great.” I got to my feet and shuffled along. Thankfully, the cramps went away and I was able to finish off the race.
+
+
+      Moral of the story, get used to open water swimming, secure your bento box, and take in nutrition throughout the bike and run."
   - q: "If you could give any advice to someone in their first season of triathlon training, what would it be?"
     a: "The first season of triathlon training can be very intimidating, there is so much to do, buy, and learn. From swimming, biking, running, nutrition, weight training, etc, it can be easy to get caught up in it all, especially when there are other people further along in their own triathlon career. I think my biggest piece of advice to someone new would be to not take it too seriously, allow yourself to be a beginner. At the end of the day, it’s swimming, biking, and running, that’s it, nothing more, nothing less. It’s not necessary to have the fanciest bike, multiple pairs of running shoes, or even a fitness watch. You don’t need to know your exact paces at track or know all the drills during swim. All you need is the desire to swim, bike, and run. There’s a time and a place to get the gear, but the first season is all about enjoying it and having fun. Take your time, don’t take it too seriously, and enjoy the process."
   - q: "What races / goals are you targeting next?"

@@ -1,6 +1,6 @@
 ---
 title: "Mike Locke"
-date: 2026-05-15
+date: "2026-05-15"
 summary: "Three-time Ironman finisher and longtime SF Tri board member who served as President and Membership Officer."
 hero_image: "/images/spotlights/mike-locke/portrait.webp"
 hero_image_alt: "Mike with his Kyoto Marathon bib"
@@ -12,21 +12,42 @@ questions:
   - q: "What was your athletic baseline when you first started training for triathlons?"
     a: "I had run a couple of marathons and was a recreational biker, so I felt pretty good about both of those. I didn't really swim much, but it was summertime in Maryland so I didn't need (or even think about!) a wetsuit and figured I'd just muddle through."
   - q: "At what point did you decide to join SF Tri as part of your training?"
-    a: "I moved back to SF (from DC) in late 2014 and I was looking for a club that felt community-based; SF Tri had a very DIY looking website and they talked a lot about volunteerism, so it really appealed to me. The people I met were instantly welcoming.\n\nI joined in 2015 and lately I've been sticking around since the coached swim workouts are the best deal in town!"
+    a: "I moved back to SF (from DC) in late 2014 and I was looking for a club that felt community-based; SF Tri had a very DIY looking website and they talked a lot about volunteerism, so it really appealed to me. The people I met were instantly welcoming.
+
+
+      I joined in 2015 and lately I've been sticking around since the coached swim workouts are the best deal in town!"
   - q: "You served three terms as SFTC board member, holding the membership officer and president roles. What inspired you to volunteer your time and energy to the club in this way?"
     a: "I've always been a do-er and I like to get my hands dirty. I joined the leadership team as membership officer, and a couple of years later, we were sitting in a board meeting talking about planning for the future. The outgoing president asked who'd be interested in following her, and everyone just looked at me!"
   - q: "What are some of the unexpected discoveries you've had about triathlon training / racing, the tri world and/or yourself as your tri journey has evolved over the years?"
     a: "The most important thing I learned about myself during the training for my first Ironman is that motivation can be optional. There were plenty of days where I didn't *want* to get up at 5 a.m. to do a swim workout before work, but I adopted the mindset that \"it doesn't matter if I *want* to do it, I'm just *doing* it.\" (It's helpful when you're half-awake and you just do the thing on autopilot -- maybe you didn't feel like it, but you've done it.)"
   - q: "What's a mistake you made early in your triathlon journey that you’d encourage newer triathletes to avoid?"
-    a: "Focusing on stats / metrics / % of workouts completed. This is a hobby (and can be an expensive one!) so the #1 concern should be:\n\n*Are you enjoying yourself and do you feel driven to do more?*\n\nTake a break anytime. It'll be there when you're ready to come back."
+    a: "Focusing on stats / metrics / % of workouts completed. This is a hobby (and can be an expensive one!) so the #1 concern should be:
+
+
+      *Are you enjoying yourself and do you feel driven to do more?*
+
+
+      Take a break anytime. It'll be there when you're ready to come back."
   - q: "What's been one of your hardest race moments and how did you prevail?"
     a: "During a relay tri with a couple of friends in Estonia, I was doing the bike portion on a rental; a few miles from the end, one pedal and crank fell off *entirely*. The race mechanic tried to help, but it didn't reattach completely so I couldn't build up much speed. I could've just given up, but I wanted my friend who was doing the run to get a chance to race, so I wobbled my way to the finish and handed it off to her."
   - q: "Like many triathletes, you have 'DNF'd' in a race ('Did Not Finish'). What would you say to someone who got their first DNF?"
-    a: "It doesn't help you to ruminate on what went wrong. The one time (out of three!) that I didn't finish an Ironman, it was a very hot day and I didn't have enough electrolytes. It's as simple as that.\n\nBut I still have happy memories of that day: I finished a very difficult bike leg just 20 minutes before the cutoff time and that felt AMAZING. I got to see Coach Meg cheering me on the run (after she had also DNF'd!) and it really lifted my spirits. I was participating in a World Championship (kind of by accident) and was surrounded by the best of the best. I still wear the IM St. George merch I got there because it was an important day for me."
+    a: "It doesn't help you to ruminate on what went wrong. The one time (out of three!) that I didn't finish an Ironman, it was a very hot day and I didn't have enough electrolytes. It's as simple as that.
+
+
+      But I still have happy memories of that day: I finished a very difficult bike leg just 20 minutes before the cutoff time and that felt AMAZING. I got to see Coach Meg cheering me on the run (after she had also DNF'd!) and it really lifted my spirits. I was participating in a World Championship (kind of by accident) and was surrounded by the best of the best. I still wear the IM St. George merch I got there because it was an important day for me."
   - q: "What keeps you motivated to keep racing and training?"
     a: "I am an absolute map and geography fiend, and getting to explore new places -- especially on foot or on wheels -- brings me so much joy. It's part of why I spent my 20s trying to run a marathon on every continent (I got to 6.5) and why I keep looking for new bike routes to continue filling out my Strava heatmap."
   - q: "What's been your favorite race to date?"
-    a: "I'm choosing three!\n\n**Long Course Tri: Ironman Lake Tahoe (2013)** -- It snowed the day before (in September!), no one could see anything during the swim, and something like 25% of the field DNF'd, but I finished and it was a big part of what convinced me to move home to California.\n\n**Short Course Tri: Monte Rio Sprint/Oly (2015-2017)**-- We got to swim in the Russian River, ride out to the coast and run through the forest. Independent races are amazing!\n\n**Overall: It's called the Dual (2012), a small trail marathon in an island national park in New Zealand.** It was incredibly tough, but a beautiful course, and after crossing the finish line we all stripped down to our underwear and waded right into the Auckland Bay to soothe our legs."
+    a: "I'm choosing three!
+
+
+      **Long Course Tri: Ironman Lake Tahoe (2013)** -- It snowed the day before (in September!), no one could see anything during the swim, and something like 25% of the field DNF'd, but I finished and it was a big part of what convinced me to move home to California.
+
+
+      **Short Course Tri: Monte Rio Sprint/Oly (2015-2017)**-- We got to swim in the Russian River, ride out to the coast and run through the forest. Independent races are amazing!
+
+
+      **Overall: It's called the Dual (2012), a small trail marathon in an island national park in New Zealand.** It was incredibly tough, but a beautiful course, and after crossing the finish line we all stripped down to our underwear and waded right into the Auckland Bay to soothe our legs."
   - q: "What races are you targeting this year?"
     a: "I'm doing the open-water swim at the Gay Games in Valencia, Spain this summer."
 race_groups:

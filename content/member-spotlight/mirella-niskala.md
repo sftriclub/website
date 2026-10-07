@@ -1,6 +1,6 @@
 ---
 title: "Mirella Niskala"
-date: 2026-03-15
+date: "2026-03-15"
 summary: "Ironman age-group winner racing the 70.3 World Championship in Marbella and the Ironman World Championship in Kona."
 hero_image: "/images/spotlights/mirella-niskala/portrait.webp"
 hero_image_alt: "Mirella running during Escape from Alcatraz"
