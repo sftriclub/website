@@ -50,7 +50,7 @@ disableKinds = ["taxonomy", "term"]
   facebook = "https://www.facebook.com/sftriclub"
   tiktok = "https://www.tiktok.com/@sftriclub"
   strava = "https://www.strava.com/clubs/sftriclub"
-  login = "https://www.heylo.com/g/a48c491e-6366-468e-9db9-45e9586ba5e2"
+  login = "https://www.heylo.com/login"
   heyloSignup = "https://www.heylo.com/invite/30b897c1-3bba-4511-9a25-c2bde97b9491"
 
 # Top-level nav items. Items with identifier are dropdown parents (no URL).

@@ -1,0 +1,18 @@
+# Cloudflare Workers Static Assets header rules (copied into public/ by Hugo).
+#
+# The asset server sends a bare "text/html" with no charset. Pages still
+# declare <meta charset="UTF-8">, but SEO checkers and some clients want the
+# encoding in the HTTP header itself, so set it explicitly per file type.
+
+# Pretty URLs (/about/faq/) are served from index.html files.
+/
+  Content-Type: text/html; charset=utf-8
+/*/
+  Content-Type: text/html; charset=utf-8
+/*.html
+  Content-Type: text/html; charset=utf-8
+
+/*.css
+  Content-Type: text/css; charset=utf-8
+/*.js
+  Content-Type: text/javascript; charset=utf-8
