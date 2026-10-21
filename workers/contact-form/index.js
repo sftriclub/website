@@ -1,5 +1,5 @@
 const ALLOWED_ORIGIN = 'https://sftriclub.org';
-const TO_ADDRESS     = 'phil@sftriclub.org';
+const TO_ADDRESS     = 'info@sftriclub.org';
 const FROM_ADDRESS   = 'website@sftriclub.org';
 
 function corsHeaders() {
