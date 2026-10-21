@@ -10,5 +10,5 @@ pattern = "sftriclub.org/api/contact"
 zone_name = "sftriclub.org"
 
 [[routes]]
-pattern = "new-www.sftriclub.org/api/contact"
+pattern = "www.sftriclub.org/api/contact"
 zone_name = "sftriclub.org"
