@@ -1,0 +1,23 @@
+{
+  "$schema": "https://unpkg.com/wrangler/config-schema.json",
+  "name": "sftriclub-contact-form",
+  "main": "index.js",
+  "compatibility_date": "2024-01-01",
+
+  // Secrets are set via: wrangler secret put RESEND_API_KEY
+  // Never commit secrets to this file.
+
+  // Only reachable through the zone routes below, not a workers.dev URL.
+  "workers_dev": false,
+
+  "routes": [
+    {
+      "pattern": "sftriclub.org/api/contact",
+      "zone_name": "sftriclub.org"
+    },
+    {
+      "pattern": "www.sftriclub.org/api/contact",
+      "zone_name": "sftriclub.org"
+    }
+  ]
+}
