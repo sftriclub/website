@@ -17,6 +17,23 @@
   </div>
 </section>
 
+{{/* ── Announcement (toggled from the Homepage entry in the CMS) ───────── */}}
+{{ if .Params.announcement_show }}
+<section class="announcement" aria-labelledby="announcement-title">
+  <div class="container announcement__inner">
+    <div class="announcement__copy">
+      {{ with .Params.announcement_eyebrow }}<span class="eyebrow eyebrow--dark">{{ . }}</span>{{ end }}
+      <h2 class="announcement__title" id="announcement-title">{{ .Params.announcement_title }}</h2>
+      {{ with .Params.announcement_text }}<p class="announcement__text">{{ . }}</p>{{ end }}
+    </div>
+    <div class="announcement__actions">
+      {{ with .Params.announcement_cta_url }}<a class="btn btn--primary" href="{{ . }}">{{ $.Params.announcement_cta_text }}</a>{{ end }}
+      {{ with .Params.announcement_link_url }}<a class="btn btn--outline" href="{{ . }}">{{ $.Params.announcement_link_text }}</a>{{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
 {{/* ── Sports Cards ────────────────────────────────────────────────────── */}}
 <section class="sports-section">
   <div class="container">
