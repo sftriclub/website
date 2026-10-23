@@ -642,6 +642,31 @@ h1, h2, h3, h4 {
 .hero__actions .btn--outline { border-color: rgba(255, 254, 245, 0.55); color: var(--color-cream); }
 .hero__actions .btn--outline:hover { border-color: var(--color-cream); background-color: var(--color-cream); color: var(--color-forest); }
 
+/* Announcement band: optional strip between the hero and the sport cards */
+.announcement {
+  background-color: var(--color-notice);
+  border-bottom: 1px solid var(--color-border);
+  padding-block: var(--space-lg);
+}
+/* Level, unlike other eyebrows: tilted, it rises into the hero above */
+.announcement .eyebrow { transform: none; }
+.announcement__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+.announcement__copy { flex: 1 1 32rem; max-width: 46rem; }
+.announcement__title {
+  font-size: var(--font-size-2xl);
+  font-weight: 900;
+  font-stretch: 118%;
+  line-height: var(--line-height-tight);
+}
+.announcement__text { color: var(--color-text-muted); margin-top: var(--space-sm); }
+.announcement__actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
+
 /* Section headings */
 .section-heading { margin-bottom: var(--space-md); }
 .section-heading--center { text-align: center; }
