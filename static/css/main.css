@@ -610,12 +610,39 @@ h1, h2, h3, h4 {
 }
 /* Faces sit in the upper-middle of the photo, so crop low and anchor copy to the bottom */
 .hero .hero-bg-image { object-position: center 85%; }
+/* Wide screens: the hero stays at most 820px tall, so most of the photo's
+   height is cropped and cropping low would cut off the heads. Crop mostly
+   from the bottom instead, where the copy sits anyway. */
+@media (min-width: 1500px) {
+  .hero .hero-bg-image { object-position: center 30%; }
+}
 .hero__overlay {
   position: absolute;
   inset: 0;
   background:
     linear-gradient(to top, rgba(3, 44, 29, 0.92) 0%, rgba(3, 44, 29, 0.7) 28%, rgba(3, 44, 29, 0) 58%),
     linear-gradient(90deg, rgba(3, 44, 29, 0.35) 0%, rgba(3, 44, 29, 0) 60%);
+}
+/* Very wide screens: stop the photo at 1640px (about 2:1 at the 820px cap) so
+   it keeps the framing it has there, and fade its edges into the forest
+   background. The side fade sits under the bottom gradient so the darkening
+   behind the copy runs evenly across the full width. */
+@media (min-width: 1640px) {
+  .hero .hero-bg-image { left: 0; right: 0; width: 1640px; margin-inline: auto; }
+  .hero__overlay {
+    background:
+      linear-gradient(to top, rgba(3, 44, 29, 0.92) 0%, rgba(3, 44, 29, 0.7) 28%, rgba(3, 44, 29, 0) 58%),
+      linear-gradient(90deg, rgba(3, 44, 29, 0.35) 0%, rgba(3, 44, 29, 0) 60%),
+      linear-gradient(90deg,
+        var(--color-forest) calc(50% - 820px),
+        rgba(5, 66, 44, 0.45) calc(50% - 790px),
+        rgba(5, 66, 44, 0.12) calc(50% - 730px),
+        rgba(5, 66, 44, 0) calc(50% - 680px),
+        rgba(5, 66, 44, 0) calc(50% + 680px),
+        rgba(5, 66, 44, 0.12) calc(50% + 730px),
+        rgba(5, 66, 44, 0.45) calc(50% + 790px),
+        var(--color-forest) calc(50% + 820px));
+  }
 }
 .hero__content {
   position: relative;
