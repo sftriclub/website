@@ -4,6 +4,12 @@ backend:
   branch: main
   base_url: https://sveltia-cms-auth.sf-tri-club.workers.dev
 
+# main requires an approved review, so saves can't be committed to it directly.
+# Each change is saved to a cms/<collection>/<slug> branch with a pull request;
+# once another board member approves it on GitHub, Publish in the CMS (or Merge
+# on GitHub) puts it live.
+publish_mode: editorial_workflow
+
 # Local editing: run `mise run dev` (alias `mise run cms`), open
 # http://localhost:1313/admin/ in a Chromium browser and click "Work with Local
 # Repository". Sveltia edits the files directly through the File System Access
