@@ -53,6 +53,14 @@ collections:
           - { name: hero_cta_url, label: CTA Button URL, widget: string }
           - { name: hero_image, label: Hero Image, widget: image }
           - { name: hero_image_alt, label: Hero Image Alt Text, widget: string, required: false, hint: "Describes the photo for screen readers and image search. Leave blank if the image is purely decorative." }
+          - { name: announcement_show, label: Show announcement, widget: boolean, required: false, default: false, hint: "Shows a highlighted band below the hero photo, above the swim/bike/run cards. Turn off to hide it without losing the text." }
+          - { name: announcement_eyebrow, label: Announcement Eyebrow, widget: string, required: false, hint: "Short script label above the title, e.g. Zero to Sixty 2027" }
+          - { name: announcement_title, label: Announcement Title, widget: string, required: false }
+          - { name: announcement_text, label: Announcement Text, widget: text, required: false, hint: "One or two sentences." }
+          - { name: announcement_cta_text, label: Announcement Button Text, widget: string, required: false }
+          - { name: announcement_cta_url, label: Announcement Button URL, widget: string, required: false, hint: "A page on the site (/training/zero-to-sixty/) or a full link (https://...)" }
+          - { name: announcement_link_text, label: Second Button Text, widget: string, required: false }
+          - { name: announcement_link_url, label: Second Button URL, widget: string, required: false, hint: "Optional. Leave blank for a single button." }
 
       - name: trial_workout
         label: Trial Workout

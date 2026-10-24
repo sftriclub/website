@@ -7,7 +7,7 @@ weight: 1
 ---
 
 {{< notice title="2027 registration opens in December!" >}}
-We offer this program once per year; it runs from late January to April. Check back in early December 2026 for details on registration for our 2027 program. There are only 30 spots and we sold out in 24 hours this year, so don't wait!
+We offer this program once per year; it runs from late January to April. Registration for our 2027 program opens in early December 2026. There are only 30 spots and we sold out in 24 hours this year, so don't wait! [Join the interest list](https://forms.gle/9YHnx7mBgscofp3j8) and we'll email you when registration opens.
 
 In the meantime, you can [join the club](/membership/) and take part in our weekly workouts!
 {{< /notice >}}
